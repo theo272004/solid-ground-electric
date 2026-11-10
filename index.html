@@ -8,258 +8,242 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Solid Ground Electric | Electrician in Lisbon Falls, Maine">
 <meta property="og:description" content="Electrical work. Done right. Request a quote online with photos of your job.">
-<meta name="theme-color" content="#0E2A20">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%230E2A20'/%3E%3Cg fill='none' stroke-width='3.2'%3E%3Cpath d='M20 7v10M7 18h26M12 25h16' stroke='%23fff'/%3E%3Cpath d='M17 32h6' stroke='%23FFC629'/%3E%3C/g%3E%3C/svg%3E">
+<meta name="theme-color" content="#071F19">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23071F19'/%3E%3Cg fill='none' stroke-width='3.2'%3E%3Cpath d='M20 7v10M7 18h26M12 25h16' stroke='%23fff'/%3E%3Cpath d='M17 32h6' stroke='%23FFD82F'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Electrician","name":"Solid Ground Electric LLC","telephone":"+1-207-713-1857","email":"solidgroundelectric26@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Lisbon Falls","addressRegion":"ME","addressCountry":"US"},"areaServed":["Lewiston, ME","Auburn, ME","Brunswick, ME","Portland, ME","Augusta, ME","Lisbon Falls, ME","Sabattus, ME"]}
 </script>
 <style>
-/* Direction: lettering on a work truck. Full-width type, hairlines instead of boxes, one yellow. */
 :root{
   color-scheme:light;
-  --g:#0E2A20;--g2:#163A2D;--g3:#2B5D49;--y:#FFC629;--y2:#F2B600;--bg:#F3F2EC;--ink:#101A15;--mut:#56615B;--line:rgba(16,26,21,.18);
-  --on:rgba(255,255,255,.76);--ld:rgba(255,255,255,.2);--gut:clamp(16px,3.3vw,64px);--sec:clamp(72px,9vw,144px);
-  --ease:cubic-bezier(.2,.7,.2,1);--r:3px;
+  --g:#071F19;--g2:#102D24;--g3:#2B5D49;--y:#FFD82F;--y2:#F2C800;--bg:#F3F2E9;--w:#fff;--ink:#10221D;--mut:#69736D;
+  --line:#DEDDD2;--on:rgba(255,255,255,.74);--ld:rgba(255,255,255,.14);--gut:clamp(16px,3vw,40px);--r:12px;
+  --ease:cubic-bezier(.2,.7,.2,1);
   /* names used by the job request styles */
-  --paper:#fff;--rule:rgba(16,26,21,.16);--muted:var(--mut);--birch:var(--bg);--birch-2:#E6E5DD;--spruce-700:var(--g3);--spruce-800:var(--g);
-  --cream:#fff;--serif:Archivo,system-ui,sans-serif;--glow:var(--y);--on-glow:var(--ink);--danger:#A93A1E;
+  --paper:#fff;--rule:#DEDDD2;--muted:var(--mut);--birch:var(--bg);--birch-2:#E6E5DA;--spruce-700:var(--g3);--spruce-800:var(--g2);
+  --cream:#fff;--serif:Inter,system-ui,sans-serif;--glow:var(--y);--on-glow:var(--ink);--danger:#A93A1E;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.5 Archivo,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
 h1,h2,h3,h4,p,ul,ol,dl,dd,figure,blockquote{margin:0;padding:0}
 ul,ol{list-style:none}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;cursor:pointer}
 img,svg{display:block;max-width:100%}
 address{font-style:normal}
-:focus-visible{outline:2px solid var(--g3);outline-offset:3px}
+:focus-visible{outline:2px solid var(--g3);outline-offset:3px;border-radius:4px}
 .dk :focus-visible{outline-color:var(--y)}
-/* display type: condensed, heavy, set like truck lettering */
-h1,h2,.disp{font-weight:800;font-stretch:72%;text-transform:uppercase;letter-spacing:-.012em;line-height:.92}
-h2{font-size:clamp(44px,6.4vw,104px)}
-h3{font-weight:700;font-stretch:80%;letter-spacing:-.008em;line-height:1.02}
-.w{padding-inline:max(var(--gut),env(safe-area-inset-left,0px)) max(var(--gut),env(safe-area-inset-right,0px))}
-.lead{font-size:clamp(18px,1.45vw,22px);line-height:1.42;max-width:44ch}
+.w{max-width:1320px;margin-inline:auto;padding-inline:max(var(--gut),env(safe-area-inset-left,0px)) max(var(--gut),env(safe-area-inset-right,0px))}
+h2{font-size:clamp(32px,3.3vw,46px);font-weight:800;letter-spacing:-.03em;line-height:1.04;text-wrap:balance}
+.lab{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g3);margin-bottom:12px}
+.dk .lab{color:var(--y)}
+.sub{color:var(--mut);font-size:16px;line-height:1.55;margin-top:16px;max-width:38ch}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--y);padding:10px 14px;font-weight:600}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--y);padding:10px 14px;border-radius:8px;font-weight:600}
 .skip:focus{top:12px}
-.fill{background:#FFEAA6;padding:0 4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.fill{background:#FFF0A8;padding:0 4px;border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.dk .fill{background:rgba(255,216,47,.2);color:#fff}
+.st{color:var(--y);letter-spacing:2px;line-height:1}
+.st.dkst{color:#E0B400}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:0 28px;border:1.5px solid transparent;border-radius:3px;font-weight:700;font-size:17px;line-height:1.1;white-space:nowrap;transition:background .2s,border-color .2s,color .2s}
-.btn svg{width:18px;height:18px;flex:none;transition:transform .25s var(--ease)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border:1.5px solid transparent;border-radius:999px;font-weight:700;font-size:15.5px;line-height:1.1;white-space:nowrap;transition:background .2s,border-color .2s,color .2s}
+.btn svg{width:17px;height:17px;flex:none;transition:transform .25s var(--ease)}
 .btn:hover svg.ar{transform:translateX(4px)}
 .btn:disabled{opacity:.65;cursor:progress}
 .y,.btn-glow{background:var(--y);color:var(--ink)}
 .y:hover,.btn-glow:hover{background:var(--y2)}
-.d{background:var(--g);color:#fff}
-.d:hover{background:var(--g2)}
-.btn-ink{border-color:var(--line);background:transparent}
+.ow{background:transparent;border-color:rgba(255,255,255,.55);color:#fff}
+.ow:hover{background:rgba(255,255,255,.08)}
+.btn-ink{border-color:var(--line);background:#fff}
 .btn-ink:hover{border-color:var(--g3)}
-.tl{font-variant-numeric:tabular-nums}
-.st{color:var(--y2);letter-spacing:2px;font-size:14px;line-height:1}
-.dk .st{color:var(--y)}
-.sec{padding-top:var(--sec)}
+.lk{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:7px;min-height:40px;font-weight:600;font-size:14.5px}
+.lk span{border-bottom:1.5px solid currentColor;padding-bottom:1px}
+.lk svg{width:15px;height:15px;transition:transform .25s var(--ease)}
+.lk:hover svg{transform:translateX(4px)}
+.lk:focus-visible{outline:2px solid var(--g3);outline-offset:3px;border-radius:4px}
 
 /* draft note */
-.draft{background:var(--ink);color:var(--on);font-size:13.5px}
-.draft .w{display:flex;gap:12px;align-items:center;justify-content:space-between;min-height:36px}
+.draft{background:#03100C;color:var(--on);font-size:13px}
+.draft .w{display:flex;gap:12px;align-items:center;justify-content:space-between;min-height:34px}
 .draft b{color:var(--y);font-weight:600;margin-right:8px}
-.draft button{background:none;border:0;color:var(--on);font-size:20px;line-height:1;width:44px;height:36px;margin-right:-14px;flex:none}
+.draft button{background:none;border:0;color:var(--on);font-size:20px;line-height:1;width:44px;height:34px;margin-right:-14px;flex:none}
 
 /* header */
-.hdr{position:sticky;top:0;z-index:50;background:var(--g);color:#fff}
-.hdr .w{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
-.brand{display:flex;align-items:center;gap:12px;flex:none;white-space:nowrap;min-height:44px}
+.hdr{position:sticky;top:0;z-index:50;background:var(--g);color:#fff;border-bottom:1px solid var(--ld)}
+.hdr .w{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.brand{display:flex;align-items:center;gap:11px;flex:none;min-height:44px}
 .brand svg{width:34px;height:34px;flex:none}
-.brand b{font-weight:800;font-stretch:72%;font-size:25px;letter-spacing:.005em;text-transform:uppercase;line-height:1}
-.brand span{color:var(--y)}
-.nav{display:flex;gap:clamp(18px,2.2vw,36px);font-weight:500;font-size:16px}
-.nav a{padding:8px 0;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 4px)/0 1.5px no-repeat;transition:background-size .25s var(--ease)}
-.nav a:hover{background-size:100% 1.5px}
-.hr{display:flex;align-items:center;gap:22px;font-weight:700;font-size:18px;white-space:nowrap}
-.hr .btn{min-height:44px;padding:0 20px;font-size:15.5px}
-.menu{display:none;flex:none;width:46px;height:46px;background:none;border:1.5px solid var(--ld);border-radius:3px;align-items:center;justify-content:center;color:#fff}
+.brand b{display:block;font-weight:800;font-size:21px;letter-spacing:-.02em;line-height:1}
+.brand small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.32em;margin-top:5px;color:var(--on)}
+.nav{display:flex;gap:clamp(18px,2.4vw,34px);font-weight:600;font-size:15px}
+.nav a{padding:10px 0;position:relative;color:rgba(255,255,255,.9)}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--y);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.nav a:hover::after,.nav a[aria-current="true"]::after{transform:scaleX(1)}
+.nav a[aria-current="true"]{color:var(--y)}
+.hr{display:flex;align-items:center;gap:20px;font-weight:600;white-space:nowrap}
+.hr .tl{font-size:15px;padding-block:12px;color:rgba(255,255,255,.9)}
+.hr .btn{min-height:44px;padding:0 20px;font-size:14.5px}
+.menu{display:none;flex:none;width:46px;height:46px;background:none;border:1.5px solid var(--ld);border-radius:10px;align-items:center;justify-content:center;color:#fff}
 .menu svg{width:20px;height:20px}
 
 /* hero */
-.hero{background:var(--g);color:#fff;position:relative}
-h1{font-size:13.25vw;line-height:.86;padding-top:clamp(20px,2.2vw,36px);letter-spacing:-.018em;font-stretch:66%;white-space:nowrap}
+.hero{position:relative;background:var(--g);color:#fff;overflow:hidden}
+.hphoto{position:absolute;top:0;bottom:0;right:0;width:52%}
+.hphoto img{width:100%;height:100%;object-fit:cover;object-position:26% 32%}
+.hphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--g) 0%,rgba(7,31,25,.55) 9%,rgba(7,31,25,0) 26%),linear-gradient(0deg,rgba(7,31,25,.55),rgba(7,31,25,0) 30%)}
+.slash{position:absolute;top:-10%;bottom:-10%;right:2.4%;width:46px;background:var(--y);transform:skewX(-18deg);pointer-events:none}
+.hero .tag{position:absolute;right:96px;bottom:16px;z-index:2}
+.tag{background:rgba(7,31,25,.84);color:#fff;border-radius:99px;padding:5px 11px;font-size:11px;font-weight:600;letter-spacing:.03em}
+.hin{position:relative;z-index:1;padding-block:clamp(32px,4.6svh,56px) clamp(30px,4svh,48px)}
+.htext{max-width:600px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,216,47,.35);background:rgba(255,216,47,.08);border-radius:99px;padding:6px 14px 6px 10px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.pill svg{width:15px;height:15px;color:var(--y)}
+h1{font-size:clamp(44px,4.6vw,70px);font-weight:900;line-height:.94;letter-spacing:-.035em;text-transform:uppercase;margin-top:clamp(18px,2.6svh,26px)}
 h1 span{display:block}
 h1 em{font-style:normal;color:var(--y);display:block}
-.hrow{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,64px);margin-top:clamp(28px,3vw,48px);align-items:start}
-.hrow .lead{color:#fff}
-.hactions{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin-top:clamp(22px,2.2vw,32px)}
-.hactions .tl{font-weight:700;font-size:clamp(22px,1.9vw,28px);font-stretch:85%;border-bottom:2px solid var(--y);line-height:1.2}
-.hmeta{margin-top:clamp(22px,2.2vw,34px);font-size:15.5px;color:var(--on);display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
-.hmeta a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--ld)}
-.hphoto{position:relative;margin-right:calc(var(--gut)*-1);height:clamp(320px,34vw,620px);margin-bottom:calc(clamp(60px,7vw,120px)*-1);background:#8F8C80;z-index:1}
-.hphoto img{width:100%;height:100%;object-fit:cover;object-position:30% 32%}
-.tag{position:absolute;right:12px;top:12px;background:rgba(14,42,32,.86);color:#fff;padding:3px 8px;font-size:11px;font-weight:600;letter-spacing:.03em}
-.hero::after{content:"";display:block;height:clamp(40px,3vw,56px)}
+.hlead{font-size:clamp(16.5px,1.3vw,19px);line-height:1.5;margin-top:clamp(16px,2.4svh,24px);max-width:31em;color:#fff}
+.hctas{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin-top:clamp(20px,3svh,30px)}
+.play{display:inline-flex;align-items:center;gap:12px;font-weight:600;min-height:44px}
+.play i{width:40px;height:40px;border:1.5px solid rgba(255,255,255,.7);border-radius:50%;display:grid;place-items:center}
+.play svg{width:16px;height:16px}
+.play:hover i{background:rgba(255,255,255,.1)}
+.trust{display:flex;flex-wrap:wrap;gap:16px 0;margin-top:clamp(20px,2.8svh,30px)}
+.trust>*{padding:0 26px;border-left:1px solid var(--ld);display:grid;gap:5px;align-content:start}
+.trust>*:first-child{padding-left:0;border-left:0}
+.trust b{font-size:21px;font-weight:800;letter-spacing:-.01em;line-height:1;display:flex;gap:8px;align-items:center}
+.trust b .st{font-size:15px}
+.trust small{font-size:13px;color:var(--on)}
+.trust a:hover small{text-decoration:underline;text-underline-offset:3px}
 
 /* services */
-.sv-head{display:grid;grid-template-columns:5fr 7fr;gap:clamp(18px,2vw,28px) clamp(24px,4vw,64px);margin-top:clamp(60px,7vw,120px);padding-top:var(--sec)}
-.sv-head h2{grid-column:1/-1}
-.sv-head .lead{grid-column:2}
-.sv-head .lead{color:var(--mut)}
-.list{margin-top:clamp(32px,4vw,64px);border-top:2px solid var(--ink)}
-.row{all:unset;box-sizing:border-box;display:grid;grid-template-columns:5fr 4.6fr 2.4fr;gap:12px clamp(24px,4vw,64px);width:100%;cursor:pointer;align-items:baseline;padding:clamp(22px,2.2vw,34px) var(--gut);border-bottom:1px solid var(--line);transition:background .2s}
-.row h3{font-size:clamp(32px,3.6vw,58px);font-weight:800;font-stretch:72%;text-transform:uppercase;line-height:.95}
-.row p{color:var(--mut);max-width:58ch;transition:color .2s}
-.row .go{font-weight:700;display:inline-flex;gap:8px;align-items:center;justify-self:end;white-space:nowrap}
-.row .go svg{width:17px;height:17px;transition:transform .25s var(--ease)}
-.row:hover{background:var(--y)}
-.row:hover p{color:var(--ink)}
-.row:hover .go svg{transform:translateX(5px)}
-.row:focus-visible{outline:2px solid var(--g3);outline-offset:-3px}
+.svc{padding-block:clamp(48px,7svh,80px)}
+.svc .w{display:grid;grid-template-columns:minmax(240px,300px) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:start}
+.svc .lk{margin-top:18px}
+.srow{position:relative;min-width:0;padding-right:58px}
+.scroller{display:grid;grid-auto-flow:column;grid-auto-columns:max(200px,25%);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}
+.scroller::-webkit-scrollbar{display:none}
+.sv{scroll-snap-align:start;padding:6px 22px 4px;border-left:1px solid var(--line);display:flex;flex-direction:column}
+.sv svg.ic{width:36px;height:36px;color:var(--g)}
+.sv h3{font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.2;margin-top:18px;min-height:2.4em}
+.sv p{font-size:14.5px;line-height:1.5;color:var(--mut);margin-top:8px;flex:1}
+.sv .lk{margin-top:14px}
+.snext{position:absolute;right:0;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;display:grid;place-items:center;box-shadow:0 6px 16px -10px rgba(7,31,25,.4)}
+.snext svg{width:18px;height:18px}
+.snext:hover{border-color:var(--g3)}
+.snext[disabled]{opacity:0;pointer-events:none}
 
-/* quote + demo */
-.quote{background:var(--y);margin-top:var(--sec);padding-top:clamp(48px,6vw,104px);display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,440px);gap:clamp(32px,6vw,112px);overflow:hidden;align-items:end}
-.quote .copy{padding-bottom:clamp(40px,5vw,88px)}
-.quote .lead{color:#332B0C;margin-top:clamp(18px,1.8vw,28px)}
-.steps{margin-top:clamp(28px,3vw,48px);border-top:2px solid var(--ink)}
-.qd-step{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:grid;grid-template-columns:clamp(54px,6vw,96px) minmax(0,1fr);align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(16,26,21,.3)}
-.qd-step:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-.qd-step .n{font-weight:800;font-stretch:72%;font-size:clamp(34px,3.2vw,52px);line-height:.9;opacity:.32;transition:opacity .25s}
-.qd-step[aria-current="step"] .n{opacity:1}
-.qd-step b{font-size:clamp(19px,1.5vw,22px);font-weight:700;display:block;line-height:1.2}
-.qd-step .t{color:#332B0C}
-.ctas{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:28px;font-weight:500}
-.qd-note{font-size:14.5px;color:#332B0C;margin-top:12px}
-.qd-col{display:grid;justify-items:center;align-self:end;margin-right:clamp(0px,3vw,48px)}
-.qd-phone{width:min(400px,100%);background:#0A1C15;border-radius:44px 44px 0 0;padding:11px 11px 0}
-.qd-screen{background:#fff;border-radius:34px 34px 0 0;height:640px;display:flex;flex-direction:column;overflow:hidden}
-.qd-top{padding:40px 24px 0;color:var(--mut);font-size:12px;font-weight:600;letter-spacing:.05em}
-.qd-bar{height:3px;background:var(--bg);margin-top:10px;overflow:hidden}
-.qd-bar i{display:block;height:100%;width:20%;background:var(--g);transition:width .4s var(--ease)}
-.qd-views{flex:1;display:grid;min-height:0}
-.qd-view{grid-area:1/1;padding:24px 24px 26px;display:flex;flex-direction:column;gap:18px;opacity:0;visibility:hidden;transform:translateX(14px);transition:opacity .3s,transform .3s,visibility .3s;min-width:0}
-.qd-view.on{opacity:1;visibility:visible;transform:none}
-.qd-view h3{font-size:36px;font-weight:800;font-stretch:72%;text-transform:uppercase;line-height:.95}
-.qd-view p{color:var(--mut);font-size:15px;margin-top:-10px}
-.qd-chips{display:flex;flex-wrap:wrap;gap:7px}
-.qd-chip{all:unset;box-sizing:border-box;cursor:pointer;border:1.5px solid var(--rule);border-radius:3px;padding:9px 12px;font-size:14.5px;font-weight:500;transition:background .15s,color .15s,border-color .15s}
-.qd-chip:hover{border-color:var(--g3)}
-.qd-chip[aria-pressed="true"]{background:var(--g);border-color:var(--g);color:#fff}
-.qd-chip:focus-visible,.qd-add:focus-visible,.qd-go:focus-visible{outline:2px solid var(--g3);outline-offset:2px}
-.qd-add{all:unset;box-sizing:border-box;cursor:pointer;border:1.5px dashed rgba(16,26,21,.35);padding:20px;text-align:center;font-size:13px;color:var(--mut);display:grid;justify-items:center;gap:4px}
-.qd-add:hover{border-color:var(--g3)}
-.qd-add svg{width:24px;height:24px;color:var(--ink)}
-.qd-add b{font-weight:600;font-size:15px;color:var(--ink)}
-.qd-shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;min-height:92px}
-.qd-shots i{aspect-ratio:1;background:var(--bg);position:relative;overflow:hidden;animation:pop .25s ease-out}
-.qd-shots i::after{content:"";position:absolute;inset:18% 28%;border:1.5px solid var(--g3);background:repeating-linear-gradient(0deg,var(--g3) 0 2px,transparent 2px 7px)}
-@keyframes pop{from{transform:scale(.8);opacity:0}}
-.qd-ok{width:54px;height:54px;background:var(--y);display:grid;place-items:center}
-.qd-ok svg{width:26px;height:26px}
-.qd-list{border-top:1px solid var(--rule);font-size:15px;color:var(--mut)}
-.qd-list li{padding:12px 0;border-bottom:1px solid var(--rule)}
-.qd-go{all:unset;box-sizing:border-box;cursor:pointer;margin-top:auto;text-align:center;background:var(--y);border-radius:3px;padding:15px;font-weight:700}
-.qd-go:hover{background:var(--y2)}
+/* quote strip */
+.qs .box{background:var(--g2);color:#fff;border-radius:16px;display:grid;grid-template-columns:1.5fr repeat(3,minmax(0,1fr)) auto;align-items:center;padding:clamp(24px,3vw,32px) clamp(22px,2.6vw,36px)}
+.qs h2{font-size:clamp(26px,2.4vw,34px)}
+.qs .intro p{color:var(--on);font-size:14.5px;margin-top:10px;max-width:30ch}
+.qstep{border-left:1px solid var(--ld);padding:4px clamp(14px,1.8vw,26px);text-align:center;display:grid;justify-items:center;gap:6px}
+.qstep i{width:30px;height:30px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:14px}
+.qstep b{font-size:15.5px;font-weight:700;line-height:1.25;margin-top:4px}
+.qstep span{font-size:13px;color:var(--on);line-height:1.4}
+.qs .act{border-left:1px solid var(--ld);padding-left:clamp(14px,1.8vw,26px);display:grid;gap:8px;justify-items:center}
+.qs .act small{font-size:12.5px;color:var(--on)}
 
-/* gallery (kept) */
-.gal{display:grid;grid-template-columns:5fr 3fr 4fr;grid-template-rows:clamp(260px,23vw,420px) clamp(260px,23vw,420px);gap:16px;margin-top:clamp(28px,3vw,48px)}
-.gal figure{position:relative;border-radius:24px;overflow:hidden;background:#C9CAC2}
-.gal img{width:100%;height:100%;object-fit:cover;filter:saturate(.8)}
-.gal figure:nth-child(1){grid-row:span 2}
-.gal figure:nth-child(4){grid-column:span 2}
-.gal figcaption{position:absolute;left:14px;bottom:14px;background:#fff;border-radius:99px;padding:8px 16px;font-weight:600;font-size:15px}
-.gal .tag{border-radius:99px;right:14px;top:14px;padding:5px 12px}
+/* projects */
+.work{padding-block:clamp(48px,7svh,80px)}
+.work .w{display:grid;grid-template-columns:minmax(240px,300px) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:center}
+.gal{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:12px;height:clamp(240px,34svh,330px)}
+.gal figure{position:relative;border-radius:10px;overflow:hidden;background:#C9CAC2}
+.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,31,25,.85),rgba(7,31,25,0) 45%)}
+.gal figcaption{position:absolute;left:14px;right:14px;bottom:13px;z-index:1;color:#fff;font-size:13.5px;font-weight:600;display:flex;flex-wrap:wrap;align-items:center;gap:4px 7px;line-height:1.3}
+.gal figcaption svg{width:15px;height:15px;color:var(--y);flex:none}
+.gal figcaption .fill{color:#fff;background:rgba(255,216,47,.28);font-weight:500}
+.gal .tag{position:absolute;right:10px;top:10px;z-index:1}
 
-/* reviews */
-.rev{display:grid;grid-template-columns:7fr 5fr;gap:48px clamp(24px,4vw,64px);align-items:start}
-.pull .st{font-size:18px}
-.pull q{display:block;quotes:none;font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:clamp(52px,8.4vw,148px);line-height:.88;letter-spacing:-.012em;margin-top:clamp(16px,1.6vw,26px)}
-.pull cite{display:block;font-style:normal;font-weight:600;margin-top:clamp(16px,1.6vw,26px);font-size:18px}
-.rev-side{display:grid;gap:clamp(28px,3vw,44px)}
-.scores{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink)}
-.scores a{padding:16px 16px 18px 0;display:block}
-.scores a+a{border-left:1px solid var(--line);padding-left:20px}
-.scores b{display:block;font-weight:800;font-stretch:72%;font-size:clamp(56px,5.6vw,88px);line-height:.9}
-.scores span{display:block;font-size:15.5px;margin-top:6px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
-.scores a:hover span{text-decoration-color:currentColor}
-.more li{padding:16px 0;border-top:1px solid var(--line)}
-.more q{quotes:none;font-size:clamp(20px,1.6vw,24px);font-weight:500;line-height:1.22;display:block}
-.more cite{font-style:normal;color:var(--mut);font-size:15px;display:block;margin-top:6px}
+/* testimonials */
+.tm{padding-block:clamp(44px,6svh,72px);border-top:1px solid var(--line)}
+.tm .w{display:grid;grid-template-columns:minmax(240px,300px) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:center}
+.score{margin-top:16px;display:grid;gap:6px;font-size:14px;color:var(--mut)}
+.score a{display:flex;gap:8px;align-items:center}
+.score a b{color:var(--ink);font-weight:700}
+.score a:hover span{text-decoration:underline;text-underline-offset:3px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.card q{quotes:"\201C" "\201D";font-size:16.5px;font-weight:500;line-height:1.45}
+.who{margin-top:auto;display:flex;gap:12px;align-items:center}
+.av{width:40px;height:40px;border-radius:50%;background:var(--g2);color:var(--y);display:grid;place-items:center;font-weight:800;font-size:14px;flex:none}
+.who b{display:block;font-size:14.5px}
+.who small{display:block;font-size:12.5px;color:var(--mut)}
 
-/* why + about */
-.band{background:var(--g);color:#fff;margin-top:var(--sec);padding-block:clamp(56px,7vw,120px)}
-.band .grid{display:grid;grid-template-columns:6fr 6fr;gap:40px clamp(24px,4vw,64px)}
-.band h2 em{font-style:normal;color:var(--y);display:block}
-.why li{padding:clamp(13px,1.2vw,18px) 0;border-top:1px solid var(--ld);font-size:clamp(20px,1.8vw,27px);font-weight:500;line-height:1.2}
-.why li:last-child{border-bottom:1px solid var(--ld)}
-.about{display:grid;grid-template-columns:5fr 7fr;gap:32px clamp(24px,4vw,64px)}
-.about .say p{font-size:clamp(20px,1.7vw,26px);line-height:1.32;max-width:34em}
-.about .say p+p{color:var(--mut);margin-top:16px;font-size:clamp(17px,1.3vw,19px)}
-.facts{display:grid;grid-template-columns:clamp(110px,12vw,170px) minmax(0,1fr);margin-top:clamp(28px,3vw,44px);border-bottom:1px solid var(--line)}
-.facts dt,.facts dd{padding:13px 0;border-top:1px solid var(--line)}
-.facts dt{color:var(--mut);font-size:15px}
-.facts dd{font-weight:500}
-
-/* area with real map */
-.area{display:grid;grid-template-columns:4fr 8fr;gap:32px clamp(24px,4vw,64px);align-items:stretch}
-.area h2{font-size:clamp(44px,5vw,84px)}
-.area p.l{color:var(--mut);margin-top:20px;max-width:40ch}
-.tw{margin-top:clamp(24px,2.4vw,36px);border-top:2px solid var(--ink)}
-.tw li{padding:10px 0;border-bottom:1px solid var(--line);font-weight:600;display:flex;justify-content:space-between;gap:12px;font-size:18px}
-.tw li span{font-weight:500;color:var(--mut);font-size:15px}
-.area .note{color:var(--mut);font-size:15.5px;margin-top:14px}
-.mapwrap{position:relative;margin-right:calc(var(--gut)*-1);min-height:clamp(420px,46vw,820px);background:#DDE3DB}
-#map{position:absolute;inset:0}
-.mapfall{position:absolute;left:16px;bottom:16px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
-.mk{position:relative;width:12px;height:12px;pointer-events:none}
-.mk i{display:block;width:12px;height:12px;background:var(--g);border:2px solid #fff;box-shadow:0 0 0 1px var(--g)}
-.mk span{position:absolute;left:calc(100% + 6px);top:50%;transform:translateY(-50%);font:600 14px/1 Archivo,sans-serif;color:var(--ink);white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 6px #fff}
+/* service area */
+.area{background:var(--g);color:#fff;padding-block:clamp(44px,6svh,72px);overflow:hidden}
+.area .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr) minmax(0,.9fr);gap:clamp(20px,3vw,48px);align-items:center}
+.area .sub{color:var(--on)}
+.area .btn{margin-top:26px;min-height:48px}
+.mapbox{position:relative;height:clamp(320px,46svh,440px)}
+#map{position:absolute;inset:0;-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent 100%);mask-image:radial-gradient(closest-side,#000 72%,transparent 100%)}
+.attr{position:absolute;right:0;bottom:-4px;font-size:10.5px;color:rgba(255,255,255,.5)}
+.attr a{text-decoration:underline;text-underline-offset:2px}
+.mapfall{position:absolute;inset:auto 0 50% 0;text-align:center;font-weight:600;text-decoration:underline}
+.mk{position:relative;width:10px;height:10px;pointer-events:none}
+.mk i{display:block;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--g)}
+.mk span{position:absolute;left:calc(100% + 6px);top:50%;transform:translateY(-50%);font:600 12.5px/1 Inter,sans-serif;color:#fff;white-space:nowrap;text-shadow:0 0 4px var(--g),0 0 4px var(--g),0 0 8px var(--g)}
 .mk.left span{left:auto;right:calc(100% + 6px)}
-.mk.below span{left:2px;top:calc(100% + 6px);transform:none}
-.mk.up span{left:2px;top:auto;bottom:calc(100% + 5px);transform:none}
-.mk.home{width:18px;height:18px}
-.mk.home i{width:18px;height:18px;background:var(--y);box-shadow:0 0 0 2px var(--g)}
-.mk.home span{font-weight:800;font-stretch:80%;font-size:18px;left:calc(100% + 8px)}
-.maplibregl-ctrl-attrib{font:11px Archivo,sans-serif}
-.maplibregl-ctrl-group{border-radius:3px!important;box-shadow:none!important;border:1px solid var(--line)}
+.mk.below span{left:auto;right:calc(100% + 4px);top:calc(100% + 3px);transform:none}
+.mk.up span{left:2px;top:auto;bottom:calc(100% + 4px);transform:none}
+.mk.home{width:26px;height:34px}
+.mk.home i{width:26px;height:34px;border:0;border-radius:0;background:none}
+.mk.home svg{width:26px;height:34px}
+.mk.home span{font-size:16px;font-weight:800;left:calc(100% + 6px);top:58%}
+.towns h3{font-size:20px;font-weight:800;color:var(--y);letter-spacing:-.01em}
+.towns ul{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:18px}
+.towns li{display:flex;gap:9px;align-items:baseline;font-size:15px}
+.towns li svg{transform:translateY(2px)}
+.towns li small{display:block}
+.towns li svg{width:15px;height:15px;color:var(--y);flex:none}
+.towns li small{color:var(--on);font-size:12px}
+.towns p{margin-top:16px;color:var(--on);font-size:14px}
 
-/* faq */
-.faq{display:grid;grid-template-columns:5fr 7fr;gap:32px clamp(24px,4vw,64px);align-items:start}
-.faq h2{font-size:clamp(40px,4.6vw,76px)}
-.faq .lead{margin-top:20px;color:var(--mut)}
-.faq .lead b{color:var(--ink);font-weight:700;white-space:nowrap}
-.fl{border-top:2px solid var(--ink)}
+/* about + faq */
+.af{padding-block:clamp(48px,7svh,80px)}
+.af .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,80px);align-items:start}
+.af h2{font-size:clamp(28px,2.6vw,36px)}
+.about p{font-size:17px;line-height:1.55;margin-top:16px;max-width:48ch}
+.about p.q{color:var(--mut);font-size:15.5px;margin-top:10px}
+.facts{display:grid;grid-template-columns:110px minmax(0,1fr);margin-top:22px;border-bottom:1px solid var(--line)}
+.facts dt,.facts dd{padding:10px 0;border-top:1px solid var(--line);font-size:14.5px}
+.facts dt{color:var(--mut)}
+.facts dd{font-weight:500}
+.fl{margin-top:18px;border-top:1px solid var(--line)}
 .fl details{border-bottom:1px solid var(--line)}
-.fl summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font-size:clamp(19px,1.6vw,24px);font-weight:600;line-height:1.2}
+.fl summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 0;font-size:16.5px;font-weight:600;line-height:1.3}
 .fl summary::-webkit-details-marker{display:none}
-.fl summary i{flex:none;width:18px;height:18px;position:relative}
-.fl summary i::before,.fl summary i::after{content:"";position:absolute;left:50%;top:50%;width:16px;height:2px;background:var(--ink);transform:translate(-50%,-50%)}
+.fl summary i{flex:none;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid var(--line);position:relative}
+.fl summary i::before,.fl summary i::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.6px;background:var(--ink);transform:translate(-50%,-50%)}
 .fl summary i::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .25s var(--ease)}
 .fl details[open] summary i::after{transform:translate(-50%,-50%) rotate(0)}
-.fl details p{color:var(--mut);padding-bottom:22px;max-width:62ch}
+.fl details p{color:var(--mut);padding-bottom:16px;max-width:60ch;font-size:15px}
+.faq .q2{color:var(--mut);font-size:15px;margin-top:10px}
+.faq .q2 b{color:var(--ink);white-space:nowrap}
 
-/* close + footer */
-.final{background:var(--g);color:#fff;margin-top:var(--sec);padding-block:clamp(48px,6vw,104px) 0}
-.final h2{font-size:10.95vw;line-height:.86;font-stretch:66%;white-space:nowrap;letter-spacing:-.018em}
-.final h2 em{font-style:normal;color:var(--y)}
-.fbar{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;justify-content:space-between;margin-top:clamp(28px,3vw,48px);padding-bottom:clamp(36px,4vw,64px);border-bottom:1px solid var(--ld)}
-.fbar p{color:var(--on);font-size:18px;max-width:40ch}
-.fbar .act{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
-.fbar .tl{font-weight:700;font-size:clamp(24px,2.2vw,32px);font-stretch:85%;border-bottom:2px solid var(--y);line-height:1.2}
-.ftr{display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr;gap:32px clamp(24px,4vw,64px);padding-block:clamp(32px,3.4vw,52px);font-size:16px;color:var(--on)}
-.ftr h3{font:600 14px/1.3 Archivo,sans-serif;color:#fff;margin-bottom:10px}
-.ftr li{margin-top:4px}
-.ftr a:hover,.ftr .as:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
-.ftr .as{all:unset;cursor:pointer}
-.ftr .as:focus-visible{outline:2px solid var(--y);outline-offset:3px}
-.ftr .brand{color:#fff}
-.ftr address{margin-top:14px}
-.ftr .fill{color:var(--ink)}
-.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 28px;font-size:13.5px;color:var(--on);border-top:1px solid var(--ld);padding-block:18px}
-.legal .fill{color:var(--ink)}
+/* footer */
+.ftr{background:var(--g);color:#fff}
+.ftr .top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px;padding-block:32px}
+.ftr nav{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:14px;font-weight:500;color:rgba(255,255,255,.88)}
+.ftr nav a:hover,.ftr .cnt a:hover,.ftr .soc a:hover{color:var(--y)}
+.ftr .sep{width:1px;align-self:stretch;background:var(--ld)}
+.ftr .cnt{display:grid;gap:8px;font-size:14px}
+.ftr .cnt a{display:flex;gap:10px;align-items:center}
+.ftr .cnt svg{width:16px;height:16px;color:var(--y);flex:none}
+.ftr .soc{display:grid;gap:6px;font-size:13.5px;color:rgba(255,255,255,.88)}
+.ftr .soc b{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--on);font-weight:600}
+.ftr .soc div{display:flex;gap:16px;flex-wrap:wrap}
+.legal{border-top:1px solid var(--ld);padding-block:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:12.5px;color:var(--on)}
+.legal .hrs{display:flex;gap:6px 18px;flex-wrap:wrap}
 .mbar{display:none}
 
 /* job request */
@@ -330,529 +314,292 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .demo-note{margin-top:24px;font-size:14px;color:var(--muted)}
 
 
-.jr h2{font-weight:800;font-stretch:72%;text-transform:uppercase}
-.jr-h b{font-weight:700;font-stretch:80%;font-size:21px}
-.jr-x,.jr .chip,.urg button,.jr input,.jr select,.jr textarea,.drop-zone,.tipbox,.emerg,.thumb{border-radius:3px!important}
+.jr h2{font-weight:800;letter-spacing:-.03em}
+.jr-h b{font-weight:800;font-family:Inter,sans-serif;letter-spacing:-.01em}
 .jr-fill{font-family:inherit}
-.emerg .num{font-weight:800;font-stretch:72%}
-.done-ic{border-radius:0}
-
-/* reveal */
-.js [data-r]{opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
-.js [data-r].in{opacity:1;transform:none}
+.emerg .num{font-weight:800;letter-spacing:-.03em}
 
 /* responsive */
-@media (max-width:1240px){
+@media (max-width:1180px){
   .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--g);padding:6px var(--gut) 14px;display:none;border-top:1px solid var(--ld)}
   .nav.open{display:flex}
-  .nav a{padding:13px 0;border-bottom:1px solid var(--ld);background:none;font-size:18px}
+  .nav a{padding:13px 0;border-bottom:1px solid var(--ld);font-size:17px}
+  .nav a::after{display:none}
   .nav a:last-child{border:0}
   .menu{display:inline-flex}
   .hr{margin-left:auto}
+  .qs .box{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px;align-items:start}
+  .qs .intro{grid-column:1/-1}
+  .qs .act{grid-column:1/-1;border-left:0;padding-left:0;justify-items:start;grid-auto-flow:column;align-items:center;justify-content:start;gap:16px}
+  .qstep:nth-child(2){border-left:0}
 }
-@media (max-width:780px){
-  .hr .tl{display:none}
+@media (max-width:980px){
+  .svc .w,.work .w,.tm .w,.af .w{grid-template-columns:minmax(0,1fr)}
+  .cards{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .cards .card:last-child{grid-column:1/-1}
+  .area .w{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .area .w>.mapbox{grid-column:1/-1;grid-row:2}
 }
-@media (max-width:900px){
-  .hrow{grid-template-columns:minmax(0,1fr)}
-  .hphoto{margin-left:calc(var(--gut)*-1);margin-bottom:0;height:62vw}
-  .hero::after{display:none}
-  .sv-head{margin-top:0;grid-template-columns:minmax(0,1fr)}
-  .sv-head .lead{grid-column:1}
-  .row{grid-template-columns:minmax(0,1fr) auto}
-  .row h3{grid-column:1/-1}
-  .quote{grid-template-columns:minmax(0,1fr)}
-  .quote .copy{padding-bottom:0}
-  .qd-col{margin-right:0}
-  .qd-phone{width:min(380px,100%)}
-  .rev,.band .grid,.about,.area,.faq{grid-template-columns:minmax(0,1fr)}
-  .mapwrap{margin-left:calc(var(--gut)*-1);min-height:440px}
-  .ftr{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .ftr>:first-child{grid-column:1/-1}
+@media (max-width:860px){
+  .hphoto{position:relative;width:auto;height:clamp(240px,52vw,380px)}
+  .hphoto::after{background:linear-gradient(180deg,var(--g) 0%,rgba(7,31,25,0) 30%)}
+  .slash{display:none}
+  .hero .tag{right:12px;bottom:12px}
+  .hphoto img{object-position:30% 30%}
+  .hero{display:flex;flex-direction:column-reverse}
+  .hin{padding-bottom:28px}
 }
+@media (max-width:780px){.hr .tl{display:none}}
 @media (max-width:640px){
-  body{font-size:16px;padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
-  html{scroll-padding-top:76px}
+  body{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+  html{scroll-padding-top:72px}
   .hdr .w{height:64px}
   .hr{display:none}
   .menu{margin-left:auto}
-  .brand b{font-size:22px}
-  .brand svg{width:28px;height:28px}
-  h1{font-size:20vw;white-space:normal;line-height:.88}
-  .final h2{font-size:16.6vw;white-space:normal}
-  .final h2 em{display:block}
-  .hactions .btn{flex:1 1 100%}
-  .row{grid-template-columns:minmax(0,1fr);padding-block:20px}
-  .row .go{justify-self:start;margin-top:4px}
-  .ctas .btn{flex:1 1 100%}
-  .gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:auto;gap:10px}
-  .gal figure{height:190px;border-radius:16px}
-  .gal figure:nth-child(1),.gal figure:nth-child(4){grid-column:1/-1;grid-row:auto;height:240px}
-  .gal figcaption{left:10px;bottom:10px;padding:6px 12px;font-size:13px;width:fit-content;max-width:calc(100% - 20px)}
-  .gal .tag{right:10px;top:10px}
-  .gal figure:nth-child(2) .tag,.gal figure:nth-child(3) .tag{display:none}
-  .facts{grid-template-columns:minmax(0,1fr)}
-  .facts dt{padding-bottom:0}
-  .facts dd{border-top:0;padding-top:2px}
-  .fbar .btn{flex:1 1 100%}
-  .ftr{grid-template-columns:minmax(0,1fr)}
+  .brand b{font-size:19px}
+  .brand svg{width:30px;height:30px}
+  h1{font-size:clamp(40px,12.2vw,56px)}
+  .pill{font-size:10.5px;letter-spacing:.08em}
+  .pl{display:none}
+  .scroller{grid-auto-columns:minmax(64%,1fr)}
+  .sv:first-child{border-left:0;padding-left:0}
+  .hctas .btn{flex:1 1 100%}
+  .trust>*{padding:0 16px}
+  .trust b{font-size:18px}
+  .snext{display:none}
+  .sv{padding-inline:18px}
+  .qs .w{padding-inline:0}
+  .qs .box{border-radius:0;grid-template-columns:minmax(0,1fr);padding:32px var(--gut)}
+  .qstep{border-left:0;border-top:1px solid var(--ld);padding:14px 0 0;grid-template-columns:30px minmax(0,1fr);justify-items:start;text-align:left;column-gap:14px;row-gap:2px}
+  .qstep i{grid-row:span 2}
+  .qstep b{margin-top:0}
+  .qs .act{grid-auto-flow:row;justify-items:stretch}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr));height:auto}
+  .gal figure{height:190px}
+  .gal figure:first-child{grid-column:1/-1;height:220px}
+  .gal figure:not(:first-child) .tag{display:none}
+  .gal figcaption{left:10px;right:10px;bottom:9px;font-size:12.5px}
+  .srow{padding-right:0}
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .area .w{grid-template-columns:minmax(0,1fr)}
+  .area .w>.mapbox{grid-row:auto;height:320px}
+  .facts{grid-template-columns:92px minmax(0,1fr)}
+  .ftr .top{flex-direction:column;align-items:flex-start}
+  .ftr .sep{display:none}
   .urg,.row2{grid-template-columns:minmax(0,1fr)}
   .next div{grid-template-columns:minmax(0,1fr);gap:4px}
   .jr-f .btn-glow{min-width:0;flex:1}
-  .mbar{display:grid;grid-template-columns:1fr 1.5fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
-  .mbar .btn{min-height:50px;padding:0 12px;font-size:16px}
+  .mbar{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+  .mbar .btn{min-height:50px;padding:0 18px}
   .mbar .btn-ink{color:var(--g)}
 }
-@media (max-width:640px){
-  .mbar{grid-template-columns:auto minmax(0,1fr)}
-  .mbar .btn{padding:0 16px}
-}
 @media (max-width:360px){
-  .brand{gap:8px}
-  .brand b{font-size:19px}
-  .brand svg{width:24px;height:24px}
-}
-/* ---- every section fits one screen ---- */
-:root{--hh:76px;--draft:0px;--avail:calc(100svh - var(--hh))}
-.hero{min-height:calc(var(--avail) - var(--draft));display:flex;flex-direction:column}
-.hero>.w{flex:1;display:flex;flex-direction:column;min-height:0}
-.hero::after{display:none}
-.hrow{flex:1;min-height:0}
-.hphoto img{position:absolute;inset:0}
-@media (min-width:901px){
-  h1{font-size:min(13.25vw,24svh)}
-  .hrow{align-items:stretch;margin-top:clamp(16px,3svh,48px)}
-  .hrow>div:first-child{padding-bottom:clamp(16px,3svh,40px)}
-  .hphoto{height:auto;margin-bottom:0;min-height:0}
-  .hactions{margin-top:clamp(14px,2.4svh,32px)}
-  .hmeta{margin-top:clamp(12px,2.2svh,34px)}
-
-  #services,.quote,#work,#reviews,.band,#about,#locations,#faq,.final{min-height:var(--avail);scroll-snap-align:start;margin-top:0}
-  #services,#work{display:flex;flex-direction:column;justify-content:center}
-  #reviews,#about,#faq,.band{display:grid;align-content:center;padding-block:clamp(20px,4svh,64px)}
-  .band .grid{align-items:center}
-
-  #services{padding-block:clamp(16px,3svh,48px)}
-  .sv-head{margin-top:0;padding-top:0;gap:clamp(6px,1.2svh,18px)}
-  .sv-head h2{font-size:min(5.1vw,9.5svh)}
-  .sv-head .lead{grid-column:1/-1;max-width:none;font-size:clamp(16px,2.1svh,20px)}
-  .list{margin-top:clamp(12px,2.2svh,36px)}
-  .row{grid-template-columns:4.4fr 6fr 1.6fr;padding-block:clamp(6px,1.35svh,24px)}
-  .row h3{font-size:min(2.7vw,4.7svh)}
-  .row p{max-width:none;font-size:clamp(15px,1.85svh,17px);line-height:1.4}
-
-  .quote{padding-top:clamp(20px,4svh,72px);align-items:end}
-  .quote .copy{padding-bottom:clamp(16px,3.4svh,64px);align-self:center}
-  .quote h2{font-size:min(5.6vw,8.6svh)}
-  .quote .lead{margin-top:clamp(8px,1.6svh,24px);font-size:clamp(16px,2.1svh,20px)}
-  .steps{margin-top:clamp(10px,2svh,36px)}
-  .qd-step{padding-block:clamp(7px,1.3svh,16px)}
-  .qd-step b{font-size:clamp(17px,2.2svh,22px)}
-  .qd-step .t{font-size:clamp(15px,1.9svh,17px)}
-  .ctas{margin-top:clamp(12px,2.2svh,28px)}
-  .qd-note{margin-top:clamp(6px,1svh,12px)}
-  .qd-screen{height:min(640px,calc(var(--avail) - clamp(20px,4svh,72px) - 11px))}
-  .qd-top{padding-top:clamp(20px,3.6svh,40px)}
-
-  #work{height:var(--avail);padding-block:clamp(16px,3svh,48px)}
-  #work h2{font-size:min(6.4vw,10svh);flex:none}
-  .gal{flex:1;min-height:0;grid-template-rows:repeat(2,minmax(0,1fr));margin-top:clamp(12px,2.4svh,40px)}
-  .gal img{position:absolute;inset:0}
-
-  .pull q{font-size:min(8.4vw,15svh)}
-  .band h2,#about h2{font-size:min(6.4vw,11svh)}
-  .why li{font-size:clamp(18px,2.8svh,27px);padding-block:clamp(9px,1.6svh,18px)}
-  .facts{margin-top:clamp(14px,3svh,44px)}
-  .facts dt,.facts dd{padding-block:clamp(8px,1.4svh,13px)}
-
-  #locations{padding-top:0;align-items:stretch}
-  #locations>div:first-child{align-self:center;padding-block:clamp(16px,3svh,48px)}
-  .area h2{font-size:min(4.6vw,8.2svh)}
-  .area p.l{margin-top:clamp(8px,1.6svh,20px)}
-  .tw{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;margin-top:clamp(12px,2.2svh,36px)}
-  .tw li:first-child{grid-column:1/-1}
-  .tw li{padding-block:clamp(6px,1.1svh,10px);font-size:clamp(16px,2svh,18px)}
-  .area .note{margin-top:clamp(8px,1.4svh,14px)}
-  .mapwrap{min-height:0;height:auto}
-
-  .faq{align-items:center}
-  .faq h2{font-size:min(4.6vw,8.6svh)}
-  .fl summary{padding-block:clamp(12px,2.1svh,20px)}
-
-  .final{display:flex;flex-direction:column;justify-content:center;padding-block:clamp(20px,4svh,64px) 0}
-  .final>.w{width:100%}
-  .final h2{font-size:min(10.95vw,20svh)}
-  .fbar{margin-top:clamp(14px,3svh,48px);padding-bottom:clamp(14px,3svh,64px)}
-  .ftr{padding-block:clamp(14px,3svh,52px)}
-}
-@media (min-width:901px) and (min-height:600px) and (prefers-reduced-motion:no-preference){
-  html{scroll-snap-type:y proximity}
-}
-@media (max-width:900px){
-  .hrow{display:flex;flex-direction:column;align-items:stretch;gap:clamp(16px,3svh,32px);margin-top:clamp(16px,2.6svh,32px)}
-  .hphoto{flex:1 1 0;height:auto;min-height:140px}
-  .qd-screen{height:min(640px,calc(var(--avail) - 40px))}
-  .mapwrap{min-height:0;height:min(calc(var(--avail) - 60px),560px)}
-}
-@media (max-width:640px){
-  :root{--hh:64px;--avail:calc(100svh - var(--hh) - 74px)}
-  /* the call and quote buttons are always in the bottom bar */
-  .hactions{display:none}
-  h1{font-size:min(20vw,10.5svh)}
-  .hmeta{margin-top:12px;font-size:14.5px}
-  .hphoto{min-height:120px}
-}
-@media (min-width:641px) and (max-width:900px){
-  .quote{grid-template-columns:minmax(0,1fr) 300px;gap:32px;margin-top:0}
-  .quote .copy{padding-bottom:32px;align-self:center}
-  .quote h2{font-size:clamp(40px,6.4vw,56px)}
-  .qd-col{margin:0}
-  .qd-view{padding-inline:18px}
-  .qd-top{padding-inline:18px}
-  .qd-view h3{font-size:30px}
-  #locations{grid-template-columns:5fr 7fr;align-items:stretch}
-  .area h2{font-size:clamp(36px,5.6vw,48px)}
-  .tw{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
-  .tw li:first-child{grid-column:1/-1}
-  .mapwrap{margin-left:0;height:auto;min-height:420px}
-  .sv-head{padding-top:24px}
-  .list{margin-top:16px}
-  .row{padding-block:9px;gap:4px 24px}
-  .row h3{font-size:30px}
-  .row p{font-size:15.5px;line-height:1.38}
-}
-@media (max-width:640px){
-  :root{--sec:48px}
-  /* the real form is one tap away in the bottom bar, so a phone drawn on a phone only adds length */
-  .qd-col,.qd-note{display:none}
-  .quote{padding-block:40px;margin-top:0}
-  .quote .copy{padding-bottom:0}
-  .quote .ctas{margin-top:20px}
-  .qd-step{cursor:default;pointer-events:none}
-  .qd-step .n{opacity:1}
-  .gal figure{height:19svh}
-  .gal figure:nth-child(1),.gal figure:nth-child(4){height:24svh}
-  .gal img{position:absolute;inset:0}
-  .pull q{font-size:min(14vw,8svh)}
-  .band{margin-top:48px;padding-block:40px}
-  .facts{grid-template-columns:92px minmax(0,1fr)}
-  .facts dt{padding-bottom:9px;padding-top:9px;border-top:1px solid var(--line)}
-  .facts dd{border-top:1px solid var(--line);padding-block:9px;font-size:15px}
-  .about .say p{font-size:18px}
-  .tw{display:grid;grid-template-columns:1fr 1fr;column-gap:16px;margin-top:16px}
-  .tw li:first-child{grid-column:1/-1}
-  .tw li{padding-block:8px;font-size:16px}
-  .area{gap:16px}
-  .area h2{font-size:min(11vw,6svh)}
-  .area p.l{margin-top:12px;font-size:15.5px}
-  .area .note{margin-top:8px}
-  .mapwrap{height:max(240px,calc(var(--avail) - 400px));min-height:0}
-  .final{margin-top:48px;padding-top:36px}
-  .fbar .act{display:none}
-  .fbar{margin-top:16px;padding-bottom:20px}
-  .fbar p{font-size:16px}
-  .ftr{grid-template-columns:1fr 1fr;gap:20px 16px;padding-block:20px;font-size:15px}
-  .ftr>:nth-child(1),.ftr>:nth-child(2){grid-column:1/-1}
-  .ftr address{margin-top:8px}
-}
-@media (max-width:640px){
-  .quote{padding-block:28px}
-  .quote h2{font-size:min(11.4vw,6.2svh)}
-  .quote .lead{margin-top:10px;font-size:16.5px}
-  .steps{margin-top:16px}
-  .qd-step{padding-block:9px}
-  .quote .ctas{margin-top:14px;gap:6px 14px}
-  /* towns read as one compact line; the map shows where they are */
-  .tw{display:flex;flex-wrap:wrap;gap:4px 0;border-top:0;margin-top:12px}
-  .tw li{display:inline;padding:0;border:0;font-size:15.5px}
-  .tw li:not(:last-child)::after{content:"·";margin:0 7px;color:var(--mut);font-weight:500}
-  .tw li span{font-size:14px;margin-left:5px}
-  .tw li:first-child{grid-column:auto}
-  .mapwrap{height:max(250px,calc(var(--avail) - 372px))}
-  .mk.below span{left:auto;right:calc(100% + 6px);top:calc(100% + 2px)}
-  .mk span{font-size:13px}
-  .mk.home span{font-size:16px}
-}
-/* ---- type scale: smaller display sizes, normal spacing ---- */
-h1{padding-top:0;white-space:nowrap;line-height:.92;font-stretch:68%;letter-spacing:-.01em}
-.htext .lead{margin-top:clamp(16px,2.4svh,28px)}
-@media (min-width:901px){
-  h1{font-size:min(6vw,13svh)}
-  .hrow{grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-top:0}
-  .hrow>.htext{align-self:center;padding-block:clamp(24px,4svh,56px)}
-  .lead{font-size:clamp(17px,1.3vw,20px)}
-  .hactions{margin-top:clamp(20px,3svh,36px)}
-  .hmeta{margin-top:clamp(16px,2.4svh,28px)}
-
-  .sv-head h2,.quote h2,#work h2,.band h2,#about h2,.area h2,.faq h2{font-size:min(3.6vw,7.4svh);line-height:.98}
-  #services{padding-block:clamp(16px,3.6svh,72px)}
-  .sv-head{gap:clamp(8px,1.4svh,16px)}
-  .sv-head .lead{font-size:clamp(16px,1.2vw,18px)}
-  .list{margin-top:clamp(20px,3.4svh,40px)}
-  .row{grid-template-columns:4fr 6.4fr 1.6fr;padding-block:clamp(8px,1.6svh,24px)}
-  .row h3{font-size:min(2.1vw,4svh);line-height:1}
-  .row p{font-size:16px;line-height:1.45}
-  .row .go{font-size:15.5px}
-
-  .quote{padding-top:clamp(28px,5.5svh,80px)}
-  .quote .copy{padding-bottom:clamp(24px,5svh,72px)}
-  .quote .lead{margin-top:clamp(12px,2svh,20px);font-size:clamp(16px,1.25vw,19px)}
-  .steps{margin-top:clamp(16px,3svh,36px)}
-  .qd-step{padding-block:clamp(9px,1.6svh,16px);grid-template-columns:56px minmax(0,1fr)}
-  .qd-step .n{font-size:30px}
-  .qd-step b{font-size:18px}
-  .qd-step .t{font-size:16px}
-  .qd-screen{height:min(620px,calc(var(--avail) - clamp(28px,5.5svh,80px) - 11px))}
-  .qd-view h3{font-size:30px}
-
-  #work{padding-block:clamp(24px,4.5svh,64px)}
-  .gal{margin-top:clamp(16px,3svh,36px)}
-
-  .pull q{font-size:min(4.8vw,10svh);line-height:.96}
-  .pull cite{font-size:17px}
-  .scores b{font-size:min(3.8vw,8svh)}
-  .more q{font-size:clamp(18px,1.4vw,21px)}
-
-  .why li{font-size:clamp(18px,1.5vw,22px);padding-block:clamp(11px,1.9svh,18px)}
-  .about .say p{font-size:clamp(18px,1.4vw,21px)}
-  .about .say p+p{font-size:17px}
-
-  .area p.l{font-size:16.5px;margin-top:clamp(12px,2svh,20px)}
-  .tw{margin-top:clamp(16px,2.8svh,32px)}
-  .tw li{padding-block:clamp(8px,1.3svh,11px);font-size:17px}
-
-  .fl summary{font-size:clamp(17px,1.35vw,20px);padding-block:clamp(14px,2.3svh,20px)}
-  .faq .lead{margin-top:16px}
-
-  .final h2{font-size:min(6.2vw,13svh);line-height:.94}
-  .fbar p{font-size:17px}
-  .fbar .tl,.hactions .tl{font-size:clamp(20px,1.6vw,24px)}
-}
-@media (min-width:641px) and (max-width:900px){
-  h1{font-size:9vw}
-  .sv-head h2,.quote h2,#work h2,.band h2,#about h2,.area h2,.faq h2{font-size:clamp(32px,5vw,42px);line-height:1}
-  .lead{font-size:17px}
-  .row{padding-block:14px}
-  .row h3{font-size:26px}
-  .row p{font-size:16px}
-  .sv-head{padding-top:40px}
-  .list{margin-top:24px}
-  .pull q{font-size:7.4vw;line-height:.96}
-  .scores b{font-size:52px}
-  .why li{font-size:19px}
-  .about .say p{font-size:18px}
-  .final h2{font-size:9.6vw}
-  .fl summary{font-size:18px}
-}
-@media (max-width:640px){
-  h1{font-size:12.4vw}
-  .htext .lead{font-size:16.5px}
-  .hactions{display:flex;margin-top:18px;gap:10px 18px}
-  .hactions .btn{flex:0 0 auto;min-height:50px;padding:0 20px;font-size:16px}
-  .hactions .tl{font-size:20px}
-  .sv-head h2,.quote h2,#work h2,.band h2,#about h2,.area h2,.faq h2{font-size:clamp(28px,8.4vw,36px);line-height:1}
-  .row h3{font-size:25px}
-  .row p{font-size:15.5px}
-  .row{padding-block:16px}
-  .pull q{font-size:10.5vw;line-height:.96}
-  .scores b{font-size:44px}
-  .more q{font-size:18px}
-  .why li{font-size:17px}
-  .about .say p{font-size:17px}
-  .fl summary{font-size:17px;padding-block:16px}
-  .final{padding-top:28px}
-  .final h2{font-size:12.4vw;line-height:.96}
-  .fbar{margin-top:12px;padding-bottom:14px}
-  .fbar .act{margin-top:2px}
-  .ftr{padding-block:14px;gap:14px 16px}
-  .legal{padding-block:12px}
-  .fbar .act{display:flex}
-  .fbar .btn{flex:0 0 auto;min-height:50px;padding:0 20px;font-size:16px}
-  .fbar .tl{font-size:20px}
-}
-@media (max-width:350px){
-  h1{font-size:11.4vw}
+  .brand small{letter-spacing:.24em}
+  .trust>*{padding:0 12px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
-  .js [data-r]{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="p" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="9" y="5" width="30" height="38" rx="2"/><path d="M24 9v30M14 13h6M14 19h6M14 25h6M14 31h6M28 13h6M28 19h6M28 25h6M28 31h6"/></g></symbol>
+<symbol id="e" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="10" y="5" width="18" height="34" rx="2"/><path d="M6 43h26M20 13l-4 7h6l-4 7M28 20h6a4 4 0 0 1 4 4v10a3 3 0 0 0 6 0V18l-4-4"/></g></symbol>
+<symbol id="h" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M6 22L24 7l18 15M11 18v24h26V18M19 42V30h10v12"/></g></symbol>
+<symbol id="l" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M24 4v8M14 12h20l4 12H10zM20 24a4 4 0 0 0 8 0M24 33v4M14 31l-2 4M34 31l2 4"/></g></symbol>
+<symbol id="g" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="5" y="14" width="38" height="24" rx="2"/><path d="M10 38v4M38 38v4M10 20h12M10 25h12M10 30h12"/><circle cx="33" cy="26" r="5"/></g></symbol>
+<symbol id="m" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M30 6a10 10 0 0 0-9 14L7 34a4 4 0 0 0 6 6l14-14a10 10 0 0 0 14-9l-6 6-6-2-2-6z"/></g></symbol>
 <symbol id="a" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
-<symbol id="c" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+<symbol id="c" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.6"/></symbol>
 <symbol id="t" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-<symbol id="cam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
-<symbol id="k" viewBox="0 0 40 40"><g fill="none" stroke-width="3.6"><path d="M20 3v13M4 17h32M10 25h20" stroke="currentColor"/><path d="M16 33h8" stroke="#FFC629"/></g></symbol>
+<symbol id="mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></g></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M12 22s7-7.2 7-12a7 7 0 0 0-14 0c0 4.8 7 12 7 12z" fill="currentColor"/><circle cx="12" cy="10" r="2.6" fill="#071F19"/></symbol>
+<symbol id="grid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></g></symbol>
+<symbol id="k" viewBox="0 0 40 40"><g fill="none" stroke-width="3.6"><path d="M20 3v13M4 17h32M10 25h20" stroke="currentColor"/><path d="M16 33h8" stroke="#FFD82F"/></g></symbol>
 <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
 <symbol id="i-cam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
 </defs></svg>
 
-<div class="draft" id="draft"><div class="w"><p><b>Draft for review</b>Highlighted text, sample photos and hours are placeholders until you confirm them.</p><button type="button" aria-label="Hide note" onclick="document.getElementById('draft').hidden=true">×</button></div></div>
+<div class="draft" id="draft"><div class="w"><p><b>Draft for review</b>Highlighted text and sample photos are placeholders until you confirm them.</p><button type="button" aria-label="Hide note" onclick="document.getElementById('draft').hidden=true">×</button></div></div>
 
 <header class="hdr dk" id="hdr"><div class="w">
-  <a class="brand" href="#top" aria-label="Solid Ground Electric home"><svg aria-hidden="true"><use href="#k"/></svg><b>Solid Ground <span>Electric</span></b></a>
-  <nav class="nav" id="nav" aria-label="Main"><a href="#services">Services</a><a href="#work">Projects</a><a href="#reviews">Reviews</a><a href="#about">About</a><a href="#locations">Locations</a><a href="#contact">Contact</a></nav>
-  <div class="hr"><a href="tel:+12077131857" class="tl" style="padding-block:12px">(207) 713-1857</a><button class="btn y" type="button" data-open>Request a quote</button></div>
+  <a class="brand" href="#top" aria-label="Solid Ground Electric home"><svg aria-hidden="true"><use href="#k"/></svg><span><b>Solid Ground</b><small>ELECTRIC</small></span></a>
+  <nav class="nav" id="nav" aria-label="Main"><a href="#top" aria-current="true">Home</a><a href="#services">Services</a><a href="#work">Projects</a><a href="#reviews">Reviews</a><a href="#about">About</a><a href="#locations">Service Area</a></nav>
+  <div class="hr"><a href="tel:+12077131857" class="tl">(207) 713-1857</a><button class="btn y" type="button" data-open>Get a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button></div>
   <button class="menu" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
 </div></header>
 
 <main id="top">
-<section class="hero dk">
+<section class="hero dk" id="home">
+  <div class="hphoto">
+    <img src="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=1600&q=78&auto=format" srcset="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=900&q=78&auto=format 900w,https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=1600&q=78&auto=format 1600w" sizes="(max-width:860px) 100vw,54vw" alt="Electrician in a hard hat and face shield testing an electrical panel (sample photo)" fetchpriority="high">
+    <span class="tag">Sample photo</span>
+  </div>
+  <div class="slash" aria-hidden="true"></div>
+  <div class="w hin">
+    <div class="htext">
+      <span class="pill"><svg aria-hidden="true"><use href="#c"/></svg>Licensed electrician<span class="pl"> · Lisbon Falls, Maine</span></span>
+      <h1><span>Electrical</span><span>work.</span><em>Done right.</em></h1>
+      <p class="hlead">Residential and commercial electrical services across Southern &amp; Central Maine. Reliable, code-compliant, quality workmanship.</p>
+      <div class="hctas">
+        <button class="btn y" type="button" data-open>Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button>
+        <a class="play" href="#work"><i><svg aria-hidden="true"><use href="#grid"/></svg></i>See our work</a>
+      </div>
+      <div class="trust">
+        <a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm"><b>5.0 <span class="st" aria-hidden="true">★★★★★</span></b><small>24 reviews on Angi</small></a>
+        <a href="https://share.google/AuNdjh7cpOlOxx9OF"><b>5.0 <span class="st" aria-hidden="true">★★★★★</span></b><small>on Google</small></a>
+        <a href="tel:+12077131857"><b>(207) 713-1857</b><small>Call or text</small></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="services">
   <div class="w">
-    <div class="hrow">
-      <div class="htext">
-        <h1><span>Electrical work.</span> <em>Done right.</em></h1>
-        <p class="lead">Residential and commercial electrical services across Southern &amp; Central Maine. Reliable, code-compliant, quality workmanship.</p>
-        <div class="hactions">
-          <button class="btn y" type="button" data-open>Request a quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button>
-          <a class="tl" href="tel:+12077131857">(207) 713-1857</a>
-        </div>
-        <p class="hmeta"><span class="st" aria-hidden="true">★★★★★</span><a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm">5.0 on Angi, 24 reviews</a><a href="https://share.google/AuNdjh7cpOlOxx9OF">5.0 on Google</a></p>
+    <div>
+      <span class="lab">Our services</span>
+      <h2>Complete Electrical Solutions</h2>
+      <p class="sub">Residential and commercial electrical work in Lewiston, Auburn, Brunswick, Portland, Augusta and nearby towns.</p>
+      <button class="lk" type="button" data-open><span>Request a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button>
+    </div>
+    <div class="srow">
+      <div class="scroller" id="scroller">
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#p"/></svg><h3>Panel Upgrades</h3><p>Older and undersized panels replaced, including fuse boxes, and 100-amp service upgraded to 200 amps.</p><button class="lk" type="button" data-open="Panel / breakers"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#e"/></svg><h3>EV Chargers</h3><p>Level 2 charger installation in your garage or driveway. Your panel gets checked first.</p><button class="lk" type="button" data-open="EV charger"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#h"/></svg><h3>Rewiring &amp; Updates</h3><p>Old wiring replaced and updates for older homes, kitchens, basements and additions.</p><button class="lk" type="button" data-open="New circuits / renovation"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#l"/></svg><h3>Lighting &amp; Outlets</h3><p>Fixtures, recessed lighting, ceiling fans, outlets and switches. Small jobs are welcome.</p><button class="lk" type="button" data-open="Lighting|Outlets &amp; switches"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#g"/></svg><h3>Generators &amp; Transfer Switches</h3><p>Portable generator hookups and transfer switches, so the essentials keep running in an outage.</p><button class="lk" type="button" data-open="Generator"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#m"/></svg><h3>Service &amp; Troubleshooting</h3><p>Breakers that won't reset, dead outlets and flickering lights tracked down and repaired.</p><button class="lk" type="button" data-open="Something stopped working"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
       </div>
-      <div class="hphoto">
-        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=78&auto=format" srcset="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=78&auto=format 800w,https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=78&auto=format 1600w" sizes="(max-width:900px) 100vw,60vw" alt="Electrician in a yellow hard hat working on electrical equipment (sample photo)" fetchpriority="high">
-        <span class="tag">Sample photo</span>
+      <button class="snext" id="nextBtn" type="button" aria-label="Show more services"><svg aria-hidden="true"><use href="#a"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section class="qs" id="how" aria-label="How to request a quote">
+  <div class="w"><div class="box dk">
+    <div class="intro"><span class="lab">Get a quote</span><h2>It's Fast &amp; Easy</h2><p>Tell us about the job, add a few photos and send it. No need to wait for a visit to get started.</p></div>
+    <div class="qstep"><i>1</i><b>Tell us about the job</b><span>What you need done, where and how soon.</span></div>
+    <div class="qstep"><i>2</i><b>Add a few photos</b><span>The panel, the problem or where the work goes.</span></div>
+    <div class="qstep"><i>3</i><b>Send it and hear back</b><span>A quote, a question or a time for a visit.</span></div>
+    <div class="act"><button class="btn y" type="button" data-open>Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button><small>Takes about 2 minutes</small></div>
+  </div></div>
+</section>
+
+<section class="work" id="work">
+  <div class="w">
+    <div>
+      <span class="lab">Our work</span>
+      <h2>Project Gallery</h2>
+      <p class="sub">Panels, service upgrades and repairs from jobs across Southern &amp; Central Maine.</p>
+      <a class="lk" href="https://share.google/AuNdjh7cpOlOxx9OF" style="margin-top:18px"><span>See us on Google</span> <svg aria-hidden="true"><use href="#a"/></svg></a>
+    </div>
+    <div class="gal">
+      <figure><img src="https://images.unsplash.com/photo-1660330589693-99889d60181e?w=900&q=75&auto=format" style="object-position:50% 30%" alt="Electrician using a screwdriver on an electrical panel (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption><svg aria-hidden="true"><use href="#pin"/></svg>Panel installation · <span class="fill">[Town], ME</span></figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=700&q=75&auto=format" style="object-position:40% 50%" alt="Testing electrical equipment with a multimeter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption><svg aria-hidden="true"><use href="#pin"/></svg>Troubleshooting · <span class="fill">[Town], ME</span></figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=700&q=75&auto=format" style="object-position:60% 30%" alt="Electrician working on a wall-mounted meter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption><svg aria-hidden="true"><use href="#pin"/></svg>Service upgrade · <span class="fill">[Town], ME</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="tm" id="reviews">
+  <div class="w">
+    <div>
+      <span class="lab">Testimonials</span>
+      <h2>What Our Customers Say</h2>
+      <div class="score">
+        <a href="https://share.google/AuNdjh7cpOlOxx9OF"><span class="st dkst" aria-hidden="true">★★★★★</span><b>5.0</b><span>on Google</span></a>
+        <a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm"><span class="st dkst" aria-hidden="true">★★★★★</span><b>5.0</b><span>on Angi · 24 reviews</span></a>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="services">
-  <div class="w sv-head" data-r><h2>What each electrical service includes</h2><p class="lead">Residential and commercial electrical work in Lewiston, Auburn, Brunswick, Portland, Augusta and nearby towns.</p></div>
-  <div class="list">
-    <button class="row" type="button" data-open="Panel / breakers"><h3>Panel Upgrades</h3><p>Older and undersized panels replaced, including fuse boxes, and 100-amp service upgraded to 200 amps. A good fit if your breakers keep tripping or you're adding a heat pump, EV charger or new appliance.</p><span class="go">Request a quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-    <button class="row" type="button" data-open="EV charger"><h3>EV Chargers</h3><p>Level 2 charger installation in your garage or driveway. Your panel gets checked first to make sure it can carry the extra load.</p><span class="go">Request a quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-    <button class="row" type="button" data-open="New circuits / renovation"><h3>Rewiring &amp; Updates</h3><p>Old wiring replaced and electrical updates for older homes, kitchens, basements and additions, with new circuits where you need them.</p><span class="go">Request a quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-    <button class="row" type="button" data-open="Lighting|Outlets &amp; switches"><h3>Lighting &amp; Outlets</h3><p>Light fixtures, recessed lighting, ceiling fans, outlets and switches, inside and outside the house. Small jobs are welcome.</p><span class="go">Request a quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-    <button class="row" type="button" data-open="Generator"><h3>Generators &amp; Transfer Switches</h3><p>Hookups for portable generators and transfer switches for standby units, so your heat, well pump and fridge can keep running during an outage.</p><span class="go">Request a quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-    <button class="row" type="button" data-open="Something stopped working"><h3>Service &amp; Troubleshooting</h3><p>Breakers that won't reset, dead outlets, flickering lights and other electrical problems tracked down and repaired.</p><span class="go">Request a quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-  </div>
-</section>
-
-<section class="quote w" id="how">
-  <div class="copy">
-    <h2>Request a quote online in three easy steps</h2>
-    <p class="lead">Tell us about the job, add a few photos and send it. No need to wait for someone to come out just to get the process started.</p>
-    <ol class="steps">
-      <li><button class="qd-step" type="button" data-qd="0" aria-current="step"><span class="n">1</span><span><b>Tell us about the job</b><span class="t">What you need done, where and how soon.</span></span></button></li>
-      <li><button class="qd-step" type="button" data-qd="1"><span class="n">2</span><span><b>Add a few photos</b><span class="t">The panel, the problem or where the work goes.</span></span></button></li>
-      <li><button class="qd-step" type="button" data-qd="2"><span class="n">3</span><span><b>Send it and hear back</b><span class="t">You get a quote, a question or a time for a visit.</span></span></button></li>
-    </ol>
-    <div class="ctas"><button class="btn d" type="button" id="qdCta" data-open="">Request a quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button><span>Takes about 2 minutes</span></div>
-    <p class="qd-note">Try the phone. This is an example, and nothing here gets sent.</p>
-  </div>
-  <div class="qd-col"><div class="qd-phone"><div class="qd-screen">
-    <div class="qd-top"><span id="qdLabel">JOB REQUEST · STEP 1 OF 5</span><div class="qd-bar"><i id="qdBar"></i></div></div>
-    <div class="qd-views">
-      <div class="qd-view on" data-view="0"><h3>What do you need done?</h3><p>Pick everything that applies.</p><div class="qd-chips" id="qdChips"></div><button class="qd-go" type="button" data-next="1">Continue</button></div>
-      <div class="qd-view" data-view="1"><h3>Add photos</h3><p>Optional, but clear photos help with pricing.</p><button class="qd-add" type="button" id="qdAdd"><svg aria-hidden="true"><use href="#cam"/></svg><b>Tap to add a photo</b>Up to 10 on the real form</button><div class="qd-shots" id="qdShots"></div><button class="qd-go" type="button" data-next="2">Continue</button></div>
-      <div class="qd-view" data-view="2"><div class="qd-ok"><svg aria-hidden="true"><use href="#c"/></svg></div><h3>Request sent</h3><ul class="qd-list"><li>Your details and photos arrive by email.</li><li>The job gets reviewed.</li><li>You get a quote, a question or a time for a visit.</li></ul><button class="qd-go" type="button" id="qdReal">Start your real request</button></div>
+    <div class="cards">
+      <blockquote class="card"><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span><q>Excellent! Highly recommend.</q><div class="who"><span class="av" aria-hidden="true">JO</span><div><b>Jennifer O.</b><small>Google review</small></div></div></blockquote>
+      <blockquote class="card"><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span><q>Quick response and efficient work.</q><div class="who"><span class="av" aria-hidden="true">SM</span><div><b>Sean M.</b><small>Google review</small></div></div></blockquote>
+      <blockquote class="card"><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span><q>Fast, very attentive to my needs.</q><div class="who"><span class="av" aria-hidden="true">A</span><div><b><span class="fill">[Customer name]</span></b><small>Angi · August 2026</small></div></div></blockquote>
     </div>
-  </div></div></div>
-</section>
-
-<section class="sec w" id="work">
-  <h2 data-r>Project gallery</h2>
-  <div class="gal">
-    <figure data-r><img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=1400&q=75&auto=format" style="object-position:40% 50%" alt="Testing an electrical panel with a multimeter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Service &amp; troubleshooting</figcaption></figure>
-    <figure data-r><img src="https://images.unsplash.com/photo-1682345262055-8f95f3c513ea?w=800&q=75&auto=format" alt="Gloved hand holding a stripped electrical cable (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Rewiring &amp; updates</figcaption></figure>
-    <figure data-r><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1000&q=75&auto=format" style="object-position:60% 30%" alt="Electrician working on a wall-mounted meter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Meter &amp; service upgrade</figcaption></figure>
-    <figure data-r><img src="https://images.unsplash.com/photo-1660330589693-99889d60181e?w=1400&q=75&auto=format" style="object-position:50% 32%" alt="Electrician using a screwdriver on an electrical panel (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Panel installation</figcaption></figure>
   </div>
 </section>
 
-<section class="sec w rev" id="reviews">
-  <blockquote class="pull" data-r><span class="st" role="img" aria-label="5 stars">★★★★★</span><q>Excellent! Highly recommend.</q><cite>Jennifer O.</cite></blockquote>
-  <div class="rev-side" data-r>
-    <div class="scores">
-      <a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm"><b>5.0</b><span>Read our 24 Angi reviews</span></a>
-      <a href="https://share.google/AuNdjh7cpOlOxx9OF"><b>5.0</b><span>Read our Google reviews</span></a>
+<section class="area dk" id="locations">
+  <div class="w">
+    <div>
+      <span class="lab">Service area</span>
+      <h2>Proudly Serving Southern &amp; Central Maine</h2>
+      <p class="sub">Based in the Lisbon Falls area, with residential and commercial electrical service across these communities and the towns around them.</p>
+      <button class="btn ow" type="button" data-open>Check Your Area <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button>
     </div>
-    <ul class="more">
-      <li><q>Quick response and efficient work.</q><cite>Sean M.</cite></li>
-      <li><q>Fast, very attentive to my needs.</q><cite><span class="fill">[Customer name]</span> · Angi, August 2026</cite></li>
-    </ul>
+    <div class="mapbox">
+      <div id="map" role="region" aria-label="Map of Southern and Central Maine showing Lisbon Falls, Sabattus, Lewiston, Auburn, Brunswick, Portland and Augusta"></div>
+      <p class="attr"><a href="https://openfreemap.org">OpenFreeMap</a> © <a href="https://www.openmaptiles.org/">OpenMapTiles</a> Data from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></p>
+      <noscript><a class="mapfall" href="https://share.google/AuNdjh7cpOlOxx9OF">Find us on Google</a></noscript>
+    </div>
+    <div class="towns">
+      <h3>Areas We Serve</h3>
+      <ul>
+        <li><svg aria-hidden="true"><use href="#c"/></svg><span>Lisbon Falls <small>Home base</small></span></li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Sabattus</li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Lewiston</li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Auburn</li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Brunswick</li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Portland</li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Augusta</li>
+      </ul>
+      <p>Don't see your town? Request a quote and ask.</p>
+    </div>
   </div>
 </section>
 
-<section class="band dk">
-  <div class="w grid">
-    <h2 data-r>Why choose <em>Solid Ground Electric?</em></h2>
-    <ul class="why" data-r>
-      <li>Local Maine electrician</li>
-      <li>Residential and commercial service &amp; upgrades</li>
-      <li>Clean, professional and reliable work</li>
-      <li>Code-compliant and fully permitted</li>
-      <li>Clear communication and fair pricing</li>
-    </ul>
-  </div>
-</section>
-
-<section class="sec w about" id="about">
-  <h2 data-r>Meet your electrician</h2>
-  <div class="say" data-r>
-    <p>I'm <span class="fill">[Your name]</span>, a licensed electrician with <span class="fill">[X]</span> years of experience. Before starting Solid Ground Electric in <span class="fill">[2025]</span>, I <span class="fill">[where you trained and worked, and on what kind of jobs]</span>.</p>
-    <p>When you send a job, I'm the one who reads it, prices it and does the work.</p>
-    <dl class="facts">
-      <dt>License</dt><dd>Maine <span class="fill">[master / journeyman]</span> electrician, <span class="fill">#00000</span></dd>
-      <dt>Experience</dt><dd><span class="fill">[X]</span> years in electrical work</dd>
-      <dt>Training</dt><dd><span class="fill">[School, apprenticeship or certifications]</span></dd>
-      <dt>Insurance</dt><dd><span class="fill">[Coverage you carry]</span></dd>
-      <dt>Based in</dt><dd>Lisbon Falls area, Maine</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="sec w area" id="locations">
-  <div data-r>
-    <h2>Areas served in Southern &amp; Central Maine</h2>
-    <p class="l">Based in the Lisbon Falls area, with residential and commercial electrical service across these communities and the towns around them.</p>
-    <ul class="tw"><li>Lisbon Falls <span>Home base</span></li><li>Sabattus</li><li>Lewiston</li><li>Auburn</li><li>Brunswick</li><li>Portland</li><li>Augusta</li></ul>
-    <p class="note">Don't see your town? Request a quote and ask.</p>
-  </div>
-  <div class="mapwrap">
-    <div id="map" role="region" aria-label="Map of Southern and Central Maine showing Lisbon Falls, Sabattus, Lewiston, Auburn, Brunswick, Portland and Augusta"></div>
-    <noscript><a class="mapfall" href="https://share.google/AuNdjh7cpOlOxx9OF">Find us on Google</a></noscript>
-  </div>
-</section>
-
-<section class="sec w faq" id="faq">
-  <div data-r><h2>Common questions about quotes and electrical work</h2><p class="lead">Have a different question? Call or text <b>(207) 713-1857</b>.</p></div>
-  <div class="fl" data-r>
-    <details open><summary>Do you pull permits?<i aria-hidden="true"></i></summary><p>Yes. When a job requires a permit, it gets pulled and the work gets inspected.</p></details>
-    <details><summary>How does a panel upgrade work, and will my power be off?<i aria-hidden="true"></i></summary><p>You get the quote first. After that, the permit gets pulled and the power shutoff gets coordinated with Central Maine Power. Expect your power to be off for part of the day while the panel is replaced. You'll know the timing ahead of time.</p></details>
-    <details><summary>Do you handle generator hookups?<i aria-hidden="true"></i></summary><p>Yes, both hookups for portable generators and transfer switches for standby units. Send a photo of your panel and tell us which generator you have or want.</p></details>
-    <details><summary>Do you do commercial work too?<i aria-hidden="true"></i></summary><p>Yes, commercial work as well as residential. Request a quote and choose Business as the property type, or call (207) 713-1857.</p></details>
-    <details><summary>I have an electrical emergency. Can you help?<i aria-hidden="true"></i></summary><p>Call (207) 713-1857 right away instead of using the form. If you smell burning or see sparks and can safely reach the main breaker, turn it off. If there's smoke or fire, get out and call 911.</p></details>
+<section class="af">
+  <div class="w">
+    <div class="about" id="about">
+      <span class="lab">About</span>
+      <h2>Meet Your Electrician</h2>
+      <p>I'm <span class="fill">[Your name]</span>, a licensed electrician with <span class="fill">[X]</span> years of experience. Before starting Solid Ground Electric in <span class="fill">[2025]</span>, I <span class="fill">[where you trained and worked, and on what kind of jobs]</span>.</p>
+      <p class="q">When you send a job, I'm the one who reads it, prices it and does the work.</p>
+      <dl class="facts">
+        <dt>License</dt><dd>Maine <span class="fill">[master / journeyman]</span> electrician, <span class="fill">#00000</span></dd>
+        <dt>Experience</dt><dd><span class="fill">[X]</span> years in electrical work</dd>
+        <dt>Training</dt><dd><span class="fill">[School, apprenticeship or certifications]</span></dd>
+        <dt>Insurance</dt><dd><span class="fill">[Coverage you carry]</span></dd>
+        <dt>Based in</dt><dd>Lisbon Falls area, Maine</dd>
+      </dl>
+    </div>
+    <div class="faq" id="faq">
+      <span class="lab">FAQ</span>
+      <h2>Common Questions</h2>
+      <p class="q2">Have a different question? Call or text <b>(207) 713-1857</b>.</p>
+      <div class="fl">
+        <details open><summary>Do you pull permits?<i aria-hidden="true"></i></summary><p>Yes. When a job requires a permit, it gets pulled and the work gets inspected.</p></details>
+        <details><summary>How does a panel upgrade work, and will my power be off?<i aria-hidden="true"></i></summary><p>You get the quote first. After that, the permit gets pulled and the power shutoff gets coordinated with Central Maine Power. Expect your power to be off for part of the day while the panel is replaced. You'll know the timing ahead of time.</p></details>
+        <details><summary>Do you handle generator hookups?<i aria-hidden="true"></i></summary><p>Yes, both hookups for portable generators and transfer switches for standby units. Send a photo of your panel and tell us which generator you have or want.</p></details>
+        <details><summary>Do you do commercial work too?<i aria-hidden="true"></i></summary><p>Yes, commercial work as well as residential. Request a quote and choose Business as the property type, or call (207) 713-1857.</p></details>
+        <details><summary>I have an electrical emergency. Can you help?<i aria-hidden="true"></i></summary><p>Call (207) 713-1857 right away instead of using the form. If you smell burning or see sparks and can safely reach the main breaker, turn it off. If there's smoke or fire, get out and call 911.</p></details>
+      </div>
+    </div>
   </div>
 </section>
 </main>
 
-<footer class="final dk" id="contact">
+<footer class="ftr dk" id="contact">
   <div class="w">
-    <h2>Need an <em>electrician?</em></h2>
-    <div class="fbar">
-      <p>Serving Lewiston, Auburn, Brunswick, Portland, Augusta and surrounding communities.</p>
-      <div class="act"><button class="btn y" type="button" data-open>Request a quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button><a class="tl" href="tel:+12077131857">(207) 713-1857</a></div>
+    <div class="top">
+      <a class="brand" href="#top" aria-label="Solid Ground Electric home"><svg aria-hidden="true"><use href="#k"/></svg><span><b>Solid Ground</b><small>ELECTRIC</small></span></a>
+      <nav aria-label="Footer"><a href="#top">Home</a><a href="#services">Services</a><a href="#work">Projects</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#locations">Service Area</a></nav>
+      <span class="sep" aria-hidden="true"></span>
+      <div class="cnt"><a href="tel:+12077131857"><svg aria-hidden="true"><use href="#t"/></svg>(207) 713-1857</a><a href="mailto:solidgroundelectric26@gmail.com" style="overflow-wrap:anywhere"><svg aria-hidden="true"><use href="#mail"/></svg>solidgroundelectric26@gmail.com</a></div>
+      <span class="sep" aria-hidden="true"></span>
+      <div class="soc"><b>Find us</b><div><a href="https://share.google/AuNdjh7cpOlOxx9OF">Google</a><a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm">Angi</a><a href="https://www.homeadvisor.com/rated.Solidgroundelectric.160679976.html">HomeAdvisor</a></div></div>
     </div>
-    <div class="ftr">
-      <div><a class="brand" href="#top" aria-label="Solid Ground Electric home"><svg aria-hidden="true"><use href="#k"/></svg><b>Solid Ground <span>Electric</span></b></a><address>Solid Ground Electric LLC<br>Lisbon Falls, Maine</address></div>
-      <div><h3>Contact</h3><ul><li><a href="tel:+12077131857">(207) 713-1857</a></li><li><a href="mailto:solidgroundelectric26@gmail.com" style="overflow-wrap:anywhere">solidgroundelectric26@gmail.com</a></li><li><button class="as" type="button" data-open>Request a quote →</button></li></ul></div>
-      <div><h3>Hours</h3><ul><li>Monday–Friday</li><li><span class="fill">7 AM – 5 PM</span></li><li>Emergencies: call</li></ul></div>
-      <div><h3>Find us</h3><ul><li><a href="https://share.google/AuNdjh7cpOlOxx9OF">Google reviews</a></li><li><a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm">Angi</a></li><li><a href="https://www.homeadvisor.com/rated.Solidgroundelectric.160679976.html">HomeAdvisor</a></li></ul></div>
-    </div>
-    <div class="legal"><span>© 2026 Solid Ground Electric LLC</span><span>Licensed Maine electrician · License <span class="fill">#00000</span></span></div>
+    <div class="legal"><span>© 2026 Solid Ground Electric LLC · Lisbon Falls, Maine</span><span class="hrs"><span>Mon–Fri <span class="fill">7 AM – 5 PM</span> · Emergencies: call</span><span>Licensed Maine electrician · License <span class="fill">#00000</span></span></span></div>
   </div>
 </footer>
 
 <div class="mbar">
   <a class="btn btn-ink" href="tel:+12077131857"><svg aria-hidden="true"><use href="#t"/></svg>Call</a>
-  <button class="btn y" type="button" data-open>Request a quote</button>
+  <button class="btn y" type="button" data-open>Request a Quote</button>
 </div>
 
 <!-- Job request -->
@@ -1143,126 +890,65 @@ h1{padding-top:0;white-space:nowrap;line-height:.92;font-stretch:68%;letter-spac
   renderAll();
 })();
 
-(function(){
-  /* ---- quote demo ---- */
-  const $=id=>document.getElementById(id);
-  const steps=[...document.querySelectorAll(".qd-step")],views=[...document.querySelectorAll(".qd-view")];
-  const labels=["JOB REQUEST · STEP 1 OF 5","JOB REQUEST · STEP 4 OF 5","JOB REQUEST · SENT"],bars=["20%","80%","100%"];
-  const opts=["Panel / breakers","EV charger","Generator","Lighting","Outlets & switches","Something stopped working"];
-  const picked=new Set(["Panel / breakers"]);
-  let touched=false,shots=0,idx=0,timer=null,live=false,visible=false,fills=[];
-  const still=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function chips(){
-    const el=$("qdChips");el.textContent="";
-    opts.forEach(o=>{
-      const b=document.createElement("button");b.type="button";b.className="qd-chip";b.textContent=o;
-      b.setAttribute("aria-pressed",picked.has(o));
-      b.addEventListener("click",()=>{
-        stop();
-        if(!touched){picked.clear();touched=true;}
-        picked.has(o)?picked.delete(o):picked.add(o);
-        $("qdCta").dataset.open=[...picked].join("|");
-        chips();
-      });
-      el.appendChild(b);
-    });
-  }
-  function addShot(){if(shots>=3)return;shots++;$("qdShots").appendChild(document.createElement("i"));}
-  function clearFills(){fills.forEach(clearTimeout);fills=[];}
-  function go(n){
-    idx=n;clearFills();
-    steps.forEach((b,i)=>i===n?b.setAttribute("aria-current","step"):b.removeAttribute("aria-current"));
-    views.forEach((v,i)=>v.classList.toggle("on",i===n));
-    $("qdLabel").textContent=labels[n];$("qdBar").style.width=bars[n];
-  }
-  function tick(){
-    const n=(idx+1)%3;
-    if(n===0){shots=0;$("qdShots").textContent="";}
-    go(n);
-    if(n===1)[500,1100,1700].forEach(t=>fills.push(setTimeout(addShot,t)));
-  }
-  function play(){if(!still&&!timer&&live&&visible)timer=setInterval(tick,3800);}
-  function pause(){clearInterval(timer);timer=null;}
-  function stop(){live=false;pause();clearFills();}
-  steps.forEach((b,i)=>b.addEventListener("click",()=>{stop();go(i);if(i===1&&!shots)addShot();}));
-  document.querySelectorAll("[data-next]").forEach(b=>b.addEventListener("click",()=>{stop();go(+b.dataset.next);}));
-  $("qdAdd").addEventListener("click",()=>{stop();addShot();});
-  $("qdReal").addEventListener("click",()=>{stop();$("qdCta").click();});
-  chips();live=true;
-  if("IntersectionObserver" in window){
-    new IntersectionObserver(e=>{visible=e[0].isIntersecting;visible?play():pause();},{threshold:.35}).observe($("how"));
-  }
-})();
-
 
 
 (function(){
   /* ---- page polish ---- */
   const btn=document.getElementById("menuBtn"),nav=document.getElementById("nav");
-  const still=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
   const setMenu=o=>{nav.classList.toggle("open",o);btn.setAttribute("aria-expanded",o?"true":"false");btn.setAttribute("aria-label",o?"Close menu":"Open menu");};
   btn.addEventListener("click",()=>setMenu(!nav.classList.contains("open")));
   nav.addEventListener("click",e=>{if(e.target.closest("a"))setMenu(false);});
   document.addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false);});
-  const draft=document.getElementById("draft");
-  const setDraft=()=>document.documentElement.style.setProperty("--draft",draft.offsetHeight+"px");
-  setDraft();
-  if("ResizeObserver" in window)new ResizeObserver(setDraft).observe(draft);
-  const items=[...document.querySelectorAll("[data-r]")];
-  if("IntersectionObserver" in window&&!still){
-    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.08,rootMargin:"0px 0px -5% 0px"});
-    items.forEach(i=>io.observe(i));
-  }else items.forEach(i=>i.classList.add("in"));
+  /* services scroller */
+  const sc=document.getElementById("scroller"),nx=document.getElementById("nextBtn");
+  const upd=()=>{nx.disabled=sc.scrollLeft+sc.clientWidth>=sc.scrollWidth-4;};
+  nx.addEventListener("click",()=>sc.scrollBy({left:sc.querySelector(".sv").offsetWidth*2,behavior:"smooth"}));
+  sc.addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd();
+  /* active nav link */
+  const links=[...nav.querySelectorAll("a")];
+  if("IntersectionObserver" in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const key=e.target.id==="home"?"#top":"#"+e.target.id;links.forEach(a=>a.setAttribute("aria-current",a.getAttribute("href")===key?"true":"false"));}),{rootMargin:"-45% 0px -50% 0px"});
+    ["home","services","work","reviews","about","locations"].forEach(id=>io.observe(document.getElementById(id)));
+  }
 })();
 
 (function(){
-  /* ---- real map: MapLibre + OpenFreeMap (no key). Loaded only when the section gets close. ---- */
+  /* ---- real map: MapLibre + OpenFreeMap (no key), dark, with the service radius ---- */
   const box=document.getElementById("map");
-  const TOWNS=[
-    ["Lisbon Falls",-70.0606,44.0037,"home"],
-    ["Sabattus",-70.1075,44.1195,"up"],
-    ["Lewiston",-70.2148,44.1004,"below"],
-    ["Auburn",-70.2312,44.0979,"left"],
-    ["Brunswick",-69.9639,43.9145,""],
-    ["Portland",-70.2553,43.6591,""],
-    ["Augusta",-69.7795,44.3106,""]
-  ];
+  const HOME=[-70.0606,44.0037];
+  const TOWNS=[["Sabattus",-70.1075,44.1195,"up"],["Lewiston",-70.2148,44.1004,"below"],["Auburn",-70.2312,44.0979,"left"],["Brunswick",-69.9639,43.9145,""],["Portland",-70.2553,43.6591,""],["Augusta",-69.7795,44.3106,""]];
   const fallback=()=>{const a=document.createElement("a");a.className="mapfall";a.href="https://share.google/AuNdjh7cpOlOxx9OF";a.textContent="Find us on Google";box.parentNode.appendChild(a);};
+  function circle(c,km,n=96){const pts=[];for(let i=0;i<=n;i++){const t=i/n*2*Math.PI,dy=km/110.574*Math.sin(t),dx=km/(111.32*Math.cos(c[1]*Math.PI/180))*Math.cos(t);pts.push([c[0]+dx,c[1]+dy]);}return{type:"Feature",geometry:{type:"Polygon",coordinates:[pts]}};}
   function restyle(map){
-    /* Bring the base map into the site's colours and quiet everything that isn't geography or a main road. */
     map.getStyle().layers.forEach(l=>{
-      const id=l.id;
-      const set=(p,v)=>{try{map.setPaintProperty(id,p,v);}catch(e){}};
-      if(l.type==="background")set("background-color","#E9E8DF");
-      else if(/water/.test(id)&&l.type==="fill")set("fill-color","#B9CCC6");
-      else if(/water/.test(id)&&l.type==="line")set("line-color","#A7BEB7");
-      else if(/landcover|landuse|park|wood|grass|forest/.test(id)&&l.type==="fill"){set("fill-color","#DCE0D1");set("fill-opacity",.5);}
-      else if(/building/.test(id))map.setLayoutProperty(id,"visibility","none");
-      else if(/highway|road|bridge|tunnel/.test(id)&&l.type==="line"){
-        if(/casing/.test(id))set("line-color","#DDDCD2");
-        else if(/motorway/.test(id))set("line-color","#7D8C83");
-        else if(/trunk|primary/.test(id))set("line-color","#B5BCB2");
-        else set("line-color","#DDDCD2");
+      const id=l.id,set=(p,v)=>{try{map.setPaintProperty(id,p,v);}catch(e){}},hide=()=>map.setLayoutProperty(id,"visibility","none");
+      if(l.type==="background")set("background-color","#123227");
+      else if(/water/.test(id)&&l.type==="fill")set("fill-color","#06170F");
+      else if(/water/.test(id)&&l.type==="line")set("line-color","#0A2219");
+      else if(l.type==="fill"&&/landcover|landuse|park|wood|grass|forest|ice|sand/.test(id)){set("fill-color","#16392D");set("fill-opacity",.5);}
+      else if(/building|hillshade|ne2/.test(id)||l.type==="raster"||l.type==="fill-extrusion")hide();
+      else if(l.type==="line"&&/highway|road|bridge|tunnel|rail/.test(id)){
+        if(/casing|rail/.test(id))hide();
+        else if(/motorway/.test(id))set("line-color","#3E6150");
+        else if(/trunk|primary/.test(id))set("line-color","#2C5243");
+        else set("line-color","#1D4235");
       }
-      else if(/boundary/.test(id))set("line-color","#C2C4B8");
-      else if(l.type==="symbol"){
-        const keep=/shield/.test(id);
-        if(!keep)map.setLayoutProperty(id,"visibility","none");
-        else{set("text-color","#5F6D65");set("text-halo-color","#F3F2EC");}
-      }
+      else if(/boundary/.test(id))set("line-color","#2C5243");
+      else if(l.type==="symbol")hide();
     });
+    map.addSource("radius",{type:"geojson",data:circle(HOME,46)});
+    map.addLayer({id:"radius-fill",type:"fill",source:"radius",paint:{"fill-color":"#FFD82F","fill-opacity":.07}});
+    map.addLayer({id:"radius-line",type:"line",source:"radius",paint:{"line-color":"#FFD82F","line-opacity":.55,"line-width":1.4,"line-dasharray":[3,3]}});
   }
   function init(){
-    const map=new maplibregl.Map({container:box,style:"https://tiles.openfreemap.org/styles/liberty",bounds:[[-70.42,43.60],[-69.62,44.37]],fitBoundsOptions:{padding:48},attributionControl:{compact:false},scrollZoom:false,dragRotate:false,pitchWithRotate:false,cooperativeGestures:false});
+    const map=new maplibregl.Map({container:box,style:"https://tiles.openfreemap.org/styles/liberty",bounds:[[-70.5,43.6],[-69.62,44.36]],fitBoundsOptions:{padding:56},attributionControl:false,scrollZoom:false,dragRotate:false,pitchWithRotate:false});
     window.__map=map;
     map.touchZoomRotate.disableRotation();
-    map.addControl(new maplibregl.NavigationControl({showCompass:false}),"top-right");
     map.on("style.load",()=>restyle(map));
-    TOWNS.forEach(([name,lng,lat,kind])=>{
-      const el=document.createElement("div");el.className="mk "+kind;el.innerHTML="<i></i><span>"+name+"</span>";
-      new maplibregl.Marker({element:el,anchor:"center"}).setLngLat([lng,lat]).addTo(map);
-    });
-    /* touch: let one finger keep scrolling the page */
+    const h=document.createElement("div");h.className="mk home";
+    h.innerHTML='<i><svg viewBox="0 0 26 34"><path d="M13 33S25 20.6 25 12.5a12 12 0 0 0-24 0C1 20.6 13 33 13 33z" fill="#FFD82F"/><circle cx="13" cy="12.5" r="4.5" fill="#071F19"/></svg></i><span>Lisbon Falls</span>';
+    new maplibregl.Marker({element:h,anchor:"bottom"}).setLngLat(HOME).addTo(map);
+    TOWNS.forEach(([name,lng,lat,kind])=>{const el=document.createElement("div");el.className="mk "+kind;el.innerHTML="<i></i><span>"+name+"</span>";new maplibregl.Marker({element:el,anchor:"center"}).setLngLat([lng,lat]).addTo(map);});
     if(matchMedia("(pointer:coarse)").matches)map.dragPan.disable();
   }
   function load(){
