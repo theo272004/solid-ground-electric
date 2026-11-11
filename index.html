@@ -493,32 +493,79 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .qbox{background:var(--g2);color:#fff;border-radius:22px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,72px);align-items:center;padding:clamp(34px,6svh,70px) clamp(26px,4.4vw,84px);overflow:hidden}
 .qbox h2{font-size:clamp(34px,3.4vw,54px);line-height:1.05}
 .qintro{color:var(--on);font-size:clamp(15.5px,1.2vw,18px);line-height:1.55;margin-top:14px;max-width:36ch}
-.qsteps{list-style:none;margin:clamp(22px,4svh,40px) 0 0;padding:0;display:grid;gap:clamp(18px,3svh,30px)}
-.qsteps li{position:relative;display:flex;gap:18px;align-items:flex-start}
-.qsteps li:not(:last-child)::after{content:"";position:absolute;left:22px;top:50px;bottom:calc(-1 * clamp(18px,3svh,30px) + 4px);border-left:2px dashed rgba(255,216,47,.4)}
-.qsteps i{flex:none;width:46px;height:46px;border-radius:50%;background:var(--y);color:var(--ink);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:19px}
-.qsteps b{display:block;font-size:clamp(17px,1.4vw,21px);font-weight:700;line-height:1.25;margin-top:2px}
-.qsteps span{display:block;font-size:clamp(14px,1.05vw,16px);color:var(--on);line-height:1.45;margin-top:3px}
 .qcta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:clamp(24px,4.2svh,42px)}
 .qcta .btn{min-height:56px;padding:0 30px;font-size:16.5px}
 .qcta small{font-size:13.5px;color:var(--on)}
 .qright{display:flex;justify-content:center}
-.phone{width:min(clamp(310px,24vw,370px),100%);background:#fff;color:var(--ink);border-radius:36px;border:9px solid #04130F;outline:1px solid rgba(255,255,255,.14);padding:clamp(20px,3svh,28px) clamp(18px,1.6vw,24px);box-shadow:0 30px 60px -28px rgba(0,0,0,.7)}
-.ph-top{display:flex;justify-content:space-between;align-items:baseline}
-.ph-top b{font-size:15px;font-weight:800}.ph-top small{font-size:12px;color:var(--mut)}
-.ph-bar{height:4px;border-radius:9px;background:#E7E6DC;margin:10px 0 16px}.ph-bar i{display:block;height:100%;width:40%;border-radius:9px;background:var(--y)}
-.ph-lbl{font-size:12.5px;font-weight:700;margin:0 0 8px}
-.ph-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
-.ph-chips span{font-size:13px;padding:7px 12px;border-radius:99px;border:1px solid var(--line);background:#fff}
-.ph-chips span.on{background:var(--y);border-color:var(--y);font-weight:700}
-.ph-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
-.ph-thumbs img,.ph-thumbs span{height:clamp(68px,10svh,92px);width:100%;border-radius:10px;object-fit:cover}
-.ph-thumbs span{display:grid;place-items:center;border:1.5px dashed #C9CAC2;color:var(--mut);font-size:22px}
-.ph-reply{background:#EAF3DE;border-radius:14px;padding:14px 16px;color:#173404}
-.ph-reply small{display:block;font-size:11.5px;color:#3B6D11}
-.ph-reply b{display:block;font-size:13px;margin-top:6px}
-.ph-reply strong{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
-@media (max-width:980px){.qbox{grid-template-columns:minmax(0,1fr);padding:30px 22px}.qright{margin-top:8px}}
+.ph-top b{font-size:15px;font-weight:800}.ph-bar{height:4px;border-radius:9px;background:#E7E6DC;margin:10px 0 16px}@media (max-width:980px){.qbox{grid-template-columns:minmax(0,1fr);padding:30px 22px}.qright{margin-top:8px}}
+
+
+/* six service cards: 3 x 2 */
+@media (min-width:981px){
+  .sgrid{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(20px,3.4svh,36px)}
+  .sv{min-height:0;padding:clamp(18px,2.6svh,28px) clamp(20px,1.8vw,28px)}
+  .sv .ico{width:60px;height:60px}.sv .ico::before{width:44px;height:44px}.sv svg.ic{width:44px;height:44px}
+  .sv h3{min-height:0;margin-top:clamp(10px,1.8svh,18px)}
+  .sv p{margin-top:8px}
+  .sv .go{margin-top:clamp(12px,2svh,20px);width:40px;height:40px}
+}
+@media (min-width:641px) and (max-width:980px){.sgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* quote section v2 */
+.qbox h2{font-size:clamp(30px,3vw,46px);line-height:1.06;max-width:15em}
+.qsteps{list-style:none;margin:clamp(20px,3.6svh,36px) 0 0;padding:0;display:grid;gap:10px}
+.qstep-b{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:grid;grid-template-columns:46px minmax(0,1fr);gap:18px;align-items:center;padding:clamp(10px,1.6svh,16px) 16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;transition:background .3s,border-color .3s}
+.qstep-b:hover{border-color:rgba(255,216,47,.45)}
+.qstep-b:focus-visible{outline:2px solid var(--y);outline-offset:2px}
+.qstep-b i{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:19px;border:1.5px solid rgba(255,255,255,.3);color:#fff;transition:background .3s,color .3s,border-color .3s,box-shadow .4s}
+.qstep-b b{display:block;font-size:clamp(17px,1.35vw,20px);font-weight:700;line-height:1.25}
+.qstep-b em{display:block;font-style:normal;font-size:clamp(14px,1vw,15.5px);color:var(--on);line-height:1.4;margin-top:2px}
+.qstep-b[aria-current="step"]{background:rgba(255,216,47,.08);border-color:rgba(255,216,47,.5)}
+.qstep-b[aria-current="step"] i{background:var(--y);border-color:var(--y);color:var(--ink);box-shadow:0 0 0 6px rgba(255,216,47,.18),0 0 26px 4px rgba(255,216,47,.45)}
+.qcta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:clamp(20px,3.4svh,34px)}
+.qcta .btn{min-height:56px;padding:0 30px;font-size:16.5px}
+.qcta small{font-size:13.5px;color:var(--on)}
+.qright{display:grid;justify-items:center;gap:12px}
+.qd-note{font-size:13.5px;color:var(--on);text-align:center}
+.pw{position:relative;height:clamp(500px,66svh,610px);aspect-ratio:9/19}
+.pw::before{content:"";position:absolute;left:-3px;top:17%;width:4px;height:9%;border-radius:3px 0 0 3px;background:#04130F;box-shadow:0 38px 0 #04130F,0 -26px 0 -1px #04130F}
+.pw::after{content:"";position:absolute;right:-3px;top:24%;width:4px;height:13%;border-radius:0 3px 3px 0;background:#04130F}
+.phone{position:relative;width:100%;height:100%;background:#fff;color:var(--ink);border-radius:clamp(36px,3.2vw,48px);border:10px solid #04130F;outline:1px solid rgba(255,255,255,.16);box-shadow:0 30px 60px -28px rgba(0,0,0,.75);overflow:hidden;display:flex;flex-direction:column}
+.ph-island{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:34%;height:22px;border-radius:99px;background:#04130F;z-index:3}
+.ph-status{display:flex;justify-content:space-between;align-items:center;padding:12px 22px 0;height:40px;font-size:12px;font-weight:700}
+.ph-sig{display:flex;gap:3px;align-items:flex-end}
+.ph-sig i{display:block;width:3px;border-radius:1px;background:var(--ink)}.ph-sig i:nth-child(1){height:5px}.ph-sig i:nth-child(2){height:8px}.ph-sig i:nth-child(3){height:11px}
+.ph-sig u{display:block;width:20px;height:10px;border:1.5px solid var(--ink);border-radius:3px;margin-left:5px;background:linear-gradient(90deg,var(--ink) 70%,transparent 70%)}
+.ph-home{position:absolute;bottom:7px;left:50%;transform:translateX(-50%);width:34%;height:4px;border-radius:9px;background:var(--ink);opacity:.85}
+.ph-top{padding:8px 18px 12px;display:grid;gap:8px;border-bottom:1px solid var(--line)}
+.ph-top small{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--mut)}
+.ph-bar{height:4px;border-radius:9px;background:#E7E6DC;overflow:hidden}
+.ph-bar i{display:block;height:100%;width:20%;border-radius:9px;background:var(--y);transition:width .5s var(--ease)}
+.ph-views{flex:1;display:grid;min-height:0}
+.ph-view{grid-area:1/1;padding:18px 18px 26px;display:flex;flex-direction:column;gap:12px;opacity:0;visibility:hidden;transform:translateX(14px);transition:opacity .3s,transform .3s,visibility .3s;min-width:0}
+.ph-view.on{opacity:1;visibility:visible;transform:none}
+.ph-view h4{margin:0;font-size:clamp(21px,1.7vw,25px);font-weight:800;letter-spacing:-.02em;line-height:1.08}
+.ph-view p{font-size:13.5px;color:var(--mut);line-height:1.4}
+.ph-chips{display:flex;flex-wrap:wrap;gap:7px}
+.ph-chip{all:unset;box-sizing:border-box;cursor:pointer;font-size:13px;font-weight:600;padding:7px 12px;border-radius:99px;border:1.5px solid var(--line);background:#fff;transition:background .15s,border-color .15s}
+.ph-chip[aria-pressed="true"]{background:var(--y);border-color:var(--y)}
+.ph-chip:focus-visible,.ph-add:focus-visible,.ph-go:focus-visible{outline:2px solid var(--g3);outline-offset:2px}
+.ph-add{all:unset;box-sizing:border-box;cursor:pointer;display:grid;justify-items:center;gap:3px;text-align:center;border:1.5px dashed #C9CAC2;border-radius:12px;padding:16px 12px;font-size:12.5px;color:var(--mut)}
+.ph-add:hover{border-color:var(--y2)}
+.ph-add svg{width:24px;height:24px;color:var(--g)}
+.ph-add b{font-size:14px;color:var(--ink)}
+.ph-shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;min-height:74px}
+.ph-shots img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;animation:phpop .3s ease-out}
+@keyframes phpop{from{transform:scale(.8);opacity:0}to{transform:none;opacity:1}}
+.ph-go{all:unset;box-sizing:border-box;cursor:pointer;margin-top:auto;width:100%;text-align:center;background:var(--y);color:var(--ink);font-weight:700;font-size:15px;padding:13px;border-radius:99px}
+.ph-go:hover{background:var(--y2)}
+.ph-sent{align-items:flex-start}
+.ph-ok{width:56px;height:56px;border-radius:50%;background:#EAF3DE;color:#27500A;display:grid;place-items:center}
+.ph-ok svg{width:26px;height:26px}
+.ph-list{margin:0;padding:0;list-style:none;width:100%;border-top:1px solid var(--line);font-size:13.5px;color:#3B3F3A}
+.ph-list li{padding:9px 0;border-bottom:1px solid var(--line)}
+@media (max-width:980px){.qbox{grid-template-columns:minmax(0,1fr);padding:30px 22px}.pw{height:540px}}
 
 /* one section per screen (desktop) */
 @media (min-width:981px){
@@ -621,6 +668,8 @@ h1 em{font-style:normal;color:var(--y);display:block}
       <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#e"/></svg></span><h3>EV Chargers</h3><p>Level 2 charger installation in your garage or driveway. Your panel gets checked first.</p><button class="go" type="button" data-open="EV charger" aria-label="Get a quote: EV Chargers"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
       <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#h"/></svg></span><h3>Rewiring &amp; Updates</h3><p>Old wiring replaced and updates for older homes, kitchens, basements and additions.</p><button class="go" type="button" data-open="New circuits / renovation" aria-label="Get a quote: Rewiring and Updates"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
       <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#l"/></svg></span><h3>Lighting &amp; Outlets</h3><p>Fixtures, recessed lighting, ceiling fans, outlets and switches. Small jobs are welcome.</p><button class="go" type="button" data-open="Lighting|Outlets &amp; switches" aria-label="Get a quote: Lighting and Outlets"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
+      <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#g"/></svg></span><h3>Generators &amp; Transfer Switches</h3><p>Portable generator hookups and transfer switches, so the essentials keep running in an outage.</p><button class="go" type="button" data-open="Generator" aria-label="Get a quote: Generators and Transfer Switches"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
+      <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#m"/></svg></span><h3>Service &amp; Troubleshooting</h3><p>Breakers that won't reset, dead outlets and flickering lights tracked down and repaired.</p><button class="go" type="button" data-open="Something stopped working" aria-label="Get a quote: Service and Troubleshooting"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
     </div>
   </div>
 </section>
@@ -629,25 +678,44 @@ h1 em{font-style:normal;color:var(--y);display:block}
   <div class="w"><div class="qbox dk">
     <div class="qleft">
       <span class="lab">Get a quote</span>
-      <h2>It's Fast &amp; Easy</h2>
-      <p class="qintro">Tell us about the job, add a few photos and send it. No need to wait for a visit to get started.</p>
+      <h2>Request a quote online in three easy steps</h2>
+      <p class="qintro">Tell us about the job, add a few photos and send it. No need to wait for someone to come out just to get the process started.</p>
       <ol class="qsteps">
-        <li><i>1</i><div><b>Tell us about the job</b><span>What you need done, where and how soon.</span></div></li>
-        <li><i>2</i><div><b>Add a few photos</b><span>The panel, the problem or where the work goes.</span></div></li>
-        <li><i>3</i><div><b>Send it and hear back</b><span>A quote, a question or a time for a visit.</span></div></li>
+        <li><button class="qstep-b" type="button" data-qd="0" aria-current="step"><i>1</i><span><b>Tell us about the job</b><em>What you need done, where and how soon.</em></span></button></li>
+        <li><button class="qstep-b" type="button" data-qd="1"><i>2</i><span><b>Add a few photos</b><em>The panel, the problem or where the work goes.</em></span></button></li>
+        <li><button class="qstep-b" type="button" data-qd="2"><i>3</i><span><b>Send it and hear back</b><em>You get a quote, a question or a time for a visit.</em></span></button></li>
       </ol>
-      <div class="qcta"><button class="btn y" type="button" data-open>Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button><small>Takes about 2 minutes</small></div>
+      <div class="qcta"><button class="btn y" type="button" id="qdCta" data-open="Panel / breakers">Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button><small>Takes about 2 minutes</small></div>
     </div>
-    <div class="qright" aria-hidden="true">
-      <div class="phone">
-        <div class="ph-top"><b>Job request</b><small>Step 2 of 5</small></div>
-        <div class="ph-bar"><i></i></div>
-        <div class="ph-lbl">What do you need done?</div>
-        <div class="ph-chips"><span class="on">Panel upgrade</span><span>EV charger</span><span>Lighting</span></div>
-        <div class="ph-lbl">Add photos</div>
-        <div class="ph-thumbs"><img src="assets/hero.webp" alt="" style="object-position:72% 40%"><img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=300&q=70&auto=format" alt="" style="object-position:40% 50%"><span>+</span></div>
-        <div class="ph-reply"><small>Reply from Solid Ground</small><b>Quote ready</b><strong>$<span>[amount]</span></strong><small>Visit: <span>[day]</span></small></div>
-      </div>
+    <div class="qright">
+      <div class="pw"><div class="phone">
+        <div class="ph-island" aria-hidden="true"></div>
+        <div class="ph-status" aria-hidden="true"><span>9:41</span><span class="ph-sig"><i></i><i></i><i></i><u></u></span></div>
+        <div class="ph-top"><small id="qdLabel">Job request · Step 1 of 5</small><div class="ph-bar"><i id="qdBar"></i></div></div>
+        <div class="ph-views">
+          <div class="ph-view on" data-view="0">
+            <h4>What do you need done?</h4>
+            <p>Pick everything that applies.</p>
+            <div class="ph-chips" id="qdChips"></div>
+            <button class="ph-go" type="button" data-next="1">Continue</button>
+          </div>
+          <div class="ph-view" data-view="1">
+            <h4>Add photos</h4>
+            <p>Optional, but clear photos help with pricing.</p>
+            <button class="ph-add" type="button" id="qdAdd"><svg aria-hidden="true"><use href="#grid"/></svg><b>Tap to add a photo</b><span>Up to 10 on the real form</span></button>
+            <div class="ph-shots" id="qdShots"></div>
+            <button class="ph-go" type="button" data-next="2">Continue</button>
+          </div>
+          <div class="ph-view ph-sent" data-view="2">
+            <div class="ph-ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h4>Request sent</h4>
+            <ul class="ph-list"><li>Your details and photos arrive by email.</li><li>The job gets reviewed.</li><li>You get a quote, a question or a time for a visit.</li></ul>
+            <button class="ph-go" type="button" id="qdReal">Start your real request</button>
+          </div>
+        </div>
+        <div class="ph-home" aria-hidden="true"></div>
+      </div></div>
+      <p class="qd-note">This is an example. Nothing here gets sent.</p>
     </div>
   </div></div>
 </section>
@@ -1134,6 +1202,34 @@ h1 em{font-style:normal;color:var(--y);display:block}
   var dx=(hero.clientWidth-h.offsetWidth)/2-h.offsetLeft;
   if(dx<=0)return;
   h.animate([{transform:"translateX("+dx+"px)"},{transform:"translateX(0)"}],{duration:1200,delay:700,easing:"cubic-bezier(.65,0,.25,1)",fill:"both"});
+}catch(e){}})();
+</script>
+<script>
+/* quote demo: runs on its own, click to jump to any step */
+(function(){try{
+  var $=function(id){return document.getElementById(id)};
+  var steps=[].slice.call(document.querySelectorAll(".qstep-b")),views=[].slice.call(document.querySelectorAll(".ph-view"));
+  if(!steps.length||!$("qdChips"))return;
+  var labels=["Job request · Step 1 of 5","Job request · Step 4 of 5","Job request · Sent"],bars=["20%","80%","100%"];
+  var opts=["Panel / breakers","EV charger","Generator","Lighting","Outlets & switches","Something stopped working"];
+  var picked=["Panel / breakers"],touched=false,shots=0,idx=0,timer=null,visible=false,fills=[];
+  var imgs=["assets/hero.webp","https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=300&q=70&auto=format","https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=300&q=70&auto=format"];
+  var still=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function chips(){var el=$("qdChips");el.textContent="";opts.forEach(function(o){var b=document.createElement("button");b.type="button";b.className="ph-chip";b.textContent=o;b.setAttribute("aria-pressed",picked.indexOf(o)>-1);b.addEventListener("click",function(){if(!touched){picked=[];touched=true}var i=picked.indexOf(o);i>-1?picked.splice(i,1):picked.push(o);$("qdCta").dataset.open=picked.join("|");chips();restart()});el.appendChild(b)})}
+  function addShot(){if(shots>=3)return;var im=document.createElement("img");im.alt="";im.src=imgs[shots];shots++;$("qdShots").appendChild(im)}
+  function clearFills(){fills.forEach(clearTimeout);fills=[]}
+  function go(n){idx=n;clearFills();steps.forEach(function(b,i){i===n?b.setAttribute("aria-current","step"):b.removeAttribute("aria-current")});views.forEach(function(v,i){v.classList.toggle("on",i===n)});$("qdLabel").textContent=labels[n];$("qdBar").style.width=bars[n];if(n===1){shots=0;$("qdShots").textContent="";[500,1100,1700].forEach(function(t){fills.push(setTimeout(addShot,t))})}}
+  function tick(){go((idx+1)%3)}
+  function play(){if(!still&&!timer&&visible)timer=setInterval(tick,4200)}
+  function pause(){clearInterval(timer);timer=null}
+  function restart(){pause();play()}
+  steps.forEach(function(b,i){b.addEventListener("click",function(){go(i);restart()})});
+  [].forEach.call(document.querySelectorAll("[data-next]"),function(b){b.addEventListener("click",function(){go(+b.dataset.next);restart()})});
+  $("qdAdd").addEventListener("click",function(){addShot();restart()});
+  $("qdReal").addEventListener("click",function(){$("qdCta").click()});
+  chips();go(0);
+  var sec=$("how");
+  if("IntersectionObserver" in window){new IntersectionObserver(function(e){visible=e[0].isIntersecting;if(visible){go(0);play()}else pause()},{threshold:.35}).observe(sec)}
 }catch(e){}})();
 </script>
 </body>
