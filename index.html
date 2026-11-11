@@ -567,6 +567,24 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .ph-list li{padding:9px 0;border-bottom:1px solid var(--line)}
 @media (max-width:980px){.qbox{grid-template-columns:minmax(0,1fr);padding:30px 22px}.pw{height:540px}}
 
+
+/* breathing room: every full-screen section keeps space above and below */
+@media (min-width:981px){
+  .svc{padding-block:clamp(44px,7svh,72px)}
+  .svc .shead h2{font-size:clamp(30px,2.9vw,44px)}
+  .svc .sright .sub{font-size:clamp(15px,1.05vw,17px)}
+  .sgrid{margin-top:clamp(18px,3svh,32px);gap:clamp(12px,1.1vw,16px)}
+  .sv{padding:clamp(16px,2.2svh,24px) clamp(18px,1.6vw,26px)}
+  .sv .ico{width:52px;height:52px}.sv .ico::before{width:38px;height:38px}.sv svg.ic{width:38px;height:38px}
+  .sv h3{margin-top:clamp(8px,1.4svh,14px);font-size:clamp(16.5px,1.25vw,19px)}
+  .sv p{font-size:clamp(13.5px,.95vw,15px);margin-top:6px;line-height:1.45}
+  .sv .go{margin-top:clamp(10px,1.6svh,16px);width:38px;height:38px}
+  .work{padding-block:clamp(44px,7svh,72px)}
+  .qs{padding-block:clamp(36px,5svh,60px)}
+  .af{padding-block:clamp(44px,7svh,72px)}
+  .gal{height:clamp(320px,54svh,560px)}
+}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
