@@ -754,6 +754,20 @@ h1 em{font-style:normal;color:var(--y);display:block}
   .qbox{border-radius:22px}
 }
 
+
+/* service cards on phones/tablets: compact, no empty gaps */
+@media (max-width:980px){
+  .sgrid{gap:12px;margin-top:24px}
+  .sv{min-height:0;padding:20px 20px 18px}
+  .sv .ico{width:52px;height:52px;margin-left:0}
+  .sv .ico::before{width:38px;height:38px;right:0;top:2px}
+  .sv svg.ic{width:38px;height:38px}
+  .sv h3{min-height:0;margin-top:14px;font-size:19px}
+  .sv p{flex:none;margin-top:6px;font-size:15px;line-height:1.5}
+  .sv .go{margin-top:14px;width:40px;height:40px}
+  .sv:first-child{border-left:1px solid var(--line);padding:20px 20px 18px}
+}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
