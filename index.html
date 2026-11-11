@@ -131,7 +131,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .srow{position:relative;min-width:0;padding-right:58px}
 .scroller{display:grid;grid-auto-flow:column;grid-auto-columns:max(200px,25%);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}
 .scroller::-webkit-scrollbar{display:none}
-.sv{scroll-snap-align:start;padding:6px 22px 4px;border-left:1px solid var(--line);display:flex;flex-direction:column}
+.sv{padding:6px 22px 4px;border-left:1px solid var(--line);display:flex;flex-direction:column}
 .sv svg.ic{width:36px;height:36px;color:var(--g)}
 .sv h3{font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.2;margin-top:18px;min-height:2.4em}
 .sv p{font-size:14.5px;line-height:1.5;color:var(--mut);margin-top:8px;flex:1}
@@ -418,6 +418,17 @@ h1 em{font-style:normal;color:var(--y);display:block}
 }
 
 
+
+/* gallery: 2 on top (before/after), 3 below */
+.gal{grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:1.15fr 1fr}
+.gal figure:first-child{grid-row:auto}
+.gal figure:nth-child(-n+2){grid-column:span 3}
+.gal figure:nth-child(n+3){grid-column:span 2}
+.ba-b img{filter:grayscale(1) contrast(.9) brightness(.9)}
+.gal .lbl{position:absolute;top:12px;z-index:2;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:4px 10px;border-radius:99px}
+.gal .lbl.l{left:12px}.gal .lbl.r{left:12px;background:var(--y);color:var(--ink)}
+@media (max-width:980px){.gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto}.gal figure,.gal figure:nth-child(-n+2),.gal figure:nth-child(n+3){grid-column:auto;height:200px}.gal figure:nth-child(-n+2){grid-column:1/-1;height:230px}.gal figure:last-child{grid-column:1/-1}}
+
 /* services cards */
 .svc .w{display:block}
 .shead{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:end;gap:16px clamp(32px,6vw,96px)}
@@ -452,20 +463,28 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .card .st{font-size:14px;order:3}
 @media (max-width:980px){.cards{grid-template-columns:minmax(0,1fr)}.rhead .score{text-align:left}.rhead .score a{justify-content:flex-start}}
 
+
+/* reviews + map: roomier, handles long reviews */
+.card .st{position:absolute;top:16px;right:20px;font-size:14px}
+.card q{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tm h2{font-size:clamp(28px,2.7vw,42px)}
+.area h2{font-size:clamp(30px,3vw,46px)}
+.towns .btn{margin-top:18px}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
-  html{scroll-padding-top:73px;scroll-snap-type:y proximity}
+  html{scroll-padding-top:73px}
   .hero{min-height:calc(100svh - 107px);display:flex;align-items:center}
   .hero>.hin{width:100%}
-  .svc,.qs,.work,.af{min-height:calc(100svh - 73px);display:flex;align-items:center;scroll-snap-align:start}
+  .svc,.qs,.work,.af{min-height:calc(100svh - 73px);display:flex;align-items:center}
   .hero,.ftr{scroll-snap-align:start}
-  .duo{min-height:calc(100svh - 73px);display:flex;flex-direction:column;scroll-snap-align:start}
+  .duo{min-height:calc(100svh - 73px);display:flex;flex-direction:column}
   .duo .tm,.duo .area{min-height:0;scroll-snap-align:none;display:block}
-  .duo .tm{flex:none;padding-block:clamp(22px,3.4svh,40px)}
+  .duo .tm{flex:none;padding-block:clamp(20px,3svh,34px)}
   .duo .area{flex:1;display:flex;align-items:center;padding-block:clamp(20px,3svh,36px)}
-  .duo .mapbox{height:clamp(240px,38svh,380px)}
+  .duo .mapbox{height:clamp(260px,44svh,420px)}
   .svc>.w,.qs>.w,.work>.w,.tm>.w,.area>.w,.af>.w{width:100%}
-  .gal{height:clamp(320px,58svh,600px)}
+  .gal{height:clamp(360px,64svh,640px)}
   /* quote card: wider and bigger */
   .qs>.w{max-width:1640px;padding-inline:clamp(20px,2.4vw,40px)}
   .qs .box{grid-template-columns:1.35fr repeat(3,minmax(0,1fr)) auto;column-gap:clamp(10px,1.6vw,28px);padding:clamp(44px,8svh,88px) clamp(32px,4.4vw,80px);border-radius:22px}
@@ -575,20 +594,14 @@ h1 em{font-style:normal;color:var(--y);display:block}
         <span class="lab">Our work</span>
         <h2>Work you can see</h2>
       </div>
-      <p class="sub">Drag across the first photo to compare before and after. Panels, service upgrades and repairs from jobs across Southern &amp; Central Maine. <a class="lk" href="https://share.google/AuNdjh7cpOlOxx9OF"><span>See us on Google</span> <svg aria-hidden="true"><use href="#a"/></svg></a></p>
+      <p class="sub">Panels, service upgrades and repairs from jobs across Southern &amp; Central Maine. <a class="lk" href="https://share.google/AuNdjh7cpOlOxx9OF"><span>See us on Google</span> <svg aria-hidden="true"><use href="#a"/></svg></a></p>
     </div>
     <div class="gal">
-      <figure class="ba" id="ba">
-        <img class="before" src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=1200&q=75&auto=format" alt="Before: electrical panel before the work (sample photo)" loading="lazy">
-        <img class="after" src="https://images.unsplash.com/photo-1660330589693-99889d60181e?w=1200&q=75&auto=format" style="object-position:55% 30%" alt="After: finished panel installation (sample photo)" loading="lazy">
-        <span class="bar" aria-hidden="true"></span><span class="knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
-        <span class="lbl l">Before</span><span class="lbl r">After</span>
-        <label class="sr" for="baRange" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Compare before and after</label>
-        <input id="baRange" type="range" min="0" max="100" value="50">
-        <figcaption>Panel installation · <span class="fill">[Town]</span>, ME</figcaption>
-      </figure>
+      <figure class="ba-b"><img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=1200&q=75&auto=format" style="object-position:40% 50%" alt="Before: electrical panel before the work (sample photo)" loading="lazy"><span class="lbl l">Before</span><span class="tag">Sample photo</span><figcaption>Panel installation · <span class="fill">[Town]</span>, ME</figcaption></figure>
+      <figure class="ba-a"><img src="https://images.unsplash.com/photo-1660330589693-99889d60181e?w=1200&q=75&auto=format" style="object-position:55% 30%" alt="After: finished panel installation (sample photo)" loading="lazy"><span class="lbl r">After</span><span class="tag">Sample photo</span><figcaption>Panel installation · <span class="fill">[Town]</span>, ME</figcaption></figure>
       <figure><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&q=75&auto=format" style="object-position:60% 30%" alt="Electrician working on a wall-mounted meter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Meter &amp; service upgrade · <span class="fill">[Town]</span>, ME</figcaption></figure>
       <figure><img src="https://images.unsplash.com/photo-1682345262055-8f95f3c513ea?w=900&q=75&auto=format" alt="Gloved hand holding a stripped electrical cable (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Rewiring &amp; updates · <span class="fill">[Town]</span>, ME</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=900&q=75&auto=format" style="object-position:50% 30%" alt="Electrician in a hard hat and face shield testing an electrical panel (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Testing &amp; troubleshooting · <span class="fill">[Town]</span>, ME</figcaption></figure>
     </div>
   </div>
 </section>
@@ -604,9 +617,9 @@ h1 em{font-style:normal;color:var(--y);display:block}
       </div>
     </div>
     <div class="cards">
-      <blockquote class="card"><span class="qm" aria-hidden="true">“</span><q>Excellent! Highly recommend.</q><div class="who"><span class="av" aria-hidden="true">JO</span><div><b>Jennifer O.</b><small>Google review</small></div></div><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span></blockquote>
-      <blockquote class="card"><span class="qm" aria-hidden="true">“</span><q>Quick response and efficient work.</q><div class="who"><span class="av" aria-hidden="true">SM</span><div><b>Sean M.</b><small>Google review</small></div></div><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span></blockquote>
-      <blockquote class="card"><span class="qm" aria-hidden="true">“</span><q>Fast, very attentive to my needs.</q><div class="who"><span class="av" aria-hidden="true">A</span><div><b><span class="fill">[Customer name]</span></b><small>Angi · August 2026</small></div></div><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span></blockquote>
+      <blockquote class="card"><span class="qm" aria-hidden="true">“</span><q>Excellent! Highly recommend.</q><div class="who"><span class="av" aria-hidden="true">JO</span><div><b>Jennifer O.</b><small>Google review</small></div><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span></div></blockquote>
+      <blockquote class="card"><span class="qm" aria-hidden="true">“</span><q>Quick response and efficient work.</q><div class="who"><span class="av" aria-hidden="true">SM</span><div><b>Sean M.</b><small>Google review</small></div><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span></div></blockquote>
+      <blockquote class="card"><span class="qm" aria-hidden="true">“</span><q>Fast, very attentive to my needs.</q><div class="who"><span class="av" aria-hidden="true">A</span><div><b><span class="fill">[Customer name]</span></b><small>Angi · August 2026</small></div><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span></div></blockquote>
     </div>
   </div>
 </section>
@@ -616,8 +629,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
     <div>
       <span class="lab">Service area</span>
       <h2>Proudly Serving Southern &amp; Central Maine</h2>
-      <p class="sub">Based in the Lisbon Falls area, with residential and commercial electrical service across these communities and the towns around them.</p>
-      <button class="btn ow" type="button" data-open>Check Your Area <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button>
+      <p class="sub">Based in Lisbon Falls, serving homes and businesses across these towns and the ones around them.</p>
     </div>
     <div class="mapbox">
       <div id="map" role="region" aria-label="Map of Southern and Central Maine showing Lisbon Falls, Sabattus, Lewiston, Auburn, Brunswick, Portland and Augusta"></div>
@@ -636,6 +648,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
         <li><svg aria-hidden="true"><use href="#c"/></svg>Augusta</li>
       </ul>
       <p>Don't see your town? Request a quote and ask.</p>
+      <button class="btn ow" type="button" data-open>Check Your Area <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button>
     </div>
   </div>
 </section>
