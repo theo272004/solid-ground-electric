@@ -96,10 +96,10 @@ h2{font-size:clamp(32px,3.3vw,46px);font-weight:800;letter-spacing:-.03em;line-h
 
 /* hero */
 .hero{position:relative;background:var(--g);color:#fff;overflow:hidden}
-.hphoto{position:absolute;top:0;bottom:0;right:0;width:52%}
-.hphoto img{width:100%;height:100%;object-fit:cover;object-position:26% 32%}
-.hphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--g) 0%,rgba(7,31,25,.55) 9%,rgba(7,31,25,0) 26%),linear-gradient(0deg,rgba(7,31,25,.55),rgba(7,31,25,0) 30%)}
-.slash{position:absolute;top:-10%;bottom:-10%;right:2.4%;width:46px;background:var(--y);transform:skewX(-18deg);pointer-events:none}
+.hphoto{position:absolute;inset:0}
+.hphoto img{width:100%;height:100%;object-fit:cover;object-position:72% 50%}
+.hphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,31,25,.35),rgba(7,31,25,0) 40%)}
+.slash{display:none;position:absolute;top:-10%;bottom:-10%;right:2.4%;width:46px;background:var(--y);transform:skewX(-18deg);pointer-events:none}
 .hero .tag{position:absolute;right:96px;bottom:16px;z-index:2}
 .tag{background:rgba(7,31,25,.84);color:#fff;border-radius:99px;padding:5px 11px;font-size:11px;font-weight:600;letter-spacing:.03em}
 .hin{position:relative;z-index:1;padding-block:clamp(32px,4.6svh,56px) clamp(30px,4svh,48px)}
@@ -435,8 +435,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
 <main id="top">
 <section class="hero dk" id="home">
   <div class="hphoto">
-    <img src="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=1600&q=78&auto=format" srcset="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=900&q=78&auto=format 900w,https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=1600&q=78&auto=format 1600w" sizes="(max-width:860px) 100vw,54vw" alt="Electrician in a hard hat and face shield testing an electrical panel (sample photo)" fetchpriority="high">
-    <span class="tag">Sample photo</span>
+    <img src="assets/hero.webp" width="1886" height="834" alt="Electrician in a hard hat working on an electrical panel" fetchpriority="high">
   </div>
   <div class="slash" aria-hidden="true"></div>
   <div class="w hin">
