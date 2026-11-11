@@ -82,7 +82,7 @@ h2{font-size:clamp(32px,3.3vw,46px);font-weight:800;letter-spacing:-.03em;line-h
 .brand{display:flex;align-items:center;gap:11px;flex:none;min-height:44px}
 .brand svg{width:34px;height:34px;flex:none}
 .brand b{display:block;font-weight:800;font-size:21px;letter-spacing:-.02em;line-height:1}
-.logo-ph{display:inline-block;font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--y);background:rgba(255,216,47,.14);border:1.5px dashed rgba(255,216,47,.55);border-radius:6px;padding:9px 16px}
+.logo-ph{display:inline-block;font-weight:700;font-size:17px;letter-spacing:.02em;color:var(--y)}
 .brand small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.32em;margin-top:5px;color:var(--on)}
 .nav{display:flex;gap:clamp(18px,2.4vw,34px);font-weight:600;font-size:15px}
 .nav a{padding:10px 0;position:relative;color:rgba(255,255,255,.9)}
@@ -417,13 +417,52 @@ h1 em{font-style:normal;color:var(--y);display:block}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 
+
+/* services cards */
+.svc .w{display:block}
+.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 56px}
+.sright{max-width:44ch}.sright .sub{margin:0}.sright .lk{margin-top:12px}
+.sgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(12px,1.2vw,18px);margin-top:clamp(24px,4svh,48px)}
+.sv{background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(22px,2.4vw,32px) clamp(18px,1.6vw,24px);display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.sv:hover{transform:translateY(-4px);box-shadow:0 18px 34px -22px rgba(7,31,25,.45)}
+.sv .ico{position:relative;width:60px;height:60px;display:grid;place-items:center;margin-left:-4px}
+.sv .ico::before{content:"";position:absolute;width:42px;height:42px;border-radius:50%;right:2px;top:4px;background:radial-gradient(circle,rgba(255,216,47,.95) 0%,rgba(255,216,47,.55) 55%,rgba(255,216,47,0) 100%);filter:blur(1.5px)}
+.sv svg.ic{position:relative;width:44px;height:44px;color:var(--ink)}
+.sv h3{font-size:clamp(17px,1.3vw,20px);margin-top:clamp(16px,3svh,30px);min-height:2.4em}
+.sv p{font-size:clamp(14px,1vw,15.5px);margin-top:10px}
+.sv .go{margin-top:clamp(18px,3svh,32px);width:44px;height:44px;border:0;border-radius:50%;background:var(--y);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:transform .25s var(--ease),background .2s}
+.sv .go svg{width:18px;height:18px}
+.sv .go:hover{background:var(--y2);transform:translateX(3px)}
+.sv .go:focus-visible{outline:2px solid var(--g3);outline-offset:3px}
+@media (min-width:981px){.sv{min-height:clamp(340px,50svh,520px)}.sv .ico{width:72px;height:72px}.sv .ico::before{width:52px;height:52px}.sv svg.ic{width:54px;height:54px}.shead h2{font-size:clamp(36px,3.6vw,56px)}.sright .sub{font-size:clamp(16px,1.15vw,18px)}}
+@media (max-width:1180px){.sgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.sgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.sv .ico{width:52px;height:52px}.sv svg.ic{width:38px;height:38px}}
+@media (max-width:420px){.sgrid{grid-template-columns:minmax(0,1fr)}}
+
+/* reviews + map share one screen */
+.tm .w{display:block}
+.rhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px 40px}
+.rhead .score{margin:0;text-align:right}
+.rhead .score a{justify-content:flex-end}
+.tm .cards{margin-top:clamp(16px,2.6svh,28px)}
+.card{position:relative;padding:20px 22px;gap:10px}
+.card .qm{font-size:34px;line-height:.6;height:14px;font-weight:800;color:var(--y2)}
+.card q{font-size:clamp(15px,1.1vw,17px)}
+.card .st{font-size:14px;order:3}
+@media (max-width:980px){.cards{grid-template-columns:minmax(0,1fr)}.rhead .score{text-align:left}.rhead .score a{justify-content:flex-start}}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px;scroll-snap-type:y proximity}
   .hero{min-height:calc(100svh - 107px);display:flex;align-items:center}
   .hero>.hin{width:100%}
-  .svc,.qs,.work,.tm,.area,.af{min-height:calc(100svh - 73px);display:flex;align-items:center;scroll-snap-align:start}
+  .svc,.qs,.work,.af{min-height:calc(100svh - 73px);display:flex;align-items:center;scroll-snap-align:start}
   .hero,.ftr{scroll-snap-align:start}
+  .duo{min-height:calc(100svh - 73px);display:flex;flex-direction:column;scroll-snap-align:start}
+  .duo .tm,.duo .area{min-height:0;scroll-snap-align:none;display:block}
+  .duo .tm{flex:none;padding-block:clamp(22px,3.4svh,40px)}
+  .duo .area{flex:1;display:flex;align-items:center;padding-block:clamp(20px,3svh,36px)}
+  .duo .mapbox{height:clamp(240px,38svh,380px)}
   .svc>.w,.qs>.w,.work>.w,.tm>.w,.area>.w,.af>.w{width:100%}
   .gal{height:clamp(320px,58svh,600px)}
   /* quote card: wider and bigger */
@@ -502,22 +541,20 @@ h1 em{font-style:normal;color:var(--y);display:block}
 
 <section class="svc" id="services">
   <div class="w">
-    <div>
-      <span class="lab">Our services</span>
-      <h2>Complete Electrical Solutions</h2>
-      <p class="sub">Residential and commercial electrical work in Lewiston, Auburn, Brunswick, Portland, Augusta and nearby towns.</p>
-      <button class="lk" type="button" data-open><span>Request a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button>
-    </div>
-    <div class="srow">
-      <div class="scroller" id="scroller">
-        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#p"/></svg><h3>Panel Upgrades</h3><p>Older and undersized panels replaced, including fuse boxes, and 100-amp service upgraded to 200 amps.</p><button class="lk" type="button" data-open="Panel / breakers"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
-        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#e"/></svg><h3>EV Chargers</h3><p>Level 2 charger installation in your garage or driveway. Your panel gets checked first.</p><button class="lk" type="button" data-open="EV charger"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
-        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#h"/></svg><h3>Rewiring &amp; Updates</h3><p>Old wiring replaced and updates for older homes, kitchens, basements and additions.</p><button class="lk" type="button" data-open="New circuits / renovation"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
-        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#l"/></svg><h3>Lighting &amp; Outlets</h3><p>Fixtures, recessed lighting, ceiling fans, outlets and switches. Small jobs are welcome.</p><button class="lk" type="button" data-open="Lighting|Outlets &amp; switches"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
-        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#g"/></svg><h3>Generators &amp; Transfer Switches</h3><p>Portable generator hookups and transfer switches, so the essentials keep running in an outage.</p><button class="lk" type="button" data-open="Generator"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
-        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#m"/></svg><h3>Service &amp; Troubleshooting</h3><p>Breakers that won't reset, dead outlets and flickering lights tracked down and repaired.</p><button class="lk" type="button" data-open="Something stopped working"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+    <div class="shead">
+      <div><span class="lab">Our services</span><h2>Complete Electrical Solutions</h2></div>
+      <div class="sright">
+        <p class="sub">Residential and commercial electrical work in Lewiston, Auburn, Brunswick, Portland, Augusta and nearby towns.</p>
+        <button class="lk" type="button" data-open><span>Request a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button>
       </div>
-      <button class="snext" id="nextBtn" type="button" aria-label="Show more services"><svg aria-hidden="true"><use href="#a"/></svg></button>
+    </div>
+    <div class="sgrid">
+      <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#p"/></svg></span><h3>Panel Upgrades</h3><p>Older and undersized panels replaced, including fuse boxes, and 100-amp service upgraded to 200 amps.</p><button class="go" type="button" data-open="Panel / breakers" aria-label="Get a quote: Panel Upgrades"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
+      <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#e"/></svg></span><h3>EV Chargers</h3><p>Level 2 charger installation in your garage or driveway. Your panel gets checked first.</p><button class="go" type="button" data-open="EV charger" aria-label="Get a quote: EV Chargers"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
+      <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#h"/></svg></span><h3>Rewiring &amp; Updates</h3><p>Old wiring replaced and updates for older homes, kitchens, basements and additions.</p><button class="go" type="button" data-open="New circuits / renovation" aria-label="Get a quote: Rewiring and Updates"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
+      <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#l"/></svg></span><h3>Lighting &amp; Outlets</h3><p>Fixtures, recessed lighting, ceiling fans, outlets and switches. Small jobs are welcome.</p><button class="go" type="button" data-open="Lighting|Outlets &amp; switches" aria-label="Get a quote: Lighting and Outlets"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
+      <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#g"/></svg></span><h3>Generators &amp; Transfer Switches</h3><p>Portable generator hookups and transfer switches, so the essentials keep running in an outage.</p><button class="go" type="button" data-open="Generator" aria-label="Get a quote: Generators and Transfer Switches"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
+      <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#m"/></svg></span><h3>Service &amp; Troubleshooting</h3><p>Breakers that won't reset, dead outlets and flickering lights tracked down and repaired.</p><button class="go" type="button" data-open="Something stopped working" aria-label="Get a quote: Service and Troubleshooting"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
     </div>
   </div>
 </section>
@@ -557,20 +594,20 @@ h1 em{font-style:normal;color:var(--y);display:block}
   </div>
 </section>
 
+<div class="duo">
 <section class="tm" id="reviews">
   <div class="w">
-    <div>
-      <span class="lab">Testimonials</span>
-      <h2>What Our Customers Say</h2>
+    <div class="rhead">
+      <div><span class="lab">Testimonials</span><h2>What Our Customers Say</h2></div>
       <div class="score">
         <a href="https://share.google/AuNdjh7cpOlOxx9OF"><span class="st dkst" aria-hidden="true">★★★★★</span><b>5.0</b><span>on Google</span></a>
         <a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm"><span class="st dkst" aria-hidden="true">★★★★★</span><b>5.0</b><span>on Angi · 24 reviews</span></a>
       </div>
     </div>
     <div class="cards">
-      <blockquote class="card"><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span><q>Excellent! Highly recommend.</q><div class="who"><span class="av" aria-hidden="true">JO</span><div><b>Jennifer O.</b><small>Google review</small></div></div></blockquote>
-      <blockquote class="card"><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span><q>Quick response and efficient work.</q><div class="who"><span class="av" aria-hidden="true">SM</span><div><b>Sean M.</b><small>Google review</small></div></div></blockquote>
-      <blockquote class="card"><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span><q>Fast, very attentive to my needs.</q><div class="who"><span class="av" aria-hidden="true">A</span><div><b><span class="fill">[Customer name]</span></b><small>Angi · August 2026</small></div></div></blockquote>
+      <blockquote class="card"><span class="qm" aria-hidden="true">“</span><q>Excellent! Highly recommend.</q><div class="who"><span class="av" aria-hidden="true">JO</span><div><b>Jennifer O.</b><small>Google review</small></div></div><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span></blockquote>
+      <blockquote class="card"><span class="qm" aria-hidden="true">“</span><q>Quick response and efficient work.</q><div class="who"><span class="av" aria-hidden="true">SM</span><div><b>Sean M.</b><small>Google review</small></div></div><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span></blockquote>
+      <blockquote class="card"><span class="qm" aria-hidden="true">“</span><q>Fast, very attentive to my needs.</q><div class="who"><span class="av" aria-hidden="true">A</span><div><b><span class="fill">[Customer name]</span></b><small>Angi · August 2026</small></div></div><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span></blockquote>
     </div>
   </div>
 </section>
@@ -603,6 +640,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
     </div>
   </div>
 </section>
+</div>
 
 <section class="af">
   <div class="w">
@@ -952,11 +990,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
   nav.addEventListener("click",e=>{if(e.target.closest("a"))setMenu(false);});
   document.addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false);});
   /* services scroller */
-  const sc=document.getElementById("scroller"),nx=document.getElementById("nextBtn");
-  const upd=()=>{nx.disabled=sc.scrollLeft+sc.clientWidth>=sc.scrollWidth-4;};
-  nx.addEventListener("click",()=>sc.scrollBy({left:sc.querySelector(".sv").offsetWidth*2,behavior:"smooth"}));
-  sc.addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd();
-  /* active nav link */
+    /* active nav link */
   const ba=document.getElementById("ba"),rg=document.getElementById("baRange");
   if(ba&&rg)rg.addEventListener("input",()=>ba.style.setProperty("--x",rg.value+"%"));
   const links=[...nav.querySelectorAll("a")];
