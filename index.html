@@ -48,8 +48,8 @@ h2{font-size:clamp(32px,3.3vw,46px);font-weight:800;letter-spacing:-.03em;line-h
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--y);padding:10px 14px;border-radius:8px;font-weight:600}
 .skip:focus{top:12px}
-.fill{background:#FFF0A8;padding:0 4px;border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.dk .fill{background:rgba(255,216,47,.2);color:#fff}
+.fill{background:none;padding:0}
+.dk .fill{background:none;color:inherit}
 .st{color:var(--y);letter-spacing:2px;line-height:1}
 .st.dkst{color:#E0B400}
 
@@ -176,7 +176,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,31,25,.85),rgba(7,31,25,0) 45%)}
 .gal figcaption{position:absolute;left:14px;right:14px;bottom:13px;z-index:1;color:#fff;font-size:13.5px;font-weight:600;display:flex;flex-wrap:wrap;align-items:center;gap:4px 7px;line-height:1.3}
 .gal figcaption svg{width:15px;height:15px;color:var(--y);flex:none}
-.gal figcaption .fill{color:#fff;background:rgba(255,216,47,.28);font-weight:500}
+.gal figcaption .fill{color:#fff;background:none;font-weight:500}
 .gal .tag{position:absolute;right:10px;top:10px;z-index:1}
 
 /* testimonials */
@@ -543,7 +543,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
 <symbol id="i-cam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
 </defs></svg>
 
-<div class="draft" id="draft"><div class="w"><p><b>Draft for review</b>Highlighted text and sample photos are placeholders until you confirm them.</p><button type="button" aria-label="Hide note" onclick="document.getElementById('draft').hidden=true">×</button></div></div>
+<div class="draft" id="draft"><div class="w"><p><b>Draft for review</b>Text in [brackets] and sample photos are placeholders until you confirm them.</p><button type="button" aria-label="Hide note" onclick="document.getElementById('draft').hidden=true">×</button></div></div>
 
 <header class="hdr dk" id="hdr"><div class="w">
   <a class="brand" href="#top" aria-label="Solid Ground Electric home"><span class="logo-ph">[logo here]</span></a>
