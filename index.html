@@ -796,6 +796,25 @@ h1 em{font-style:normal;color:var(--y);display:block}
   .hero .hlead{font-size:20px}
 }
 
+/* about (photo + text + small call to action) and questions (own screen) */
+.aphoto{aspect-ratio:4/5;border-radius:22px;background:rgba(7,31,25,.07);border:1px dashed rgba(7,31,25,.28);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:var(--mut);font-size:15px;width:100%;max-width:340px}
+.acta{background:var(--g);color:#fff;border-radius:22px;padding:clamp(22px,2vw,30px);display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.acta h3{font-size:clamp(21px,1.7vw,26px);line-height:1.15;color:#fff}
+.acta p{color:rgba(255,255,255,.78);font-size:15.5px;line-height:1.5}
+.acta p b{color:#fff;white-space:nowrap}
+.acta .btn{width:100%;justify-content:center}
+.af.fq .faq{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+@media (max-width:980px){.aphoto{max-width:300px;aspect-ratio:1/1}.acta{max-width:none}}
+@media (min-width:981px){
+  .af.ab .w{grid-template-columns:minmax(0,.8fr) minmax(0,1.25fr) minmax(0,.8fr);gap:clamp(28px,4vw,64px);align-items:center}
+  .af.ab .about{position:static}
+  .af.fq .w{grid-template-columns:minmax(0,1fr)}
+  .af.fq .faq{grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);gap:clamp(32px,5vw,88px);align-items:start}
+  .af.fq .fhead{position:sticky;top:calc(73px + clamp(20px,4svh,40px))}
+  .af.fq .fl{margin-top:0}
+}
+@media (min-width:1800px){.af.ab .w{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) minmax(0,.8fr)}.aphoto{max-width:400px}}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
@@ -1016,10 +1035,10 @@ h1 em{font-style:normal;color:var(--y);display:block}
 </section>
 </div>
 
-<section class="af">
+<section class="af ab">
   <div class="w">
+    <div class="aphoto" aria-label="Photo of the owner"><span class="fill">[Photo of you here]</span></div>
     <div class="about" id="about">
-      <span class="lab">About</span>
       <h2><span class="hl">Meet Your Electrician</span></h2>
       <p>I'm <span class="fill">[Your name]</span>, a licensed electrician with <span class="fill">[X]</span> years of experience. Before starting Solid Ground Electric in <span class="fill">[2025]</span>, I <span class="fill">[where you trained and worked, and on what kind of jobs]</span>.</p>
       <p class="q">When you send a job, I'm the one who reads it, prices it and does the work.</p>
@@ -1031,10 +1050,17 @@ h1 em{font-style:normal;color:var(--y);display:block}
         <dt>Based in</dt><dd>Lisbon Falls area, Maine</dd>
       </dl></details>
     </div>
+    <aside class="acta dk"><h3>Looking for an electrician?</h3><p>Tell us about the job and get a quote, or call or text <b>(207) 713-1857</b>.</p><button class="btn y" type="button" data-open>Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button><a class="btn ow" href="tel:+12077131857">Call or text</a></aside>
+  </div>
+</section>
+
+<section class="af fq">
+  <div class="w">
     <div class="faq" id="faq">
-      <span class="lab">FAQ</span>
+      <div class="fhead">
       <h2>Common Questions</h2>
       <p class="q2">Have a different question? Call or text <b>(207) 713-1857</b>.</p>
+      </div>
       <div class="fl">
         <details open><summary>Do you pull permits?<i aria-hidden="true"></i></summary><p>Yes. When a job requires a permit, it gets pulled and the work gets inspected.</p></details>
         <details open><summary>How does a panel upgrade work, and will my power be off?<i aria-hidden="true"></i></summary><p>You get the quote first. After that, the permit gets pulled and the power shutoff gets coordinated with Central Maine Power. Expect your power to be off for part of the day while the panel is replaced. You'll know the timing ahead of time.</p></details>
