@@ -826,6 +826,31 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .gword i:nth-child(1),.gword i:nth-child(4){color:#4285F4}.gword i:nth-child(2),.gword i:nth-child(6){color:#EA4335}.gword i:nth-child(3){color:#FBBC05}.gword i:nth-child(5){color:#34A853}
 .glogo{width:1.25em;height:1.25em;vertical-align:-.3em;margin-left:2px;display:inline-block}
 .angi{display:inline-block;font-weight:800;letter-spacing:-.04em;color:#FF6153;font-size:1.2em;line-height:1;vertical-align:-.05em;margin-left:2px}
+/* About: dark card + big photo with floating rating cards */
+.af.ab .about{background:var(--g);color:#fff;border-radius:26px;padding:clamp(28px,3.4vw,52px);display:flex;flex-direction:column;gap:0}
+.af.ab .about h2{color:#fff;font-size:clamp(34px,3.6vw,54px);line-height:1.08;margin-bottom:6px}
+.af.ab .about p{margin-top:16px}
+.af.ab .about .creds{margin-top:auto}
+.af.ab .about p.q+.creds{margin-top:auto}
+.af.ab .about .hl{color:var(--g);margin-inline:0;padding:0 .16em}
+.af.ab .about p.q{margin-bottom:28px}
+.af.ab .about p{color:rgba(255,255,255,.88);max-width:46ch}
+.af.ab .about p.q{color:rgba(255,255,255,.62)}
+.af.ab .about .creds{margin-top:0;border:1px solid var(--ld);border-radius:18px;padding:0 clamp(16px,1.6vw,22px);background:rgba(255,255,255,.04)}
+.af.ab .about .creds summary{color:#fff}
+.af.ab .about .facts dt{color:rgba(255,255,255,.6)}
+.af.ab .about .facts dt,.af.ab .about .facts dd{border-top-color:var(--ld)}
+.af.ab .aphoto{position:relative;max-width:none;aspect-ratio:auto;min-height:420px;border-radius:26px;align-items:flex-start;justify-content:center;padding-top:34%!important}
+.astats{position:absolute;left:16px;right:16px;bottom:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+.astats>div{background:#fff;border-radius:16px;padding:14px 16px;display:grid;gap:6px;box-shadow:0 16px 30px -22px rgba(7,31,25,.5)}
+.astats b{font-size:clamp(20px,1.7vw,26px);font-weight:800;color:var(--ink);display:flex;gap:8px;align-items:center;line-height:1}
+.astats b .st{font-size:13px}
+.astats small{font-size:13px;color:var(--mut)}
+@media (min-width:981px){
+  .af.ab .w{grid-template-columns:minmax(0,1fr) minmax(0,.95fr);justify-content:stretch;align-items:stretch;gap:clamp(16px,1.6vw,24px)}
+  .af.ab .aphoto{min-height:clamp(460px,62svh,600px)}
+}
+@media (max-width:980px){.af.ab .aphoto{min-height:380px;max-width:none}}
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
@@ -1047,9 +1072,8 @@ h1 em{font-style:normal;color:var(--y);display:block}
 
 <section class="af ab">
   <div class="w">
-    <div class="aphoto" aria-label="Photo of the owner"><span class="fill">[Photo of you here]</span></div>
-    <div class="about" id="about">
-      <h2><span class="hl">Meet Your Electrician</span></h2>
+    <div class="about dk" id="about">
+      <h2>Meet Your <span class="hl">Electrician</span></h2>
       <p>I'm <span class="fill">[Your name]</span>, a licensed electrician with <span class="fill">[X]</span> years of experience. Before starting Solid Ground Electric in <span class="fill">[2025]</span>, I <span class="fill">[where you trained and worked, and on what kind of jobs]</span>.</p>
       <p class="q">When you send a job, I'm the one who reads it, prices it and does the work.</p>
       <details class="creds"><summary>License and background<i aria-hidden="true"></i></summary><dl class="facts">
@@ -1059,6 +1083,9 @@ h1 em{font-style:normal;color:var(--y);display:block}
         <dt>Insurance</dt><dd><span class="fill">[Coverage you carry]</span></dd>
         <dt>Based in</dt><dd>Lisbon Falls area, Maine</dd>
       </dl></details>
+    </div>
+    <div class="aphoto" aria-label="Photo of the owner"><span class="fill">[Photo of you here]</span>
+      <div class="astats"><div><b>5.0 <span class="st dkst" aria-hidden="true">★★★★★</span></b><small>on <span class="gword" role="img" aria-label="Google"><i>G</i><i>o</i><i>o</i><i>g</i><i>l</i><i>e</i></span></small></div><div><b>5.0 <span class="st dkst" aria-hidden="true">★★★★★</span></b><small>24 reviews on <span class="angi" role="img" aria-label="Angi">angi</span></small></div></div>
     </div>
   </div>
 </section>
