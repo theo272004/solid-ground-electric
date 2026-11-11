@@ -13,77 +13,62 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Caveat:wght@600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Electrician","name":"Solid Ground Electric LLC","telephone":"+1-207-713-1857","email":"solidgroundelectric26@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Lisbon Falls","addressRegion":"ME","addressCountry":"US"},"areaServed":["Lewiston, ME","Auburn, ME","Brunswick, ME","Portland, ME","Augusta, ME","Lisbon Falls, ME","Sabattus, ME"]}
 </script>
 <style>
-/* Concept: the panel schedule card inside a breaker door. Circuits number the sections, wire colours mark them, yellow is reserved for the one action. */
 :root{
   color-scheme:light;
-  --g:#071F19;--g2:#102D24;--g3:#2B5D49;--y:#FFD82F;--y2:#F2C800;--bg:#F3F2E9;--card:#FBFAF4;--ink:#10221D;--mut:#5F6A64;
-  --line:#D9D8CC;--hair:rgba(16,34,29,.14);--on:rgba(255,255,255,.72);--ld:rgba(255,255,255,.14);
-  --w-blk:#16191A;--w-red:#C6372B;--w-wht:#E9E7DD;--w-grn:#2E7D4F;--w-blu:#2F5E9E;
-  --r:4px;--gut:clamp(16px,3vw,44px);--ease:cubic-bezier(.2,.7,.2,1);
-  --disp:"Archivo",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;
+  --g:#071F19;--g2:#102D24;--g3:#2B5D49;--y:#FFD82F;--y2:#F2C800;--bg:#F3F2E9;--w:#fff;--ink:#10221D;--mut:#69736D;
+  --line:#DEDDD2;--on:rgba(255,255,255,.74);--ld:rgba(255,255,255,.14);--gut:clamp(16px,3vw,40px);--r:12px;
+  --ease:cubic-bezier(.2,.7,.2,1);
   /* names used by the job request styles */
-  --paper:#fff;--rule:#D9D8CC;--muted:var(--mut);--birch:var(--bg);--birch-2:#E6E5DA;--spruce-700:var(--g3);--spruce-800:var(--g2);
-  --cream:#fff;--serif:"Archivo",system-ui,sans-serif;--glow:var(--y);--on-glow:var(--ink);--danger:#A93A1E;
+  --paper:#fff;--rule:#DEDDD2;--muted:var(--mut);--birch:var(--bg);--birch-2:#E6E5DA;--spruce-700:var(--g3);--spruce-800:var(--g2);
+  --cream:#fff;--serif:Inter,system-ui,sans-serif;--glow:var(--y);--on-glow:var(--ink);--danger:#A93A1E;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.55 var(--disp);font-stretch:100%;-webkit-font-smoothing:antialiased;overflow-x:clip}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
 h1,h2,h3,h4,p,ul,ol,dl,dd,figure,blockquote{margin:0;padding:0}
 ul,ol{list-style:none}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;cursor:pointer}
 img,svg{display:block;max-width:100%}
 address{font-style:normal}
-:focus-visible{outline:2px solid var(--g3);outline-offset:3px;border-radius:3px}
+:focus-visible{outline:2px solid var(--g3);outline-offset:3px;border-radius:4px}
 .dk :focus-visible{outline-color:var(--y)}
 .w{max-width:1320px;margin-inline:auto;padding-inline:max(var(--gut),env(safe-area-inset-left,0px)) max(var(--gut),env(safe-area-inset-right,0px))}
-h1,h2{font-weight:800;font-stretch:76%;letter-spacing:-.018em;line-height:.96;text-wrap:balance}
-h2{font-size:clamp(34px,3.9vw,56px)}
-.mono{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
-.ckt{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:16px}
-.dk .ckt{color:var(--on)}
-.ckt b{font-weight:600;color:var(--ink)}
-.dk .ckt b{color:#fff}
-.wire{display:inline-block;width:28px;height:4px;border-radius:2px;background:var(--wc,var(--w-blk))}
-.lead{color:var(--mut);font-size:clamp(16.5px,1.25vw,18.5px);line-height:1.55;margin-top:18px;max-width:42ch}
-.dk .lead{color:var(--on)}
+h2{font-size:clamp(32px,3.3vw,46px);font-weight:800;letter-spacing:-.03em;line-height:1.04;text-wrap:balance}
+.lab{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g3);margin-bottom:12px}
+.dk .lab{color:var(--y)}
+.sub{color:var(--mut);font-size:16px;line-height:1.55;margin-top:16px;max-width:38ch}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--y);padding:10px 14px;border-radius:6px;font-weight:600}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--y);padding:10px 14px;border-radius:8px;font-weight:600}
 .skip:focus{top:12px}
-.fill{background:#FFEDA0;padding:0 4px;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.dk .fill{background:rgba(255,216,47,.22);color:#fff}
-.st{color:#D9A800;letter-spacing:2px;line-height:1}
-.dk .st{color:var(--y)}
-.tagp{position:absolute;z-index:2;font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;background:rgba(7,31,25,.86);color:#fff;padding:4px 8px;border-radius:2px}
+.fill{background:#FFF0A8;padding:0 4px;border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.dk .fill{background:rgba(255,216,47,.2);color:#fff}
+.st{color:var(--y);letter-spacing:2px;line-height:1}
+.st.dkst{color:#E0B400}
 
-/* wire stripe used as a divider */
-.stripe{height:6px;display:grid;grid-template-columns:repeat(4,1fr)}
-.stripe i{background:var(--w-blk)}.stripe i:nth-child(2){background:var(--w-red)}.stripe i:nth-child(3){background:var(--w-wht)}.stripe i:nth-child(4){background:var(--w-grn)}
-
-/* breaker CTA */
-.brk{display:inline-flex;align-items:center;gap:14px;min-height:58px;padding:9px 22px 9px 9px;background:var(--y);color:var(--ink);border:0;border-radius:6px;font-weight:700;font-size:16.5px;line-height:1.1;text-align:left;white-space:nowrap;box-shadow:inset 0 -3px 0 rgba(0,0,0,.14);transition:background .2s}
-.brk:hover{background:var(--y2)}
-.brk .sw{flex:none;width:28px;height:40px;border-radius:4px;background:var(--g);position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
-.brk .sw::before{content:"OFF";position:absolute;left:0;right:0;bottom:-1px;font:600 6.5px/1 var(--mono);color:rgba(255,255,255,.5);text-align:center;opacity:0}
-.brk .sw::after{content:"";position:absolute;left:5px;right:5px;height:16px;bottom:5px;border-radius:2px;background:#D9D7CC;box-shadow:0 2px 0 rgba(0,0,0,.35);transition:bottom .22s var(--ease),background .22s}
-.brk:hover .sw::after,.brk:focus-visible .sw::after,.brk.on .sw::after{bottom:19px;background:#fff}
-.brk small{display:block;font:500 11px/1.2 var(--mono);letter-spacing:.04em;text-transform:uppercase;opacity:.72;margin-top:4px}
-.brk:disabled{opacity:.65;cursor:progress}
-.tl{font-weight:700;font-size:19px;font-variant-numeric:tabular-nums;border-bottom:2px solid currentColor;padding-bottom:1px;line-height:1.2}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border:1.5px solid transparent;border-radius:6px;font-weight:700;font-size:16px;line-height:1.1;white-space:nowrap;transition:background .2s,border-color .2s}
-.btn svg{width:17px;height:17px;flex:none}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border:1.5px solid transparent;border-radius:999px;font-weight:700;font-size:15.5px;line-height:1.1;white-space:nowrap;transition:background .2s,border-color .2s,color .2s}
+.btn svg{width:17px;height:17px;flex:none;transition:transform .25s var(--ease)}
+.btn:hover svg.ar{transform:translateX(4px)}
 .btn:disabled{opacity:.65;cursor:progress}
 .y,.btn-glow{background:var(--y);color:var(--ink)}
 .y:hover,.btn-glow:hover{background:var(--y2)}
+.ow{background:transparent;border-color:rgba(255,255,255,.55);color:#fff}
+.ow:hover{background:rgba(255,255,255,.08)}
 .btn-ink{border-color:var(--line);background:#fff}
 .btn-ink:hover{border-color:var(--g3)}
+.lk{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:7px;min-height:40px;font-weight:600;font-size:14.5px}
+.lk span{border-bottom:1.5px solid currentColor;padding-bottom:1px}
+.lk svg{width:15px;height:15px;transition:transform .25s var(--ease)}
+.lk:hover svg{transform:translateX(4px)}
+.lk:focus-visible{outline:2px solid var(--g3);outline-offset:3px;border-radius:4px}
 
 /* draft note */
 .draft{background:#03100C;color:var(--on);font-size:13px}
@@ -92,194 +77,173 @@ h2{font-size:clamp(34px,3.9vw,56px)}
 .draft button{background:none;border:0;color:var(--on);font-size:20px;line-height:1;width:44px;height:34px;margin-right:-14px;flex:none}
 
 /* header */
-.hdr{position:sticky;top:0;z-index:50;background:var(--g);color:#fff}
-.hdr .w{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px}
+.hdr{position:sticky;top:0;z-index:50;background:var(--g);color:#fff;border-bottom:1px solid var(--ld)}
+.hdr .w{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
 .brand{display:flex;align-items:center;gap:11px;flex:none;min-height:44px}
-.brand svg{width:30px;height:30px;flex:none}
-.brand b{font-weight:800;font-stretch:78%;font-size:22px;letter-spacing:-.01em;line-height:1}
-.brand b span{color:var(--y)}
-.nav{display:flex;gap:clamp(16px,2.2vw,32px)}
-.nav a{font:500 12.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:12px 0;color:rgba(255,255,255,.82);display:flex;gap:7px;align-items:center}
-.nav a i{font-style:normal;color:rgba(255,255,255,.4)}
-.nav a:hover,.nav a[aria-current="true"]{color:#fff}
-.nav a[aria-current="true"] i{color:var(--y)}
-.hr{display:flex;align-items:center;gap:20px;white-space:nowrap}
-.hr .tl{font-size:16px;border-bottom-color:rgba(255,255,255,.3);padding-block:10px 1px}
-.hr .brk{min-height:46px;padding:6px 16px 6px 6px;font-size:15px}
-.hr .brk .sw{width:22px;height:32px}
-.hr .brk .sw::after{height:12px;bottom:4px;left:4px;right:4px}
-.hr .brk:hover .sw::after{bottom:15px}
-.menu{display:none;flex:none;width:46px;height:46px;background:none;border:1.5px solid var(--ld);border-radius:6px;align-items:center;justify-content:center;color:#fff}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{display:block;font-weight:800;font-size:21px;letter-spacing:-.02em;line-height:1}
+.brand small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.32em;margin-top:5px;color:var(--on)}
+.nav{display:flex;gap:clamp(18px,2.4vw,34px);font-weight:600;font-size:15px}
+.nav a{padding:10px 0;position:relative;color:rgba(255,255,255,.9)}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--y);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.nav a:hover::after,.nav a[aria-current="true"]::after{transform:scaleX(1)}
+.nav a[aria-current="true"]{color:var(--y)}
+.hr{display:flex;align-items:center;gap:20px;font-weight:600;white-space:nowrap}
+.hr .tl{font-size:15px;padding-block:12px;color:rgba(255,255,255,.9)}
+.hr .btn{min-height:44px;padding:0 20px;font-size:14.5px}
+.menu{display:none;flex:none;width:46px;height:46px;background:none;border:1.5px solid var(--ld);border-radius:10px;align-items:center;justify-content:center;color:#fff}
 .menu svg{width:20px;height:20px}
 
 /* hero */
-.hero{padding-block:clamp(28px,5svh,64px) clamp(28px,5svh,60px)}
-.hero .w{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(28px,4vw,64px);align-items:stretch}
-.htext{display:flex;flex-direction:column;justify-content:center}
-.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
-.meta span+span::before{content:"/";margin-right:14px;color:var(--line)}
-h1{font-size:clamp(50px,6.3vw,96px);line-height:.9;margin-top:clamp(18px,2.6svh,28px);font-stretch:72%}
-h1 em{font-style:normal;position:relative;white-space:nowrap}
-h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--y);z-index:-1}
-.hi{margin-top:clamp(20px,3svh,30px);display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;max-width:520px}
-.face{width:58px;height:58px;border-radius:50%;background:var(--g) center/cover;display:grid;place-items:center;color:var(--y);font:600 10px/1.1 var(--mono);text-align:center;letter-spacing:.02em;text-transform:uppercase}
-.hi p{font-size:clamp(17px,1.35vw,20px);line-height:1.45}
-.sig{font-family:"Caveat",cursive;font-size:30px;line-height:1;color:var(--g3);margin-top:6px;display:block}
-.hctas{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;margin-top:clamp(22px,3.2svh,34px)}
-.hphoto{position:relative;min-height:clamp(380px,62svh,620px);border-radius:4px;overflow:hidden;background:#8E8B7F}
-.hphoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 30%}
-.hphoto .tagp{left:12px;top:12px}
-.spec{position:absolute;right:14px;bottom:14px;left:auto;width:min(300px,calc(100% - 28px));background:var(--card);border:1px solid var(--ink);font-family:var(--mono);font-size:11.5px;color:var(--ink);z-index:2}
-.spec header{display:flex;justify-content:space-between;padding:7px 10px;background:var(--ink);color:#fff;letter-spacing:.08em;text-transform:uppercase;font-size:10.5px}
-.spec dl{display:grid;grid-template-columns:auto 1fr}
-.spec dt,.spec dd{padding:7px 10px;border-top:1px solid var(--hair)}
-.spec dt{color:var(--mut);text-transform:uppercase;letter-spacing:.05em;font-size:10.5px;padding-top:8px}
-.spec dd{text-align:right;font-weight:500}
-.spec dd a{border-bottom:1px solid currentColor}
+.hero{position:relative;background:var(--g);color:#fff;overflow:hidden}
+.hphoto{position:absolute;top:0;bottom:0;right:0;width:52%}
+.hphoto img{width:100%;height:100%;object-fit:cover;object-position:26% 32%}
+.hphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--g) 0%,rgba(7,31,25,.55) 9%,rgba(7,31,25,0) 26%),linear-gradient(0deg,rgba(7,31,25,.55),rgba(7,31,25,0) 30%)}
+.slash{position:absolute;top:-10%;bottom:-10%;right:2.4%;width:46px;background:var(--y);transform:skewX(-18deg);pointer-events:none}
+.hero .tag{position:absolute;right:96px;bottom:16px;z-index:2}
+.tag{background:rgba(7,31,25,.84);color:#fff;border-radius:99px;padding:5px 11px;font-size:11px;font-weight:600;letter-spacing:.03em}
+.hin{position:relative;z-index:1;padding-block:clamp(32px,4.6svh,56px) clamp(30px,4svh,48px)}
+.htext{max-width:600px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,216,47,.35);background:rgba(255,216,47,.08);border-radius:99px;padding:6px 14px 6px 10px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.pill svg{width:15px;height:15px;color:var(--y)}
+h1{font-size:clamp(44px,4.6vw,70px);font-weight:900;line-height:.94;letter-spacing:-.035em;text-transform:uppercase;margin-top:clamp(18px,2.6svh,26px)}
+h1 span{display:block}
+h1 em{font-style:normal;color:var(--y);display:block}
+.hlead{font-size:clamp(16.5px,1.3vw,19px);line-height:1.5;margin-top:clamp(16px,2.4svh,24px);max-width:31em;color:#fff}
+.hctas{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin-top:clamp(20px,3svh,30px)}
+.play{display:inline-flex;align-items:center;gap:12px;font-weight:600;min-height:44px}
+.play i{width:40px;height:40px;border:1.5px solid rgba(255,255,255,.7);border-radius:50%;display:grid;place-items:center}
+.play svg{width:16px;height:16px}
+.play:hover i{background:rgba(255,255,255,.1)}
+.trust{display:flex;flex-wrap:wrap;gap:16px 0;margin-top:clamp(20px,2.8svh,30px)}
+.trust>*{padding:0 26px;border-left:1px solid var(--ld);display:grid;gap:5px;align-content:start}
+.trust>*:first-child{padding-left:0;border-left:0}
+.trust b{font-size:21px;font-weight:800;letter-spacing:-.01em;line-height:1;display:flex;gap:8px;align-items:center}
+.trust b .st{font-size:15px}
+.trust small{font-size:13px;color:var(--on)}
+.trust a:hover small{text-decoration:underline;text-underline-offset:3px}
 
-/* services: the panel schedule */
-.svc{padding-block:clamp(48px,7svh,88px)}
-.svc .w{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:clamp(28px,4vw,64px);align-items:center}
-.sched{background:var(--card);border:1.5px solid var(--ink);border-radius:3px}
-.sched>header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding:10px 16px;border-bottom:1.5px solid var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.sched>header span:last-child{color:var(--mut)}
-.row{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:grid;grid-template-columns:44px 6px minmax(140px,1fr) minmax(0,1.6fr) auto;gap:16px;align-items:center;padding:clamp(11px,1.8svh,16px) 16px;border-top:1px solid var(--hair);transition:background .15s}
-.row:first-of-type{border-top:0}
-.row .n{font-family:var(--mono);font-size:13px;color:var(--mut)}
-.row .c{width:6px;height:30px;border-radius:2px;background:var(--wc)}
-.row h3{font-weight:800;font-stretch:78%;font-size:clamp(20px,1.6vw,24px);line-height:1.05;letter-spacing:-.005em}
-.row p{font-size:14.5px;line-height:1.45;color:var(--mut)}
-.row .q{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;display:flex;gap:6px;align-items:center;white-space:nowrap}
-.row .q svg{width:14px;height:14px;transition:transform .2s var(--ease)}
-.row:hover{background:#fff}
-.row:hover .q svg{transform:translateX(4px)}
-.row:hover .q{color:var(--g3)}
-.row:focus-visible{outline:2px solid var(--g3);outline-offset:-3px}
-.sched>footer{border-top:1.5px solid var(--ink);padding:9px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+/* services */
+.svc{padding-block:clamp(48px,7svh,80px)}
+.svc .w{display:grid;grid-template-columns:minmax(240px,300px) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:start}
+.svc .lk{margin-top:18px}
+.srow{position:relative;min-width:0;padding-right:58px}
+.scroller{display:grid;grid-auto-flow:column;grid-auto-columns:max(200px,25%);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}
+.scroller::-webkit-scrollbar{display:none}
+.sv{scroll-snap-align:start;padding:6px 22px 4px;border-left:1px solid var(--line);display:flex;flex-direction:column}
+.sv svg.ic{width:36px;height:36px;color:var(--g)}
+.sv h3{font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.2;margin-top:18px;min-height:2.4em}
+.sv p{font-size:14.5px;line-height:1.5;color:var(--mut);margin-top:8px;flex:1}
+.sv .lk{margin-top:14px}
+.snext{position:absolute;right:0;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;display:grid;place-items:center;box-shadow:0 6px 16px -10px rgba(7,31,25,.4)}
+.snext svg{width:18px;height:18px}
+.snext:hover{border-color:var(--g3)}
+.snext[disabled]{opacity:0;pointer-events:none}
 
-/* how it works: a run of wire with three terminals */
-.how{background:var(--g);color:#fff;padding-block:clamp(48px,7svh,88px)}
-.how .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 48px}
-.run{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,44px);margin-top:clamp(36px,5svh,56px);padding-top:30px}
-.run::before{content:"";position:absolute;left:0;right:0;top:10px;height:3px;background:linear-gradient(90deg,var(--w-blk) 0 33.3%,var(--w-red) 33.3% 66.6%,var(--w-grn) 66.6%);border-radius:2px;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
-.run li{position:relative}
-.run li::before{content:"";position:absolute;left:0;top:-30px;width:22px;height:22px;border-radius:50%;background:#C9C6B8;border:3px solid var(--g);box-shadow:inset 0 0 0 4px #9E9B8E}
-.run li::after{content:"";position:absolute;left:9px;top:-24px;width:4px;height:10px;background:var(--g);transform:rotate(45deg)}
-.run .n{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--y)}
-.run b{display:block;font-weight:800;font-stretch:80%;font-size:clamp(22px,1.9vw,28px);line-height:1.05;margin-top:8px}
-.run p{color:var(--on);margin-top:8px;font-size:15.5px;max-width:30ch}
+/* quote strip */
+.qs .box{background:var(--g2);color:#fff;border-radius:16px;display:grid;grid-template-columns:1.5fr repeat(3,minmax(0,1fr)) auto;align-items:center;padding:clamp(24px,3vw,32px) clamp(22px,2.6vw,36px)}
+.qs h2{font-size:clamp(26px,2.4vw,34px)}
+.qs .intro p{color:var(--on);font-size:14.5px;margin-top:10px;max-width:30ch}
+.qstep{border-left:1px solid var(--ld);padding:4px clamp(14px,1.8vw,26px);text-align:center;display:grid;justify-items:center;gap:6px}
+.qstep i{width:30px;height:30px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:14px}
+.qstep b{font-size:15.5px;font-weight:700;line-height:1.25;margin-top:4px}
+.qstep span{font-size:13px;color:var(--on);line-height:1.4}
+.qs .act{border-left:1px solid var(--ld);padding-left:clamp(14px,1.8vw,26px);display:grid;gap:8px;justify-items:center}
+.qs .act small{font-size:12.5px;color:var(--on)}
 
-/* gallery with before/after */
-.work{padding-block:clamp(48px,7svh,88px)}
-.work .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 48px}
-.gal{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:14px;margin-top:clamp(24px,3.4svh,40px);height:clamp(380px,56svh,560px)}
-.gal figure{position:relative;border-radius:3px;overflow:hidden;background:#C9CAC2;margin:0}
-.gal figure:first-child{grid-row:span 2}
-.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.gal figcaption{position:absolute;left:0;bottom:0;z-index:2;background:var(--card);border-top:1.5px solid var(--ink);border-right:1.5px solid var(--ink);padding:8px 12px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;max-width:calc(100% - 24px)}
-.gal figcaption b{font-family:var(--disp);font-stretch:80%;font-weight:800;font-size:16px;letter-spacing:0;text-transform:none;display:block;margin-bottom:2px}
-.gal .tagp{right:10px;top:10px}
-.ba{--x:50%}
-.ba .after{clip-path:inset(0 0 0 var(--x))}
-.ba .before{filter:grayscale(1) contrast(.9) brightness(.9)}
-.ba .bar{position:absolute;top:0;bottom:0;left:var(--x);width:2px;margin-left:-1px;background:var(--y);z-index:1;pointer-events:none}
-.ba .knob{position:absolute;top:50%;left:var(--x);width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:var(--y);display:grid;place-items:center;z-index:1;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.35)}
-.ba .knob svg{width:22px;height:22px}
-.ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:3}
-.ba .lbl{position:absolute;top:12px;z-index:2;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:4px 8px;border-radius:2px;pointer-events:none}
-.ba .lbl.l{left:12px}.ba .lbl.r{right:12px;background:var(--y);color:var(--ink)}
-.ba:focus-within .knob{outline:2px solid #fff;outline-offset:2px}
+/* projects */
+.work{padding-block:clamp(48px,7svh,80px)}
+.work .w{display:grid;grid-template-columns:minmax(240px,300px) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:center}
+.gal{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:12px;height:clamp(240px,34svh,330px)}
+.gal figure{position:relative;border-radius:10px;overflow:hidden;background:#C9CAC2}
+.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,31,25,.85),rgba(7,31,25,0) 45%)}
+.gal figcaption{position:absolute;left:14px;right:14px;bottom:13px;z-index:1;color:#fff;font-size:13.5px;font-weight:600;display:flex;flex-wrap:wrap;align-items:center;gap:4px 7px;line-height:1.3}
+.gal figcaption svg{width:15px;height:15px;color:var(--y);flex:none}
+.gal figcaption .fill{color:#fff;background:rgba(255,216,47,.28);font-weight:500}
+.gal .tag{position:absolute;right:10px;top:10px;z-index:1}
 
-/* reviews */
-.rev{padding-block:clamp(48px,7svh,88px);border-top:1px solid var(--line)}
-.rev .w{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(28px,4vw,64px);align-items:end}
-.big q{display:block;quotes:"\201C" "\201D";font-weight:800;font-stretch:72%;font-size:clamp(46px,6vw,92px);line-height:.92;letter-spacing:-.018em;margin-top:6px}
-.big q::before{color:var(--y2)}
-.big cite{display:block;font-style:normal;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;margin-top:20px;color:var(--mut)}
-.big cite b{color:var(--ink);font-weight:600}
-.side li{padding:16px 0;border-top:1px solid var(--line)}
-.side q{quotes:"\201C" "\201D";font-size:19px;font-weight:500;line-height:1.3;display:block}
-.side cite{display:block;font-style:normal;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);margin-top:6px}
-.score{display:grid;grid-template-columns:1fr 1fr;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);margin-bottom:6px}
-.score a{padding:12px 0;display:block}
-.score a+a{border-left:1px solid var(--line);padding-left:16px}
-.score b{font-weight:800;font-stretch:76%;font-size:40px;line-height:1;display:block}
-.score span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);display:block;margin-top:4px}
-.score a:hover span{color:var(--ink);text-decoration:underline}
-
-/* about */
-.about{padding-block:clamp(48px,7svh,88px);background:var(--card);border-block:1px solid var(--line)}
-.about .w{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,4vw,72px);align-items:center}
-.portrait{position:relative;aspect-ratio:4/5;max-height:62svh;border-radius:3px;overflow:hidden;background:repeating-linear-gradient(135deg,#E7E5DA 0 12px,#DEDCD0 12px 13px);display:grid;place-items:center;justify-self:start;width:100%}
-.portrait p{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);text-align:center;background:var(--card);padding:8px 12px;border:1px solid var(--line)}
-.portrait svg{position:absolute;right:16px;bottom:16px;width:56px;height:56px;color:var(--ink);opacity:.18}
-.about .say p:not(.ckt){font-size:clamp(18px,1.45vw,22px);line-height:1.45;margin-top:18px;max-width:40ch}
-.about .say .q{font-size:16.5px;color:var(--mut);margin-top:12px}
-.nameplate{margin-top:26px;border:1.5px solid var(--ink);border-radius:3px;font-family:var(--mono);font-size:12.5px;max-width:560px;background:#fff}
-.nameplate header{background:var(--ink);color:#fff;padding:7px 12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between}
-.nameplate dl{display:grid;grid-template-columns:120px minmax(0,1fr)}
-.nameplate dt,.nameplate dd{padding:9px 12px;border-top:1px solid var(--hair)}
-.nameplate dt{color:var(--mut);text-transform:uppercase;letter-spacing:.05em;font-size:11px;padding-top:10px;border-right:1px solid var(--hair)}
-.nameplate dd{font-family:var(--disp);font-size:15px;font-weight:500}
+/* testimonials */
+.tm{padding-block:clamp(44px,6svh,72px);border-top:1px solid var(--line)}
+.tm .w{display:grid;grid-template-columns:minmax(240px,300px) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:center}
+.score{margin-top:16px;display:grid;gap:6px;font-size:14px;color:var(--mut)}
+.score a{display:flex;gap:8px;align-items:center}
+.score a b{color:var(--ink);font-weight:700}
+.score a:hover span{text-decoration:underline;text-underline-offset:3px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.card q{quotes:"\201C" "\201D";font-size:16.5px;font-weight:500;line-height:1.45}
+.who{margin-top:auto;display:flex;gap:12px;align-items:center}
+.av{width:40px;height:40px;border-radius:50%;background:var(--g2);color:var(--y);display:grid;place-items:center;font-weight:800;font-size:14px;flex:none}
+.who b{display:block;font-size:14.5px}
+.who small{display:block;font-size:12.5px;color:var(--mut)}
 
 /* service area */
-.area{background:var(--g);color:#fff;padding-block:clamp(48px,7svh,88px);overflow:hidden}
-.area .w{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,64px);align-items:center}
-.coords{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--y);margin-top:18px}
-.towns{margin-top:26px;border-top:1px solid var(--ld);font-family:var(--mono);font-size:13px}
-.towns li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:10px 0;border-bottom:1px solid var(--ld)}
-.towns li b{font-family:var(--disp);font-size:17px;font-weight:600}
-.towns li span{color:var(--on);align-self:center}
-.towns li.h b{color:var(--y)}
-.area .note{color:var(--on);font-size:14.5px;margin-top:14px}
-.mapbox{position:relative;height:clamp(360px,58svh,560px)}
-#map{position:absolute;inset:0;-webkit-mask-image:radial-gradient(closest-side,#000 74%,transparent 100%);mask-image:radial-gradient(closest-side,#000 74%,transparent 100%)}
+.area{background:var(--g);color:#fff;padding-block:clamp(44px,6svh,72px);overflow:hidden}
+.area .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr) minmax(0,.9fr);gap:clamp(20px,3vw,48px);align-items:center}
+.area .sub{color:var(--on)}
+.area .btn{margin-top:26px;min-height:48px}
+.mapbox{position:relative;height:clamp(320px,46svh,440px)}
+#map{position:absolute;inset:0;-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent 100%);mask-image:radial-gradient(closest-side,#000 72%,transparent 100%)}
 .attr{position:absolute;right:0;bottom:-4px;font-size:10.5px;color:rgba(255,255,255,.5)}
 .attr a{text-decoration:underline;text-underline-offset:2px}
 .mapfall{position:absolute;inset:auto 0 50% 0;text-align:center;font-weight:600;text-decoration:underline}
 .mk{position:relative;width:10px;height:10px;pointer-events:none}
 .mk i{display:block;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--g)}
-.mk span{position:absolute;left:calc(100% + 6px);top:50%;transform:translateY(-50%);font:600 12px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:#fff;white-space:nowrap;text-shadow:0 0 4px var(--g),0 0 4px var(--g),0 0 8px var(--g)}
+.mk span{position:absolute;left:calc(100% + 6px);top:50%;transform:translateY(-50%);font:600 12.5px/1 Inter,sans-serif;color:#fff;white-space:nowrap;text-shadow:0 0 4px var(--g),0 0 4px var(--g),0 0 8px var(--g)}
 .mk.left span{left:auto;right:calc(100% + 6px)}
 .mk.below span{left:auto;right:calc(100% + 4px);top:calc(100% + 3px);transform:none}
 .mk.up span{left:2px;top:auto;bottom:calc(100% + 4px);transform:none}
 .mk.home{width:26px;height:34px}
 .mk.home i{width:26px;height:34px;border:0;border-radius:0;background:none}
 .mk.home svg{width:26px;height:34px}
-.mk.home span{font:800 17px/1 var(--disp);font-stretch:80%;letter-spacing:0;text-transform:none;left:calc(100% + 6px);top:58%}
+.mk.home span{font-size:16px;font-weight:800;left:calc(100% + 6px);top:58%}
+.towns h3{font-size:20px;font-weight:800;color:var(--y);letter-spacing:-.01em}
+.towns ul{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:18px}
+.towns li{display:flex;gap:9px;align-items:baseline;font-size:15px}
+.towns li svg{transform:translateY(2px)}
+.towns li small{display:block}
+.towns li svg{width:15px;height:15px;color:var(--y);flex:none}
+.towns li small{color:var(--on);font-size:12px}
+.towns p{margin-top:16px;color:var(--on);font-size:14px}
 
-/* faq */
-.faq{padding-block:clamp(48px,7svh,88px)}
-.faq .w{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,4vw,72px);align-items:start}
-.faq .lead b{color:var(--ink);white-space:nowrap}
-.fl{border-top:1.5px solid var(--ink)}
+/* about + faq */
+.af{padding-block:clamp(48px,7svh,80px)}
+.af .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,80px);align-items:start}
+.af h2{font-size:clamp(28px,2.6vw,36px)}
+.about p{font-size:17px;line-height:1.55;margin-top:16px;max-width:48ch}
+.about p.q{color:var(--mut);font-size:15.5px;margin-top:10px}
+.facts{display:grid;grid-template-columns:110px minmax(0,1fr);margin-top:22px;border-bottom:1px solid var(--line)}
+.facts dt,.facts dd{padding:10px 0;border-top:1px solid var(--line);font-size:14.5px}
+.facts dt{color:var(--mut)}
+.facts dd{font-weight:500}
+.fl{margin-top:18px;border-top:1px solid var(--line)}
 .fl details{border-bottom:1px solid var(--line)}
-.fl summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:8px;align-items:center;padding:18px 0;font-size:18px;font-weight:600;line-height:1.3}
+.fl summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 0;font-size:16.5px;font-weight:600;line-height:1.3}
 .fl summary::-webkit-details-marker{display:none}
-.fl summary .n{font-family:var(--mono);font-size:12px;color:var(--mut);font-weight:500}
-.fl summary i{flex:none;width:16px;height:16px;position:relative}
-.fl summary i::before,.fl summary i::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;background:var(--ink);transform:translate(-50%,-50%)}
+.fl summary i{flex:none;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid var(--line);position:relative}
+.fl summary i::before,.fl summary i::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.6px;background:var(--ink);transform:translate(-50%,-50%)}
 .fl summary i::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .25s var(--ease)}
 .fl details[open] summary i::after{transform:translate(-50%,-50%) rotate(0)}
-.fl details p{color:var(--mut);padding:0 0 18px 52px;max-width:62ch}
+.fl details p{color:var(--mut);padding-bottom:16px;max-width:60ch;font-size:15px}
+.faq .q2{color:var(--mut);font-size:15px;margin-top:10px}
+.faq .q2 b{color:var(--ink);white-space:nowrap}
 
-/* close + footer */
-.close{background:var(--g);color:#fff}
-.close .w{padding-block:clamp(48px,7svh,88px) clamp(32px,4svh,48px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 48px;align-items:end}
-.close h2{font-size:clamp(48px,7vw,108px);font-stretch:70%}
-.close h2 em{font-style:normal;color:var(--y)}
-.close .act{display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center}
-.close .tl{color:#fff}
-.ftr{background:var(--g);color:var(--on);font-size:14.5px}
-.ftr .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px 40px;padding-block:28px;border-top:1px solid var(--ld)}
-.ftr h4{margin:0 0 10px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.ftr li{margin-top:4px}
-.ftr a:hover,.ftr .as:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
-.ftr .as{all:unset;cursor:pointer}
-.ftr .as:focus-visible{outline:2px solid var(--y);outline-offset:3px}
-.ftr .brand{color:#fff}
-.ftr address{margin-top:12px}
-.legal{border-top:1px solid var(--ld);padding-block:16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+/* footer */
+.ftr{background:var(--g);color:#fff}
+.ftr .top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px;padding-block:32px}
+.ftr nav{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:14px;font-weight:500;color:rgba(255,255,255,.88)}
+.ftr nav a:hover,.ftr .cnt a:hover,.ftr .soc a:hover{color:var(--y)}
+.ftr .sep{width:1px;align-self:stretch;background:var(--ld)}
+.ftr .cnt{display:grid;gap:8px;font-size:14px}
+.ftr .cnt a{display:flex;gap:10px;align-items:center}
+.ftr .cnt svg{width:16px;height:16px;color:var(--y);flex:none}
+.ftr .soc{display:grid;gap:6px;font-size:13.5px;color:rgba(255,255,255,.88)}
+.ftr .soc b{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--on);font-weight:600}
+.ftr .soc div{display:flex;gap:16px;flex-wrap:wrap}
+.legal{border-top:1px solid var(--ld);padding-block:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:12.5px;color:var(--on)}
+.legal .hrs{display:flex;gap:6px 18px;flex-wrap:wrap}
 .mbar{display:none}
 
 /* job request */
@@ -350,99 +314,110 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16
 .demo-note{margin-top:24px;font-size:14px;color:var(--muted)}
 
 
-.jr h2{font-weight:800;font-stretch:76%;letter-spacing:-.015em}
-.jr-h b{font-weight:800;font-stretch:80%;font-family:var(--disp);font-size:20px}
-.jr-fill{font-family:var(--mono);text-transform:uppercase;font-size:12px;letter-spacing:.06em}
-.jr .chip,.urg button,.jr input,.jr select,.jr textarea,.drop-zone,.tipbox,.emerg,.thumb,.jr-x{border-radius:4px!important}
-.emerg .num{font-weight:800;font-stretch:78%}
-
-/* reveal */
-.js [data-r]{opacity:0;transform:translateY(12px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
-.js [data-r].in{opacity:1;transform:none}
+.jr h2{font-weight:800;letter-spacing:-.03em}
+.jr-h b{font-weight:800;font-family:Inter,sans-serif;letter-spacing:-.01em}
+.jr-fill{font-family:inherit}
+.emerg .num{font-weight:800;letter-spacing:-.03em}
 
 /* responsive */
-@media (max-width:1200px){
+@media (max-width:1180px){
   .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--g);padding:6px var(--gut) 14px;display:none;border-top:1px solid var(--ld)}
   .nav.open{display:flex}
-  .nav a{padding:14px 0;border-bottom:1px solid var(--ld);font-size:14px}
+  .nav a{padding:13px 0;border-bottom:1px solid var(--ld);font-size:17px}
+  .nav a::after{display:none}
   .nav a:last-child{border:0}
   .menu{display:inline-flex}
   .hr{margin-left:auto}
+  .qs .box{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:22px;align-items:start}
+  .qs .intro{grid-column:1/-1}
+  .qs .act{grid-column:1/-1;border-left:0;padding-left:0;justify-items:start;grid-auto-flow:column;align-items:center;justify-content:start;gap:16px}
+  .qstep:nth-child(2){border-left:0}
 }
-@media (max-width:1080px){
-  .row{grid-template-columns:40px 6px minmax(0,1fr) auto;row-gap:4px}
-  .row p{grid-column:3/-1;grid-row:2}
-  .svc .w,.rev .w,.faq .w{grid-template-columns:minmax(0,1fr)}
+@media (max-width:980px){
+  .svc .w,.work .w,.tm .w,.af .w{grid-template-columns:minmax(0,1fr)}
+  .cards{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .cards .card:last-child{grid-column:1/-1}
+  .area .w{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .area .w>.mapbox{grid-column:1/-1;grid-row:2}
 }
-@media (max-width:900px){
-  .hero .w{grid-template-columns:minmax(0,1fr)}
-  .hphoto{min-height:clamp(320px,62vw,480px)}
-  .about .w,.area .w{grid-template-columns:minmax(0,1fr)}
-  .portrait{max-width:420px;aspect-ratio:1/1}
-  .gal{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto;height:auto}
-  .gal figure{height:220px}
-  .gal figure:first-child{grid-column:1/-1;grid-row:auto;height:min(64vw,420px)}
-  .close .w{grid-template-columns:minmax(0,1fr)}
-  .ftr .grid{grid-template-columns:1fr 1fr}
-  .ftr .grid>:first-child{grid-column:1/-1}
+@media (max-width:860px){
+  .hphoto{position:relative;width:auto;height:clamp(240px,52vw,380px)}
+  .hphoto::after{background:linear-gradient(180deg,var(--g) 0%,rgba(7,31,25,0) 30%)}
+  .slash{display:none}
+  .hero .tag{right:12px;bottom:12px}
+  .hphoto img{object-position:30% 30%}
+  .hero{display:flex;flex-direction:column-reverse}
+  .hin{padding-bottom:28px}
 }
 @media (max-width:780px){.hr .tl{display:none}}
 @media (max-width:640px){
-  body{font-size:16px;padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
-  html{scroll-padding-top:70px}
-  .hdr .w{height:62px}
+  body{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+  html{scroll-padding-top:72px}
+  .hdr .w{height:64px}
   .hr{display:none}
   .menu{margin-left:auto}
-  .brand b{font-size:20px}
-  .brand svg{width:26px;height:26px}
-  h1{font-size:clamp(46px,14vw,64px)}
-  .meta{font-size:10.5px;gap:4px 10px}
-  .meta span+span::before{margin-right:10px}
-  .hctas .brk{flex:1 1 100%}
-  .hphoto{min-height:300px}
-  .spec{right:10px;bottom:10px;width:calc(100% - 20px)}
-  .row{grid-template-columns:30px 5px minmax(0,1fr);padding-inline:12px;gap:4px 12px}
-  .row .q{grid-column:3;grid-row:3;margin-top:4px}
-  .row .c{height:24px}
-  .sched>header,.sched>footer{padding-inline:12px}
-  .run{grid-template-columns:minmax(0,1fr);padding-top:0;padding-left:34px;gap:26px}
-  .run::before{left:9px;right:auto;top:0;bottom:0;width:3px;height:auto;background:linear-gradient(180deg,var(--w-blk) 0 33.3%,var(--w-red) 33.3% 66.6%,var(--w-grn) 66.6%)}
-  .run li::before{left:-34px;top:0}
-  .run li::after{left:-25px;top:6px}
-  .gal figure{height:180px}
-  .gal figure:not(:first-child) .tagp{display:none}
-  .gal figcaption{font-size:10.5px;padding:6px 9px}
-  .gal figcaption b{font-size:14px}
-  .score b{font-size:34px}
-  .nameplate dl{grid-template-columns:96px minmax(0,1fr)}
-  .fl summary{grid-template-columns:34px minmax(0,1fr) auto;font-size:16.5px}
-  .fl details p{padding-left:42px}
-  .close .act .brk{flex:1 1 100%}
-  .ftr .grid{grid-template-columns:minmax(0,1fr)}
-  .mapbox{height:340px}
+  .brand b{font-size:19px}
+  .brand svg{width:30px;height:30px}
+  h1{font-size:clamp(40px,12.2vw,56px)}
+  .pill{font-size:10.5px;letter-spacing:.08em}
+  .pl{display:none}
+  .scroller{grid-auto-columns:minmax(64%,1fr)}
+  .sv:first-child{border-left:0;padding-left:0}
+  .hctas .btn{flex:1 1 100%}
+  .trust>*{padding:0 16px}
+  .trust b{font-size:18px}
+  .snext{display:none}
+  .sv{padding-inline:18px}
+  .qs .w{padding-inline:0}
+  .qs .box{border-radius:0;grid-template-columns:minmax(0,1fr);padding:32px var(--gut)}
+  .qstep{border-left:0;border-top:1px solid var(--ld);padding:14px 0 0;grid-template-columns:30px minmax(0,1fr);justify-items:start;text-align:left;column-gap:14px;row-gap:2px}
+  .qstep i{grid-row:span 2}
+  .qstep b{margin-top:0}
+  .qs .act{grid-auto-flow:row;justify-items:stretch}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr));height:auto}
+  .gal figure{height:190px}
+  .gal figure:first-child{grid-column:1/-1;height:220px}
+  .gal figure:not(:first-child) .tag{display:none}
+  .gal figcaption{left:10px;right:10px;bottom:9px;font-size:12.5px}
+  .srow{padding-right:0}
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .area .w{grid-template-columns:minmax(0,1fr)}
+  .area .w>.mapbox{grid-row:auto;height:320px}
+  .facts{grid-template-columns:92px minmax(0,1fr)}
+  .ftr .top{flex-direction:column;align-items:flex-start}
+  .ftr .sep{display:none}
   .urg,.row2{grid-template-columns:minmax(0,1fr)}
   .next div{grid-template-columns:minmax(0,1fr);gap:4px}
   .jr-f .btn-glow{min-width:0;flex:1}
   .mbar{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
   .mbar .btn{min-height:50px;padding:0 18px}
   .mbar .btn-ink{color:var(--g)}
-  .mbar .brk{min-height:50px;padding:5px 16px 5px 5px;justify-content:center}
-  .mbar .brk .sw{width:22px;height:32px}
-  .mbar .brk .sw::after{height:12px;bottom:4px;left:4px;right:4px}
+}
+@media (max-width:360px){
+  .brand small{letter-spacing:.24em}
+  .trust>*{padding:0 12px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
-  .js [data-r]{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="p" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="9" y="5" width="30" height="38" rx="2"/><path d="M24 9v30M14 13h6M14 19h6M14 25h6M14 31h6M28 13h6M28 19h6M28 25h6M28 31h6"/></g></symbol>
+<symbol id="e" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="10" y="5" width="18" height="34" rx="2"/><path d="M6 43h26M20 13l-4 7h6l-4 7M28 20h6a4 4 0 0 1 4 4v10a3 3 0 0 0 6 0V18l-4-4"/></g></symbol>
+<symbol id="h" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M6 22L24 7l18 15M11 18v24h26V18M19 42V30h10v12"/></g></symbol>
+<symbol id="l" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M24 4v8M14 12h20l4 12H10zM20 24a4 4 0 0 0 8 0M24 33v4M14 31l-2 4M34 31l2 4"/></g></symbol>
+<symbol id="g" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="5" y="14" width="38" height="24" rx="2"/><path d="M10 38v4M38 38v4M10 20h12M10 25h12M10 30h12"/><circle cx="33" cy="26" r="5"/></g></symbol>
+<symbol id="m" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M30 6a10 10 0 0 0-9 14L7 34a4 4 0 0 0 6 6l14-14a10 10 0 0 0 14-9l-6 6-6-2-2-6z"/></g></symbol>
 <symbol id="a" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+<symbol id="c" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.6"/></symbol>
 <symbol id="t" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-<symbol id="lr" viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+<symbol id="mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></g></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M12 22s7-7.2 7-12a7 7 0 0 0-14 0c0 4.8 7 12 7 12z" fill="currentColor"/><circle cx="12" cy="10" r="2.6" fill="#071F19"/></symbol>
+<symbol id="grid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></g></symbol>
 <symbol id="k" viewBox="0 0 40 40"><g fill="none" stroke-width="3.6"><path d="M20 3v13M4 17h32M10 25h20" stroke="currentColor"/><path d="M16 33h8" stroke="#FFD82F"/></g></symbol>
 <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
 <symbol id="i-cam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
@@ -451,219 +426,180 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16
 <div class="draft" id="draft"><div class="w"><p><b>Draft for review</b>Highlighted text and sample photos are placeholders until you confirm them.</p><button type="button" aria-label="Hide note" onclick="document.getElementById('draft').hidden=true">×</button></div></div>
 
 <header class="hdr dk" id="hdr"><div class="w">
-  <a class="brand" href="#top" aria-label="Solid Ground Electric home"><svg aria-hidden="true"><use href="#k"/></svg><b>Solid Ground <span>Electric</span></b></a>
-  <nav class="nav" id="nav" aria-label="Main"><a href="#services"><i>01</i>Services</a><a href="#how"><i>02</i>How it works</a><a href="#work"><i>03</i>Work</a><a href="#reviews"><i>04</i>Reviews</a><a href="#about"><i>05</i>About</a><a href="#locations"><i>06</i>Area</a></nav>
-  <div class="hr"><a href="tel:+12077131857" class="tl">(207) 713-1857</a><button class="brk" type="button" data-open><span class="sw" aria-hidden="true"></span>Get a quote</button></div>
+  <a class="brand" href="#top" aria-label="Solid Ground Electric home"><svg aria-hidden="true"><use href="#k"/></svg><span><b>Solid Ground</b><small>ELECTRIC</small></span></a>
+  <nav class="nav" id="nav" aria-label="Main"><a href="#top" aria-current="true">Home</a><a href="#services">Services</a><a href="#work">Projects</a><a href="#reviews">Reviews</a><a href="#about">About</a><a href="#locations">Service Area</a></nav>
+  <div class="hr"><a href="tel:+12077131857" class="tl">(207) 713-1857</a><button class="btn y" type="button" data-open>Get a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button></div>
   <button class="menu" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
 </div></header>
 
 <main id="top">
-<section class="hero">
-  <div class="w">
+<section class="hero dk" id="home">
+  <div class="hphoto">
+    <img src="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=1600&q=78&auto=format" srcset="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=900&q=78&auto=format 900w,https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=1600&q=78&auto=format 1600w" sizes="(max-width:860px) 100vw,54vw" alt="Electrician in a hard hat and face shield testing an electrical panel (sample photo)" fetchpriority="high">
+    <span class="tag">Sample photo</span>
+  </div>
+  <div class="slash" aria-hidden="true"></div>
+  <div class="w hin">
     <div class="htext">
-      <p class="meta"><span>Lisbon Falls, Maine</span><span>Residential &amp; commercial</span><span>Lic. <span class="fill">#00000</span></span></p>
-      <h1>Electrical work. <em>Done right.</em></h1>
-      <div class="hi">
-        <span class="face" aria-hidden="true">Your<br>photo</span>
-        <div>
-          <p>Hi, I'm <span class="fill">[Your name]</span>. I handle electrical work across Southern &amp; Central Maine, and when you send a job, I'm the one who reads it, prices it and does the work.</p>
-          <span class="sig" aria-hidden="true">— <span class="fill">[Your name]</span></span>
-        </div>
-      </div>
+      <span class="pill"><svg aria-hidden="true"><use href="#c"/></svg>Licensed electrician<span class="pl"> · Lisbon Falls, Maine</span></span>
+      <h1><span>Electrical</span><span>work.</span><em>Done right.</em></h1>
+      <p class="hlead">Residential and commercial electrical services across Southern &amp; Central Maine. Reliable, code-compliant, quality workmanship.</p>
       <div class="hctas">
-        <button class="brk" type="button" data-open><span class="sw" aria-hidden="true"></span><span>Request a quote<small>Online · about 2 minutes</small></span></button>
-        <a class="tl" href="tel:+12077131857">(207) 713-1857</a>
+        <button class="btn y" type="button" data-open>Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button>
+        <a class="play" href="#work"><i><svg aria-hidden="true"><use href="#grid"/></svg></i>See our work</a>
       </div>
-    </div>
-    <div class="hphoto">
-      <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1300&q=78&auto=format" srcset="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=78&auto=format 800w,https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1300&q=78&auto=format 1300w" sizes="(max-width:900px) 100vw,46vw" alt="Electrician working on electrical equipment (sample photo)" fetchpriority="high">
-      <span class="tagp">Sample photo</span>
-      <aside class="spec" aria-label="Company details">
-        <header><span>Spec sheet</span><span>SGE-01</span></header>
-        <dl>
-          <dt>Service</dt><dd>Residential &amp; commercial</dd>
-          <dt>Code</dt><dd>Permitted &amp; inspected</dd>
-          <dt>Google</dt><dd><a href="https://share.google/AuNdjh7cpOlOxx9OF">5.0 ★★★★★</a></dd>
-          <dt>Angi</dt><dd><a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm">5.0 · 24 reviews</a></dd>
-        </dl>
-      </aside>
+      <div class="trust">
+        <a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm"><b>5.0 <span class="st" aria-hidden="true">★★★★★</span></b><small>24 reviews on Angi</small></a>
+        <a href="https://share.google/AuNdjh7cpOlOxx9OF"><b>5.0 <span class="st" aria-hidden="true">★★★★★</span></b><small>on Google</small></a>
+        <a href="tel:+12077131857"><b>(207) 713-1857</b><small>Call or text</small></a>
+      </div>
     </div>
   </div>
 </section>
-
-<div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 
 <section class="svc" id="services">
   <div class="w">
-    <div data-r>
-      <p class="ckt"><span class="wire" style="--wc:var(--w-blk)"></span><b>CKT 01</b> Services</p>
-      <h2>What each electrical service includes</h2>
-      <p class="lead">Residential and commercial electrical work in Lewiston, Auburn, Brunswick, Portland, Augusta and nearby towns. Pick a circuit to start a quote for that job.</p>
+    <div>
+      <span class="lab">Our services</span>
+      <h2>Complete Electrical Solutions</h2>
+      <p class="sub">Residential and commercial electrical work in Lewiston, Auburn, Brunswick, Portland, Augusta and nearby towns.</p>
+      <button class="lk" type="button" data-open><span>Request a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button>
     </div>
-    <div class="sched" data-r>
-      <header><span>Panel schedule · Solid Ground Electric</span><span>120/240V · Res &amp; Comm</span></header>
-      <button class="row" type="button" data-open="Panel / breakers" style="--wc:var(--w-blk)"><span class="n">01</span><span class="c"></span><h3>Panel Upgrades</h3><p>Older and undersized panels replaced, including fuse boxes, and 100-amp service upgraded to 200 amps.</p><span class="q">Quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-      <button class="row" type="button" data-open="EV charger" style="--wc:var(--w-red)"><span class="n">02</span><span class="c"></span><h3>EV Chargers</h3><p>Level 2 charger installation in your garage or driveway. Your panel gets checked first to make sure it can carry the load.</p><span class="q">Quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-      <button class="row" type="button" data-open="New circuits / renovation" style="--wc:var(--w-blu)"><span class="n">03</span><span class="c"></span><h3>Rewiring &amp; Updates</h3><p>Old wiring replaced and updates for older homes, kitchens, basements and additions, with new circuits where you need them.</p><span class="q">Quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-      <button class="row" type="button" data-open="Lighting|Outlets &amp; switches" style="--wc:var(--w-wht);"><span class="n">04</span><span class="c" style="box-shadow:inset 0 0 0 1px #B9B6A8"></span><h3>Lighting &amp; Outlets</h3><p>Fixtures, recessed lighting, ceiling fans, outlets and switches, inside and out. Small jobs are welcome.</p><span class="q">Quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-      <button class="row" type="button" data-open="Generator" style="--wc:var(--y2)"><span class="n">05</span><span class="c"></span><h3>Generators &amp; Transfer Switches</h3><p>Portable generator hookups and transfer switches, so your heat, well pump and fridge keep running in an outage.</p><span class="q">Quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-      <button class="row" type="button" data-open="Something stopped working" style="--wc:var(--w-grn)"><span class="n">06</span><span class="c"></span><h3>Service &amp; Troubleshooting</h3><p>Breakers that won't reset, dead outlets, flickering lights and other problems tracked down and repaired.</p><span class="q">Quote <svg aria-hidden="true"><use href="#a"/></svg></span></button>
-      <footer><span>Don't see your job? Describe it anyway.</span><span>Permits pulled when required</span></footer>
+    <div class="srow">
+      <div class="scroller" id="scroller">
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#p"/></svg><h3>Panel Upgrades</h3><p>Older and undersized panels replaced, including fuse boxes, and 100-amp service upgraded to 200 amps.</p><button class="lk" type="button" data-open="Panel / breakers"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#e"/></svg><h3>EV Chargers</h3><p>Level 2 charger installation in your garage or driveway. Your panel gets checked first.</p><button class="lk" type="button" data-open="EV charger"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#h"/></svg><h3>Rewiring &amp; Updates</h3><p>Old wiring replaced and updates for older homes, kitchens, basements and additions.</p><button class="lk" type="button" data-open="New circuits / renovation"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#l"/></svg><h3>Lighting &amp; Outlets</h3><p>Fixtures, recessed lighting, ceiling fans, outlets and switches. Small jobs are welcome.</p><button class="lk" type="button" data-open="Lighting|Outlets &amp; switches"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#g"/></svg><h3>Generators &amp; Transfer Switches</h3><p>Portable generator hookups and transfer switches, so the essentials keep running in an outage.</p><button class="lk" type="button" data-open="Generator"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+        <article class="sv"><svg class="ic" aria-hidden="true"><use href="#m"/></svg><h3>Service &amp; Troubleshooting</h3><p>Breakers that won't reset, dead outlets and flickering lights tracked down and repaired.</p><button class="lk" type="button" data-open="Something stopped working"><span>Get a quote</span> <svg aria-hidden="true"><use href="#a"/></svg></button></article>
+      </div>
+      <button class="snext" id="nextBtn" type="button" aria-label="Show more services"><svg aria-hidden="true"><use href="#a"/></svg></button>
     </div>
   </div>
 </section>
 
-<section class="how dk" id="how">
-  <div class="w">
-    <div class="top">
-      <div data-r>
-        <p class="ckt"><span class="wire" style="--wc:var(--w-red)"></span><b>CKT 02</b> How it works</p>
-        <h2>Request a quote online in three easy steps</h2>
-        <p class="lead">Tell us about the job, add a few photos and send it. No need to wait for someone to come out just to get the process started.</p>
-      </div>
-      <button class="brk" type="button" data-open data-r><span class="sw" aria-hidden="true"></span><span>Request a quote<small>About 2 minutes</small></span></button>
-    </div>
-    <ol class="run" data-r>
-      <li><span class="n">STEP 01</span><b>Tell us about the job</b><p>What you need done, where and how soon.</p></li>
-      <li><span class="n">STEP 02</span><b>Add a few photos</b><p>The panel, the problem or where the work goes.</p></li>
-      <li><span class="n">STEP 03</span><b>Send it and hear back</b><p>You get a quote, a question or a time for a visit.</p></li>
-    </ol>
-  </div>
+<section class="qs" id="how" aria-label="How to request a quote">
+  <div class="w"><div class="box dk">
+    <div class="intro"><span class="lab">Get a quote</span><h2>It's Fast &amp; Easy</h2><p>Tell us about the job, add a few photos and send it. No need to wait for a visit to get started.</p></div>
+    <div class="qstep"><i>1</i><b>Tell us about the job</b><span>What you need done, where and how soon.</span></div>
+    <div class="qstep"><i>2</i><b>Add a few photos</b><span>The panel, the problem or where the work goes.</span></div>
+    <div class="qstep"><i>3</i><b>Send it and hear back</b><span>A quote, a question or a time for a visit.</span></div>
+    <div class="act"><button class="btn y" type="button" data-open>Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button><small>Takes about 2 minutes</small></div>
+  </div></div>
 </section>
 
 <section class="work" id="work">
   <div class="w">
-    <div class="top" data-r>
-      <div>
-        <p class="ckt"><span class="wire" style="--wc:var(--w-blu)"></span><b>CKT 03</b> Project gallery</p>
-        <h2>Work you can see</h2>
-      </div>
-      <p class="lead" style="margin-top:0">Drag across the first photo to compare before and after. Every photo here will be from a real job.</p>
+    <div>
+      <span class="lab">Our work</span>
+      <h2>Project Gallery</h2>
+      <p class="sub">Panels, service upgrades and repairs from jobs across Southern &amp; Central Maine.</p>
+      <a class="lk" href="https://share.google/AuNdjh7cpOlOxx9OF" style="margin-top:18px"><span>See us on Google</span> <svg aria-hidden="true"><use href="#a"/></svg></a>
     </div>
-    <div class="gal" data-r>
-      <figure class="ba" id="ba">
-        <img class="before" src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=1200&q=75&auto=format" alt="Before: electrical panel before the work (sample photo)" loading="lazy">
-        <img class="after" src="https://images.unsplash.com/photo-1660330589693-99889d60181e?w=1200&q=75&auto=format" style="object-position:55% 30%" alt="After: finished panel installation (sample photo)" loading="lazy">
-        <span class="bar" aria-hidden="true"></span><span class="knob" aria-hidden="true"><svg><use href="#lr"/></svg></span>
-        <span class="lbl l">Before</span><span class="lbl r">After</span>
-        <label class="sr" for="baRange">Compare before and after</label>
-        <input id="baRange" type="range" min="0" max="100" value="50">
-        <figcaption><b>Panel installation</b><span class="fill">[Town]</span>, ME · Sample photos</figcaption>
-      </figure>
-      <figure><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=75&auto=format" style="object-position:60% 30%" alt="Electrician working on a wall-mounted meter (sample photo)" loading="lazy"><span class="tagp">Sample photo</span><figcaption><b>Meter &amp; service upgrade</b><span class="fill">[Town]</span>, ME</figcaption></figure>
-      <figure><img src="https://images.unsplash.com/photo-1682345262055-8f95f3c513ea?w=800&q=75&auto=format" alt="Gloved hand holding a stripped electrical cable (sample photo)" loading="lazy"><span class="tagp">Sample photo</span><figcaption><b>Rewiring &amp; updates</b><span class="fill">[Town]</span>, ME</figcaption></figure>
+    <div class="gal">
+      <figure><img src="https://images.unsplash.com/photo-1660330589693-99889d60181e?w=900&q=75&auto=format" style="object-position:50% 30%" alt="Electrician using a screwdriver on an electrical panel (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption><svg aria-hidden="true"><use href="#pin"/></svg>Panel installation · <span class="fill">[Town], ME</span></figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=700&q=75&auto=format" style="object-position:40% 50%" alt="Testing electrical equipment with a multimeter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption><svg aria-hidden="true"><use href="#pin"/></svg>Troubleshooting · <span class="fill">[Town], ME</span></figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=700&q=75&auto=format" style="object-position:60% 30%" alt="Electrician working on a wall-mounted meter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption><svg aria-hidden="true"><use href="#pin"/></svg>Service upgrade · <span class="fill">[Town], ME</span></figcaption></figure>
     </div>
   </div>
 </section>
 
-<section class="rev" id="reviews">
+<section class="tm" id="reviews">
   <div class="w">
-    <blockquote class="big" data-r>
-      <p class="ckt"><span class="wire" style="--wc:var(--y2)"></span><b>CKT 04</b> What customers say</p>
-      <span class="st" role="img" aria-label="5 stars">★★★★★</span>
-      <q>Excellent! Highly recommend.</q>
-      <cite><b>Jennifer O.</b> · Google review</cite>
-    </blockquote>
-    <div data-r>
+    <div>
+      <span class="lab">Testimonials</span>
+      <h2>What Our Customers Say</h2>
       <div class="score">
-        <a href="https://share.google/AuNdjh7cpOlOxx9OF"><b>5.0</b><span>Google reviews →</span></a>
-        <a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm"><b>5.0</b><span>Angi · 24 reviews →</span></a>
+        <a href="https://share.google/AuNdjh7cpOlOxx9OF"><span class="st dkst" aria-hidden="true">★★★★★</span><b>5.0</b><span>on Google</span></a>
+        <a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm"><span class="st dkst" aria-hidden="true">★★★★★</span><b>5.0</b><span>on Angi · 24 reviews</span></a>
       </div>
-      <ul class="side">
-        <li><q>Quick response and efficient work.</q><cite>Sean M. · Google review</cite></li>
-        <li><q>Fast, very attentive to my needs.</q><cite><span class="fill">[Customer name]</span> · Angi, August 2026</cite></li>
-      </ul>
     </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="w">
-    <div class="portrait" data-r><p>Owner portrait<br>to come</p><svg aria-hidden="true"><use href="#k"/></svg></div>
-    <div class="say" data-r>
-      <p class="ckt"><span class="wire" style="--wc:var(--w-wht);box-shadow:inset 0 0 0 1px #B9B6A8"></span><b>CKT 05</b> Meet your electrician</p>
-      <h2>One electrician, start to finish</h2>
-      <p>I'm <span class="fill">[Your name]</span>, a licensed electrician with <span class="fill">[X]</span> years of experience. Before starting Solid Ground Electric in <span class="fill">[2025]</span>, I <span class="fill">[where you trained and worked, and on what kind of jobs]</span>.</p>
-      <p class="q">When you send a job, I'm the one who reads it, prices it and does the work.</p>
-      <div class="nameplate">
-        <header><span>Nameplate</span><span>Solid Ground Electric LLC</span></header>
-        <dl>
-          <dt>License</dt><dd>Maine <span class="fill">[master / journeyman]</span>, <span class="fill">#00000</span></dd>
-          <dt>Experience</dt><dd><span class="fill">[X]</span> years in electrical work</dd>
-          <dt>Training</dt><dd><span class="fill">[School, apprenticeship or certifications]</span></dd>
-          <dt>Insurance</dt><dd><span class="fill">[Coverage you carry]</span></dd>
-          <dt>Based in</dt><dd>Lisbon Falls area, Maine</dd>
-        </dl>
-      </div>
+    <div class="cards">
+      <blockquote class="card"><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span><q>Excellent! Highly recommend.</q><div class="who"><span class="av" aria-hidden="true">JO</span><div><b>Jennifer O.</b><small>Google review</small></div></div></blockquote>
+      <blockquote class="card"><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span><q>Quick response and efficient work.</q><div class="who"><span class="av" aria-hidden="true">SM</span><div><b>Sean M.</b><small>Google review</small></div></div></blockquote>
+      <blockquote class="card"><span class="st dkst" role="img" aria-label="5 stars">★★★★★</span><q>Fast, very attentive to my needs.</q><div class="who"><span class="av" aria-hidden="true">A</span><div><b><span class="fill">[Customer name]</span></b><small>Angi · August 2026</small></div></div></blockquote>
     </div>
   </div>
 </section>
 
 <section class="area dk" id="locations">
   <div class="w">
-    <div data-r>
-      <p class="ckt"><span class="wire" style="--wc:var(--w-grn)"></span><b>CKT 06</b> Service area</p>
-      <h2>Southern &amp; Central Maine</h2>
-      <p class="coords">HOME BASE · 44.0037° N, 70.0606° W · LISBON FALLS</p>
-      <ul class="towns">
-        <li class="h"><b>Lisbon Falls</b><span>Home base</span></li>
-        <li><b>Brunswick</b><span>≈ 8 mi</span></li>
-        <li><b>Sabattus</b><span>≈ 8 mi</span></li>
-        <li><b>Lewiston</b><span>≈ 10 mi</span></li>
-        <li><b>Auburn</b><span>≈ 11 mi</span></li>
-        <li><b>Augusta</b><span>≈ 25 mi</span></li>
-        <li><b>Portland</b><span>≈ 26 mi</span></li>
-      </ul>
-      <p class="note">Straight-line distance from Lisbon Falls. Don't see your town? Request a quote and ask.</p>
+    <div>
+      <span class="lab">Service area</span>
+      <h2>Proudly Serving Southern &amp; Central Maine</h2>
+      <p class="sub">Based in the Lisbon Falls area, with residential and commercial electrical service across these communities and the towns around them.</p>
+      <button class="btn ow" type="button" data-open>Check Your Area <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button>
     </div>
     <div class="mapbox">
       <div id="map" role="region" aria-label="Map of Southern and Central Maine showing Lisbon Falls, Sabattus, Lewiston, Auburn, Brunswick, Portland and Augusta"></div>
       <p class="attr"><a href="https://openfreemap.org">OpenFreeMap</a> © <a href="https://www.openmaptiles.org/">OpenMapTiles</a> Data from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></p>
       <noscript><a class="mapfall" href="https://share.google/AuNdjh7cpOlOxx9OF">Find us on Google</a></noscript>
     </div>
+    <div class="towns">
+      <h3>Areas We Serve</h3>
+      <ul>
+        <li><svg aria-hidden="true"><use href="#c"/></svg><span>Lisbon Falls <small>Home base</small></span></li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Sabattus</li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Lewiston</li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Auburn</li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Brunswick</li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Portland</li>
+        <li><svg aria-hidden="true"><use href="#c"/></svg>Augusta</li>
+      </ul>
+      <p>Don't see your town? Request a quote and ask.</p>
+    </div>
   </div>
 </section>
 
-<section class="faq" id="faq">
+<section class="af">
   <div class="w">
-    <div data-r>
-      <p class="ckt"><span class="wire" style="--wc:var(--w-blk)"></span><b>FAQ</b></p>
-      <h2>Common questions</h2>
-      <p class="lead">Have a different question? Call or text <b>(207) 713-1857</b>.</p>
+    <div class="about" id="about">
+      <span class="lab">About</span>
+      <h2>Meet Your Electrician</h2>
+      <p>I'm <span class="fill">[Your name]</span>, a licensed electrician with <span class="fill">[X]</span> years of experience. Before starting Solid Ground Electric in <span class="fill">[2025]</span>, I <span class="fill">[where you trained and worked, and on what kind of jobs]</span>.</p>
+      <p class="q">When you send a job, I'm the one who reads it, prices it and does the work.</p>
+      <dl class="facts">
+        <dt>License</dt><dd>Maine <span class="fill">[master / journeyman]</span> electrician, <span class="fill">#00000</span></dd>
+        <dt>Experience</dt><dd><span class="fill">[X]</span> years in electrical work</dd>
+        <dt>Training</dt><dd><span class="fill">[School, apprenticeship or certifications]</span></dd>
+        <dt>Insurance</dt><dd><span class="fill">[Coverage you carry]</span></dd>
+        <dt>Based in</dt><dd>Lisbon Falls area, Maine</dd>
+      </dl>
     </div>
-    <div class="fl" data-r>
-      <details open><summary><span class="n">Q.01</span>Do you pull permits?<i aria-hidden="true"></i></summary><p>Yes. When a job requires a permit, it gets pulled and the work gets inspected.</p></details>
-      <details><summary><span class="n">Q.02</span>How does a panel upgrade work, and will my power be off?<i aria-hidden="true"></i></summary><p>You get the quote first. After that, the permit gets pulled and the power shutoff gets coordinated with Central Maine Power. Expect your power to be off for part of the day while the panel is replaced. You'll know the timing ahead of time.</p></details>
-      <details><summary><span class="n">Q.03</span>Do you handle generator hookups?<i aria-hidden="true"></i></summary><p>Yes, both hookups for portable generators and transfer switches for standby units. Send a photo of your panel and tell us which generator you have or want.</p></details>
-      <details><summary><span class="n">Q.04</span>Do you do commercial work too?<i aria-hidden="true"></i></summary><p>Yes, commercial work as well as residential. Request a quote and choose Business as the property type, or call (207) 713-1857.</p></details>
-      <details><summary><span class="n">Q.05</span>I have an electrical emergency. Can you help?<i aria-hidden="true"></i></summary><p>Call (207) 713-1857 right away instead of using the form. If you smell burning or see sparks and can safely reach the main breaker, turn it off. If there's smoke or fire, get out and call 911.</p></details>
+    <div class="faq" id="faq">
+      <span class="lab">FAQ</span>
+      <h2>Common Questions</h2>
+      <p class="q2">Have a different question? Call or text <b>(207) 713-1857</b>.</p>
+      <div class="fl">
+        <details open><summary>Do you pull permits?<i aria-hidden="true"></i></summary><p>Yes. When a job requires a permit, it gets pulled and the work gets inspected.</p></details>
+        <details><summary>How does a panel upgrade work, and will my power be off?<i aria-hidden="true"></i></summary><p>You get the quote first. After that, the permit gets pulled and the power shutoff gets coordinated with Central Maine Power. Expect your power to be off for part of the day while the panel is replaced. You'll know the timing ahead of time.</p></details>
+        <details><summary>Do you handle generator hookups?<i aria-hidden="true"></i></summary><p>Yes, both hookups for portable generators and transfer switches for standby units. Send a photo of your panel and tell us which generator you have or want.</p></details>
+        <details><summary>Do you do commercial work too?<i aria-hidden="true"></i></summary><p>Yes, commercial work as well as residential. Request a quote and choose Business as the property type, or call (207) 713-1857.</p></details>
+        <details><summary>I have an electrical emergency. Can you help?<i aria-hidden="true"></i></summary><p>Call (207) 713-1857 right away instead of using the form. If you smell burning or see sparks and can safely reach the main breaker, turn it off. If there's smoke or fire, get out and call 911.</p></details>
+      </div>
     </div>
   </div>
 </section>
 </main>
 
-<section class="close dk" aria-label="Get in touch">
-  <div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-  <div class="w">
-    <h2>Need an <em>electrician?</em></h2>
-    <div class="act"><button class="brk" type="button" data-open><span class="sw" aria-hidden="true"></span><span>Request a quote<small>About 2 minutes</small></span></button><a class="tl" href="tel:+12077131857">(207) 713-1857</a></div>
-  </div>
-</section>
 <footer class="ftr dk" id="contact">
   <div class="w">
-    <div class="grid">
-      <div><a class="brand" href="#top" aria-label="Solid Ground Electric home"><svg aria-hidden="true"><use href="#k"/></svg><b>Solid Ground <span>Electric</span></b></a><address>Solid Ground Electric LLC<br>Lisbon Falls, Maine</address></div>
-      <div><h4>Contact</h4><ul><li><a href="tel:+12077131857">(207) 713-1857</a></li><li><a href="mailto:solidgroundelectric26@gmail.com" style="overflow-wrap:anywhere">solidgroundelectric26@gmail.com</a></li><li><button class="as" type="button" data-open>Request a quote →</button></li></ul></div>
-      <div><h4>Hours</h4><ul><li>Monday–Friday</li><li><span class="fill">7 AM – 5 PM</span></li><li>Emergencies: call</li></ul></div>
-      <div><h4>Find us</h4><ul><li><a href="https://share.google/AuNdjh7cpOlOxx9OF">Google reviews</a></li><li><a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm">Angi</a></li><li><a href="https://www.homeadvisor.com/rated.Solidgroundelectric.160679976.html">HomeAdvisor</a></li></ul></div>
+    <div class="top">
+      <a class="brand" href="#top" aria-label="Solid Ground Electric home"><svg aria-hidden="true"><use href="#k"/></svg><span><b>Solid Ground</b><small>ELECTRIC</small></span></a>
+      <nav aria-label="Footer"><a href="#top">Home</a><a href="#services">Services</a><a href="#work">Projects</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#locations">Service Area</a></nav>
+      <span class="sep" aria-hidden="true"></span>
+      <div class="cnt"><a href="tel:+12077131857"><svg aria-hidden="true"><use href="#t"/></svg>(207) 713-1857</a><a href="mailto:solidgroundelectric26@gmail.com" style="overflow-wrap:anywhere"><svg aria-hidden="true"><use href="#mail"/></svg>solidgroundelectric26@gmail.com</a></div>
+      <span class="sep" aria-hidden="true"></span>
+      <div class="soc"><b>Find us</b><div><a href="https://share.google/AuNdjh7cpOlOxx9OF">Google</a><a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm">Angi</a><a href="https://www.homeadvisor.com/rated.Solidgroundelectric.160679976.html">HomeAdvisor</a></div></div>
     </div>
-    <div class="legal"><span>© 2026 Solid Ground Electric LLC</span><span>Licensed Maine electrician · License <span class="fill">#00000</span></span></div>
+    <div class="legal"><span>© 2026 Solid Ground Electric LLC · Lisbon Falls, Maine</span><span class="hrs"><span>Mon–Fri <span class="fill">7 AM – 5 PM</span> · Emergencies: call</span><span>Licensed Maine electrician · License <span class="fill">#00000</span></span></span></div>
   </div>
 </footer>
 
 <div class="mbar">
   <a class="btn btn-ink" href="tel:+12077131857"><svg aria-hidden="true"><use href="#t"/></svg>Call</a>
-  <button class="brk" type="button" data-open><span class="sw" aria-hidden="true"></span>Request a quote</button>
+  <button class="btn y" type="button" data-open>Request a Quote</button>
 </div>
 
 <!-- Job request -->
@@ -959,28 +895,21 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16
 (function(){
   /* ---- page polish ---- */
   const btn=document.getElementById("menuBtn"),nav=document.getElementById("nav");
-  const still=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
   const setMenu=o=>{nav.classList.toggle("open",o);btn.setAttribute("aria-expanded",o?"true":"false");btn.setAttribute("aria-label",o?"Close menu":"Open menu");};
   btn.addEventListener("click",()=>setMenu(!nav.classList.contains("open")));
   nav.addEventListener("click",e=>{if(e.target.closest("a"))setMenu(false);});
   document.addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false);});
-  /* breaker flips on before the form opens */
-  document.querySelectorAll(".brk").forEach(b=>b.addEventListener("pointerdown",()=>{b.classList.add("on");setTimeout(()=>b.classList.remove("on"),900);}));
-  /* before / after */
-  const ba=document.getElementById("ba"),rg=document.getElementById("baRange");
-  rg.addEventListener("input",()=>ba.style.setProperty("--x",rg.value+"%"));
-  /* active nav */
+  /* services scroller */
+  const sc=document.getElementById("scroller"),nx=document.getElementById("nextBtn");
+  const upd=()=>{nx.disabled=sc.scrollLeft+sc.clientWidth>=sc.scrollWidth-4;};
+  nx.addEventListener("click",()=>sc.scrollBy({left:sc.querySelector(".sv").offsetWidth*2,behavior:"smooth"}));
+  sc.addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd();
+  /* active nav link */
   const links=[...nav.querySelectorAll("a")];
   if("IntersectionObserver" in window){
-    const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;links.forEach(a=>a.setAttribute("aria-current",a.getAttribute("href")==="#"+e.target.id?"true":"false"));}),{rootMargin:"-45% 0px -50% 0px"});
-    ["services","how","work","reviews","about","locations","faq"].forEach(id=>io.observe(document.getElementById(id)));
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const key=e.target.id==="home"?"#top":"#"+e.target.id;links.forEach(a=>a.setAttribute("aria-current",a.getAttribute("href")===key?"true":"false"));}),{rootMargin:"-45% 0px -50% 0px"});
+    ["home","services","work","reviews","about","locations"].forEach(id=>io.observe(document.getElementById(id)));
   }
-  /* reveals */
-  const items=[...document.querySelectorAll("[data-r]")];
-  if("IntersectionObserver" in window&&!still){
-    const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io2.unobserve(e.target);}}),{threshold:.08,rootMargin:"0px 0px -5% 0px"});
-    items.forEach(i=>io2.observe(i));
-  }else items.forEach(i=>i.classList.add("in"));
 })();
 
 (function(){
@@ -1007,10 +936,9 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16
       else if(/boundary/.test(id))set("line-color","#2C5243");
       else if(l.type==="symbol")hide();
     });
-    [[16,.5],[32,.35],[46,.55]].forEach(([km,o],i)=>{
-      map.addSource("r"+i,{type:"geojson",data:circle(HOME,km)});
-      map.addLayer({id:"r"+i,type:"line",source:"r"+i,paint:{"line-color":"#FFD82F","line-opacity":o,"line-width":1.2,"line-dasharray":i===2?[3,3]:[1,4]}});
-    });
+    map.addSource("radius",{type:"geojson",data:circle(HOME,46)});
+    map.addLayer({id:"radius-fill",type:"fill",source:"radius",paint:{"fill-color":"#FFD82F","fill-opacity":.07}});
+    map.addLayer({id:"radius-line",type:"line",source:"radius",paint:{"line-color":"#FFD82F","line-opacity":.55,"line-width":1.4,"line-dasharray":[3,3]}});
   }
   function init(){
     const map=new maplibregl.Map({container:box,style:"https://tiles.openfreemap.org/styles/liberty",bounds:[[-70.5,43.6],[-69.62,44.36]],fitBoundsOptions:{padding:56},attributionControl:false,scrollZoom:false,dragRotate:false,pitchWithRotate:false});
