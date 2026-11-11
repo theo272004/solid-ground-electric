@@ -429,6 +429,23 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .gal .lbl.l{left:12px}.gal .lbl.r{left:12px;background:var(--y);color:var(--ink)}
 @media (max-width:980px){.gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto}.gal figure,.gal figure:nth-child(-n+2),.gal figure:nth-child(n+3){grid-column:auto;height:200px}.gal figure:nth-child(-n+2){grid-column:1/-1;height:230px}.gal figure:last-child{grid-column:1/-1}}
 
+
+/* hero: left-aligned, roomier, intro reveal */
+.hero>.hin{max-width:none;margin-inline:0;padding-left:clamp(24px,4.2vw,76px);padding-right:24px}
+.hero h1{margin-top:0}
+.hero .hlead{max-width:24em;margin-top:clamp(20px,3.2svh,34px)}
+.hero .hctas{margin-top:clamp(26px,4.2svh,46px)}
+.hero .trust{margin-top:clamp(28px,4.4svh,50px)}
+.hphoto::before{content:"";position:absolute;top:0;bottom:0;left:0;width:200%;z-index:2;pointer-events:none;background:linear-gradient(90deg,var(--g) 0,var(--g) 60%,rgba(7,31,25,0) 84%);transform:translateX(-100%);animation:hreveal 2.1s cubic-bezier(.65,0,.25,1) .25s both}
+.hphoto img{animation:hzoom 2.8s cubic-bezier(.2,.7,.2,1) .25s both}
+.htext>*{animation:hrise .9s cubic-bezier(.2,.7,.2,1) both}
+.htext>:nth-child(1){animation-delay:.15s}.htext>:nth-child(2){animation-delay:.3s}.htext>:nth-child(3){animation-delay:.45s}.htext>:nth-child(4){animation-delay:.6s}
+@keyframes hreveal{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@keyframes hzoom{from{transform:scale(1.07)}to{transform:scale(1)}}
+@keyframes hrise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hphoto::before,.hphoto img,.htext>*{animation:none}.hphoto::before{opacity:0}}
+@media (max-width:980px){.hero>.hin{padding-inline:max(var(--gut),env(safe-area-inset-left,0px))}}
+
 /* services cards */
 .svc .w{display:block}
 .shead{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:end;gap:16px clamp(32px,6vw,96px)}
@@ -543,7 +560,6 @@ h1 em{font-style:normal;color:var(--y);display:block}
   <div class="slash" aria-hidden="true"></div>
   <div class="w hin">
     <div class="htext">
-      <span class="pill"><svg aria-hidden="true"><use href="#c"/></svg>Licensed electrician<span class="pl"> · Lisbon Falls, Maine</span></span>
       <h1><span>Electrical</span> <span>work.</span><em>Done right.</em></h1>
       <p class="hlead">Residential and commercial electrical services across Southern &amp; Central Maine. Reliable, code-compliant, quality workmanship.</p>
       <div class="hctas">
