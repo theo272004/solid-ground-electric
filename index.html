@@ -815,6 +815,11 @@ h1 em{font-style:normal;color:var(--y);display:block}
 }
 @media (min-width:1800px){.af.ab .w{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) minmax(0,.8fr)}.aphoto{max-width:400px}}
 
+/* hero checks */
+.hchecks{list-style:none;margin:clamp(14px,2.4svh,22px) 0 0;padding:0;display:grid;gap:10px;color:#fff;font-weight:600;font-size:clamp(16px,1.2vw,18px)}
+.hchecks li{display:flex;align-items:center;gap:12px}
+.hchecks i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--y);color:var(--g);display:grid;place-items:center}
+.hchecks svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:3}
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
@@ -888,7 +893,8 @@ h1 em{font-style:normal;color:var(--y);display:block}
   <div class="w hin">
     <div class="htext">
       <h1><span>Electrical</span> <span>work.</span><em>Done right.</em></h1>
-      <p class="hlead">Residential and commercial electrical services across Southern &amp; Central Maine. Reliable, code-compliant, quality workmanship.</p>
+      <p class="hlead">Residential and commercial electrical services across Southern &amp; Central Maine.</p>
+      <ul class="hchecks"><li><i><svg aria-hidden="true"><use href="#c"/></svg></i>Reliable</li><li><i><svg aria-hidden="true"><use href="#c"/></svg></i>Code-compliant</li><li><i><svg aria-hidden="true"><use href="#c"/></svg></i>Quality workmanship</li></ul>
       <div class="hctas">
         <button class="btn y" type="button" data-open>Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button>
         <a class="play" href="#work"><i><svg aria-hidden="true"><use href="#grid"/></svg></i>See our work</a>
@@ -905,7 +911,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
 <section class="svc" id="services">
   <div class="w">
     <div class="shead">
-      <div><span class="lab">Our services</span><h2>Complete Electrical Solutions</h2></div>
+      <div><h2>Complete Electrical Solutions</h2></div>
       <div class="sright">
         <p class="sub">Residential and commercial electrical work in Lewiston, Auburn, Brunswick, Portland, Augusta and nearby towns.</p>
       </div>
@@ -924,7 +930,6 @@ h1 em{font-style:normal;color:var(--y);display:block}
 <section class="qs" id="how" aria-label="How to request a quote">
   <div class="w"><div class="qbox dk">
     <div class="qleft">
-      <span class="lab">Get a quote</span>
       <h2>Request a quote online in three easy steps</h2>
       <p class="qintro">Tell us about the job, add a few photos and send it. No need to wait for someone to come out just to get the process started.</p>
       <ol class="qsteps">
@@ -971,10 +976,9 @@ h1 em{font-style:normal;color:var(--y);display:block}
   <div class="w">
     <div class="wtop">
       <div>
-        <span class="lab">Our work</span>
-        <h2>Work you can see</h2>
+        <h2>See our recent work</h2>
       </div>
-      <p class="sub">Panels, service upgrades and repairs from jobs across Southern &amp; Central Maine. <a class="lk" href="https://share.google/AuNdjh7cpOlOxx9OF"><span>See us on Google</span> <svg aria-hidden="true"><use href="#a"/></svg></a></p>
+      <p class="sub">Recent panel, service and repair jobs around Southern &amp; Central Maine. <a class="lk" href="https://share.google/AuNdjh7cpOlOxx9OF"><span>See us on Google</span> <svg aria-hidden="true"><use href="#a"/></svg></a></p>
     </div>
     <div class="gal">
       <figure class="ba-b"><img src="https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?w=1200&q=75&auto=format" style="object-position:50% 38%" alt="Before: electrical panel with tangled, disorganised wiring (sample photo)" loading="lazy"><span class="lbl l">Before</span><span class="tag">Sample photo</span><figcaption>Panel installation · <span class="fill">[Town]</span>, ME</figcaption></figure>
@@ -991,7 +995,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
 <section class="tm" id="reviews">
   <div class="w">
     <div class="rhead">
-      <div><span class="lab">Testimonials</span><h2>What Our Customers Say</h2></div>
+      <div><h2>What Our Customers Say</h2></div>
       <div class="score">
         <a href="https://share.google/AuNdjh7cpOlOxx9OF"><span class="st dkst" aria-hidden="true">★★★★★</span><b>5.0</b><span>on Google</span></a>
         <a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm"><span class="st dkst" aria-hidden="true">★★★★★</span><b>5.0</b><span>on Angi · 24 reviews</span></a>
@@ -1008,7 +1012,6 @@ h1 em{font-style:normal;color:var(--y);display:block}
 <section class="area dk" id="locations">
   <div class="w">
     <div>
-      <span class="lab">Service area</span>
       <h2>Proudly Serving Southern &amp; Central Maine</h2>
       <p class="sub">Home base in Lisbon Falls, serving homes and businesses across these towns and the ones around them.</p>
     </div>
