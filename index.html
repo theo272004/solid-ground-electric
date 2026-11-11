@@ -785,6 +785,17 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .menu[aria-expanded="true"] .mb i:nth-child(2){top:5px;width:20px;transform:rotate(-45deg)}
 .menu:focus-visible{outline:2px solid #fff;outline-offset:3px}
 
+
+/* large monitors only (1800px and up): wider footer and map, text and phone spread apart. Laptops are untouched. */
+@media (min-width:1800px){
+  .ftr>.w{width:100%}
+  .ftr>.w,.area>.w{max-width:1640px}
+  .area .w{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,.9fr)}
+  .qbox{grid-template-columns:minmax(0,720px) auto;justify-content:space-between;padding-inline:clamp(96px,8.5vw,230px)}
+  .hero h1{font-size:clamp(42px,min(4.6vw,8.2svh),72px)}
+  .hero .hlead{font-size:20px}
+}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
