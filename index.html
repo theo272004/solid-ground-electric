@@ -672,6 +672,19 @@ h1 em{font-style:normal;color:var(--y);display:block}
   .duo>section.area{padding-block:clamp(48px,7svh,76px) clamp(88px,13svh,136px)}
 }
 
+
+/* footer: four tidy columns */
+.ftr .top{display:grid;grid-template-columns:1.5fr .8fr 1.5fr .9fr;gap:32px clamp(28px,4vw,72px);align-items:start;padding-block:clamp(32px,5svh,56px)}
+.fcol{display:flex;flex-direction:column;gap:12px;font-size:15px;color:rgba(255,255,255,.9);min-width:0}
+.fcol>b{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--on);font-weight:600;margin-bottom:4px}
+.fcol a:hover{color:var(--y)}
+.fbrand p{color:var(--on);font-size:15px;line-height:1.55;max-width:30ch;margin:0}
+.ftr .cnt .hrs{color:var(--on);font-size:14px;line-height:1.55;margin:4px 0 0}
+.ftr .cnt a{display:flex;gap:12px;align-items:center}
+.ftr nav.fcol{display:flex;flex-wrap:nowrap}
+.ftr .soc{display:flex;gap:12px}
+@media (max-width:860px){.ftr .top{grid-template-columns:repeat(2,minmax(0,1fr))}.fbrand{grid-column:1/-1}}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
@@ -929,14 +942,15 @@ h1 em{font-style:normal;color:var(--y);display:block}
       <div class="fb"><button class="btn y" type="button" data-open>Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button><a class="btn ow" href="tel:+12077131857">Call or text</a></div>
     </div>
     <div class="top">
-      <a class="brand" href="#top" aria-label="Solid Ground Electric home"><span class="logo-ph">[logo here]</span></a>
-      <nav aria-label="Footer"><a href="#top">Home</a><a href="#services">Services</a><a href="#work">Projects</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#locations">Service Area</a></nav>
-      <span class="sep" aria-hidden="true"></span>
-      <div class="cnt"><a href="tel:+12077131857"><svg aria-hidden="true"><use href="#t"/></svg>(207) 713-1857</a><a href="mailto:solidgroundelectric26@gmail.com" style="overflow-wrap:anywhere"><svg aria-hidden="true"><use href="#mail"/></svg>solidgroundelectric26@gmail.com</a></div>
-      <span class="sep" aria-hidden="true"></span>
-      <div class="soc"><b>Find us</b><div><a href="https://share.google/AuNdjh7cpOlOxx9OF">Google</a><a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm">Angi</a><a href="https://www.homeadvisor.com/rated.Solidgroundelectric.160679976.html">HomeAdvisor</a></div></div>
+      <div class="fcol fbrand">
+        <a class="brand" href="#top" aria-label="Solid Ground Electric home"><span class="logo-ph">[logo here]</span></a>
+        <p>Licensed Maine electrician serving Southern &amp; Central Maine.</p>
+      </div>
+      <nav class="fcol" aria-label="Footer"><b>Explore</b><a href="#top">Home</a><a href="#services">Services</a><a href="#work">Projects</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#locations">Service Area</a></nav>
+      <div class="fcol cnt"><b>Contact</b><a href="tel:+12077131857"><svg aria-hidden="true"><use href="#t"/></svg>(207) 713-1857</a><a href="mailto:solidgroundelectric26@gmail.com" style="overflow-wrap:anywhere"><svg aria-hidden="true"><use href="#mail"/></svg>solidgroundelectric26@gmail.com</a><p class="hrs">Mon–Fri <span class="fill">7 AM – 5 PM</span><br>Emergencies: call</p></div>
+      <div class="fcol soc"><b>Find us</b><a href="https://share.google/AuNdjh7cpOlOxx9OF">Google</a><a href="https://www.angi.com/companylist/us/me/lisbon-falls/solid-ground-electric-llc-reviews-1.htm">Angi</a><a href="https://www.homeadvisor.com/rated.Solidgroundelectric.160679976.html">HomeAdvisor</a></div>
     </div>
-    <div class="legal"><span>© 2026 Solid Ground Electric LLC · Lisbon Falls, Maine</span><span class="hrs"><span>Mon–Fri <span class="fill">7 AM – 5 PM</span> · Emergencies: call</span><span>Licensed Maine electrician · License <span class="fill">#00000</span></span></span></div>
+    <div class="legal"><span>© 2026 Solid Ground Electric LLC · Lisbon Falls, Maine</span><span>Licensed Maine electrician · License <span class="fill">#00000</span></span></div>
   </div>
 </footer>
 
