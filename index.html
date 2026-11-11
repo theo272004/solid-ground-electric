@@ -613,6 +613,16 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .fcta .fb{display:flex;gap:12px;flex-wrap:wrap}
 .fcta .btn{min-height:56px;padding:0 30px;font-size:16.5px}
 
+
+/* services header: description sits on the title baseline */
+@media (min-width:981px){
+  .shead{grid-template-columns:minmax(0,1fr) minmax(0,auto);align-items:end;gap:16px clamp(40px,6vw,120px)}
+  .svc .sright{max-width:58ch;justify-self:end;padding-bottom:6px}
+  .svc .sright .sub{font-size:clamp(15.5px,1.1vw,17.5px);line-height:1.55;max-width:none}
+  .svc .sright .lk{margin-top:10px;min-height:0}
+  .sgrid{margin-top:clamp(28px,4.4svh,44px)}
+}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
