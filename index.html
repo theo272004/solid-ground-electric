@@ -774,6 +774,17 @@ h1 em{font-style:normal;color:var(--y);display:block}
   .qcta,.fcta .fb,.ftr .cnt a[data-open]{display:none}
 }
 
+
+/* phone menu button: yellow circle, two lines that turn into an X */
+.menu{width:46px;height:46px;border:0;border-radius:50%;background:var(--y);color:var(--g);cursor:pointer}
+.menu .mb{position:relative;display:block;width:20px;height:12px}
+.menu .mb i{position:absolute;left:0;height:2.4px;border-radius:2px;background:var(--g);transition:transform .3s var(--ease),width .3s var(--ease),top .3s var(--ease)}
+.menu .mb i:nth-child(1){top:1px;width:20px}
+.menu .mb i:nth-child(2){top:9px;width:12px}
+.menu[aria-expanded="true"] .mb i:nth-child(1){top:5px;width:20px;transform:rotate(45deg)}
+.menu[aria-expanded="true"] .mb i:nth-child(2){top:5px;width:20px;transform:rotate(-45deg)}
+.menu:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
@@ -835,7 +846,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
   <a class="brand" href="#top" aria-label="Solid Ground Electric home"><span class="logo-ph">[logo here]</span></a>
   <nav class="nav" id="nav" aria-label="Main"><a href="#top" aria-current="true">Home</a><a href="#services">Services</a><a href="#work">Projects</a><a href="#reviews">Reviews</a><a href="#about">About</a><a href="#locations">Service Area</a></nav>
   <div class="hr"><a href="tel:+12077131857" class="tl">(207) 713-1857</a><button class="btn y" type="button" data-open>Get a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button></div>
-  <button class="menu" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+  <button class="menu" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span class="mb" aria-hidden="true"><i></i><i></i></span></button>
 </div></header>
 
 <main id="top">
