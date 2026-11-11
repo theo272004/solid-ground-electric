@@ -828,11 +828,11 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .angi{display:inline-block;font-weight:800;letter-spacing:-.04em;color:#FF6153;font-size:1.2em;line-height:1;vertical-align:-.05em;margin-left:2px}
 /* About: dark card + big photo with floating rating cards */
 .af.ab .about{background:var(--g);color:#fff;border-radius:26px;padding:clamp(28px,3.4vw,52px);display:flex;flex-direction:column;gap:0}
-.af.ab .about h2{color:#fff;font-size:clamp(28px,3vw,44px);line-height:1.12;margin-bottom:6px;white-space:nowrap}
+.af.ab .about h2{color:#fff;font-size:clamp(28px,3vw,44px);line-height:1.2;margin-bottom:6px;white-space:nowrap}
 .af.ab .about p{margin-top:16px}
 .af.ab .about .creds{margin-top:auto}
 .af.ab .about p.q+.creds{margin-top:auto}
-.af.ab .about .hl{color:var(--g);margin-inline:0;padding:0 .16em}
+.af.ab .about .hl{color:var(--g);margin-inline:0;padding:.04em .22em;background-size:100% 100%;background-position:0 50%}
 .af.ab .about p.q{margin-bottom:28px}
 .af.ab .about p{color:rgba(255,255,255,.88);max-width:46ch}
 .af.ab .about p.q{color:rgba(255,255,255,.62)}
@@ -851,6 +851,14 @@ h1 em{font-style:normal;color:var(--y);display:block}
   .af.ab .aphoto{min-height:clamp(460px,62svh,600px)}
 }
 @media (max-width:980px){.af.ab .aphoto{min-height:380px;max-width:none}}
+/* About card keeps a fixed size: the dropdown opens upward over the card */
+@media (min-width:981px){
+  .af.ab .w{grid-auto-rows:clamp(500px,66svh,620px)}
+  .af.ab .aphoto,.af.ab .about{align-self:stretch;min-height:0}
+  .af.ab .about{position:relative;top:auto;overflow:hidden;--pd:clamp(28px,3.4vw,52px);padding-bottom:calc(var(--pd) + 84px)}
+  .af.ab .about .creds{position:absolute;left:var(--pd);right:var(--pd);bottom:var(--pd);margin:0;background:#0e2d25;z-index:2;max-height:calc(100% - 2*var(--pd));overflow:auto}
+  .af.ab .about .creds[open]{box-shadow:0 -14px 30px -10px rgba(0,0,0,.45)}
+}
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
@@ -1073,7 +1081,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
 <section class="af ab">
   <div class="w">
     <div class="about dk" id="about">
-      <h2>Meet Your <span class="hl">Electrician</span></h2>
+      <h2><span class="hl">Meet Your Electrician</span></h2>
       <p>I'm <span class="fill">[Your name]</span>, a licensed electrician with <span class="fill">[X]</span> years of experience. Before starting Solid Ground Electric in <span class="fill">[2025]</span>, I <span class="fill">[where you trained and worked, and on what kind of jobs]</span>.</p>
       <p class="q">When you send a job, I'm the one who reads it, prices it and does the work.</p>
       <details class="creds"><summary>License and background<i aria-hidden="true"></i></summary><dl class="facts">
