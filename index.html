@@ -647,7 +647,13 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .card .qm::before{background:var(--y)}
 .ftr .cnt svg{background:var(--y);color:var(--g)}
 .towns li svg{background:var(--y);color:var(--g)}
-.ph-ok{background:var(--y);color:var(--g)}
+.ph-ok{background:var(--y);color:#fff}
+
+
+/* quote: text and phone grouped and centred in the card */
+@media (min-width:981px){
+  .qbox{grid-template-columns:minmax(0,640px) auto;justify-content:center;column-gap:clamp(56px,8vw,140px)}
+}
 
 /* one section per screen (desktop) */
 @media (min-width:981px){
@@ -1303,7 +1309,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
   function chips(){var el=$("qdChips");el.textContent="";opts.forEach(function(o){var b=document.createElement("button");b.type="button";b.className="ph-chip";b.textContent=o;b.setAttribute("aria-pressed",picked.indexOf(o)>-1);b.addEventListener("click",function(){if(!touched){picked=[];touched=true}var i=picked.indexOf(o);i>-1?picked.splice(i,1):picked.push(o);$("qdCta").dataset.open=picked.join("|");chips();restart()});el.appendChild(b)})}
   function addShot(){if(shots>=3)return;var im=document.createElement("img");im.alt="";im.src=imgs[shots];shots++;$("qdShots").appendChild(im)}
   function clearFills(){fills.forEach(clearTimeout);fills=[]}
-  function go(n){idx=n;clearFills();steps.forEach(function(b,i){i===n?b.setAttribute("aria-current","step"):b.removeAttribute("aria-current")});views.forEach(function(v,i){v.classList.toggle("on",i===n)});$("qdLabel").textContent=labels[n];$("qdBar").style.width=bars[n];if(n===1){shots=0;$("qdShots").textContent="";[500,1100,1700].forEach(function(t){fills.push(setTimeout(addShot,t))})}}
+  function go(n){idx=n;clearFills();if(n===0&&!touched){picked=["Panel / breakers"];chips();fills.push(setTimeout(function(){if(!touched){picked.push("EV charger");chips()}},1300))}steps.forEach(function(b,i){i===n?b.setAttribute("aria-current","step"):b.removeAttribute("aria-current")});views.forEach(function(v,i){v.classList.toggle("on",i===n)});$("qdLabel").textContent=labels[n];$("qdBar").style.width=bars[n];if(n===1){shots=0;$("qdShots").textContent="";[500,1100,1700].forEach(function(t){fills.push(setTimeout(addShot,t))})}}
   function tick(){go((idx+1)%3)}
   function play(){if(!still&&!timer&&visible)timer=setInterval(tick,4200)}
   function pause(){clearInterval(timer);timer=null}
