@@ -768,6 +768,12 @@ h1 em{font-style:normal;color:var(--y);display:block}
   .sv:first-child{border-left:1px solid var(--line);padding:20px 20px 18px}
 }
 
+
+/* phones: the bottom bar already has Call + Request a quote, so hide the repeats (the hero keeps its own) */
+@media (max-width:640px){
+  .qcta,.fcta .fb,.ftr .cnt a[data-open]{display:none}
+}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
