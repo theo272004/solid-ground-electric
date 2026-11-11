@@ -152,9 +152,23 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .qs .act small{font-size:12.5px;color:var(--on)}
 
 /* projects */
-.work{padding-block:clamp(48px,7svh,80px)}
-.work .w{display:grid;grid-template-columns:minmax(240px,300px) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:center}
-.gal{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:12px;height:clamp(240px,34svh,330px)}
+.work{padding-block:clamp(28px,4.4svh,52px)}
+.work .wtop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 48px}
+.work .wtop .sub{max-width:46ch;margin:0}
+.work .wtop .lk{margin-left:6px}
+.gal{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:12px;margin-top:clamp(16px,2.6svh,28px);height:clamp(300px,54svh,520px)}
+.gal figure:first-child{grid-row:span 2}
+.ba{--x:50%}
+.ba .after{clip-path:inset(0 0 0 var(--x))}
+.ba .before{filter:grayscale(1) contrast(.9) brightness(.9)}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--x);width:2px;margin-left:-1px;background:var(--y);z-index:2;pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:var(--x);width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:var(--y);color:var(--ink);display:grid;place-items:center;z-index:2;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.ba .knob svg{width:22px;height:22px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:4}
+.ba .lbl{position:absolute;top:12px;z-index:2;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:4px 9px;border-radius:99px;pointer-events:none}
+.ba .lbl.l{left:12px}.ba .lbl.r{right:12px;background:var(--y);color:var(--ink)}
+.ba:hover img{transform:none}
+.ba figcaption{z-index:3;pointer-events:none}
 .gal figure{position:relative;border-radius:10px;overflow:hidden;background:#C9CAC2}
 .gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
 .gal figure:hover img{transform:scale(1.04)}
@@ -376,7 +390,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
   .qs .act{grid-auto-flow:row;justify-items:stretch}
   .gal{grid-template-columns:repeat(2,minmax(0,1fr));height:auto}
   .gal figure{height:190px}
-  .gal figure:first-child{grid-column:1/-1;height:220px}
+  .gal figure:first-child{grid-column:1/-1;grid-row:auto;height:260px}
   .gal figure:not(:first-child) .tag{display:none}
   .gal figcaption{left:10px;right:10px;bottom:9px;font-size:12.5px}
   .srow{padding-right:0}
@@ -490,16 +504,25 @@ h1 em{font-style:normal;color:var(--y);display:block}
 
 <section class="work" id="work">
   <div class="w">
-    <div>
-      <span class="lab">Our work</span>
-      <h2>Project Gallery</h2>
-      <p class="sub">Panels, service upgrades and repairs from jobs across Southern &amp; Central Maine.</p>
-      <a class="lk" href="https://share.google/AuNdjh7cpOlOxx9OF" style="margin-top:18px"><span>See us on Google</span> <svg aria-hidden="true"><use href="#a"/></svg></a>
+    <div class="wtop">
+      <div>
+        <span class="lab">Our work</span>
+        <h2>Work you can see</h2>
+      </div>
+      <p class="sub">Drag across the first photo to compare before and after. Panels, service upgrades and repairs from jobs across Southern &amp; Central Maine. <a class="lk" href="https://share.google/AuNdjh7cpOlOxx9OF"><span>See us on Google</span> <svg aria-hidden="true"><use href="#a"/></svg></a></p>
     </div>
     <div class="gal">
-      <figure><img src="https://images.unsplash.com/photo-1660330589693-99889d60181e?w=900&q=75&auto=format" style="object-position:50% 30%" alt="Electrician using a screwdriver on an electrical panel (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption><svg aria-hidden="true"><use href="#pin"/></svg>Panel installation · <span class="fill">[Town], ME</span></figcaption></figure>
-      <figure><img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=700&q=75&auto=format" style="object-position:40% 50%" alt="Testing electrical equipment with a multimeter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption><svg aria-hidden="true"><use href="#pin"/></svg>Troubleshooting · <span class="fill">[Town], ME</span></figcaption></figure>
-      <figure><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=700&q=75&auto=format" style="object-position:60% 30%" alt="Electrician working on a wall-mounted meter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption><svg aria-hidden="true"><use href="#pin"/></svg>Service upgrade · <span class="fill">[Town], ME</span></figcaption></figure>
+      <figure class="ba" id="ba">
+        <img class="before" src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=1200&q=75&auto=format" alt="Before: electrical panel before the work (sample photo)" loading="lazy">
+        <img class="after" src="https://images.unsplash.com/photo-1660330589693-99889d60181e?w=1200&q=75&auto=format" style="object-position:55% 30%" alt="After: finished panel installation (sample photo)" loading="lazy">
+        <span class="bar" aria-hidden="true"></span><span class="knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
+        <span class="lbl l">Before</span><span class="lbl r">After</span>
+        <label class="sr" for="baRange" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Compare before and after</label>
+        <input id="baRange" type="range" min="0" max="100" value="50">
+        <figcaption>Panel installation · <span class="fill">[Town]</span>, ME</figcaption>
+      </figure>
+      <figure><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&q=75&auto=format" style="object-position:60% 30%" alt="Electrician working on a wall-mounted meter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Meter &amp; service upgrade · <span class="fill">[Town]</span>, ME</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1682345262055-8f95f3c513ea?w=900&q=75&auto=format" alt="Gloved hand holding a stripped electrical cable (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Rewiring &amp; updates · <span class="fill">[Town]</span>, ME</figcaption></figure>
     </div>
   </div>
 </section>
@@ -904,6 +927,8 @@ h1 em{font-style:normal;color:var(--y);display:block}
   nx.addEventListener("click",()=>sc.scrollBy({left:sc.querySelector(".sv").offsetWidth*2,behavior:"smooth"}));
   sc.addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd();
   /* active nav link */
+  const ba=document.getElementById("ba"),rg=document.getElementById("baRange");
+  if(ba&&rg)rg.addEventListener("input",()=>ba.style.setProperty("--x",rg.value+"%"));
   const links=[...nav.querySelectorAll("a")];
   if("IntersectionObserver" in window){
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const key=e.target.id==="home"?"#top":"#"+e.target.id;links.forEach(a=>a.setAttribute("aria-current",a.getAttribute("href")===key?"true":"false"));}),{rootMargin:"-45% 0px -50% 0px"});
