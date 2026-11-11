@@ -420,9 +420,10 @@ h1 em{font-style:normal;color:var(--y);display:block}
 
 /* services cards */
 .svc .w{display:block}
-.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 56px}
-.sright{max-width:44ch}.sright .sub{margin:0}.sright .lk{margin-top:12px}
-.sgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(12px,1.2vw,18px);margin-top:clamp(24px,4svh,48px)}
+.shead{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:end;gap:16px clamp(32px,6vw,96px)}
+@media (max-width:760px){.shead{grid-template-columns:minmax(0,1fr)}}
+.sright{justify-self:end;max-width:46ch}.sright .sub{margin:0}.sright .lk{margin-top:12px}
+.sgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.2vw,18px);margin-top:clamp(24px,4svh,48px)}
 .sv{background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(22px,2.4vw,32px) clamp(18px,1.6vw,24px);display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
 .sv:hover{transform:translateY(-4px);box-shadow:0 18px 34px -22px rgba(7,31,25,.45)}
 .sv .ico{position:relative;width:60px;height:60px;display:grid;place-items:center;margin-left:-4px}
@@ -434,8 +435,8 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .sv .go svg{width:18px;height:18px}
 .sv .go:hover{background:var(--y2);transform:translateX(3px)}
 .sv .go:focus-visible{outline:2px solid var(--g3);outline-offset:3px}
-@media (min-width:981px){.sv{min-height:clamp(340px,50svh,520px)}.sv .ico{width:72px;height:72px}.sv .ico::before{width:52px;height:52px}.sv svg.ic{width:54px;height:54px}.shead h2{font-size:clamp(36px,3.6vw,56px)}.sright .sub{font-size:clamp(16px,1.15vw,18px)}}
-@media (max-width:1180px){.sgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:981px){.sv{min-height:clamp(280px,40svh,400px)}.sv .ico{width:72px;height:72px}.sv .ico::before{width:52px;height:52px}.sv svg.ic{width:54px;height:54px}.shead h2{font-size:clamp(36px,3.6vw,56px)}.sright .sub{font-size:clamp(16px,1.15vw,18px)}}
+@media (max-width:1180px){.sgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.sgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.sv .ico{width:52px;height:52px}.sv svg.ic{width:38px;height:38px}}
 @media (max-width:420px){.sgrid{grid-template-columns:minmax(0,1fr)}}
 
@@ -553,8 +554,6 @@ h1 em{font-style:normal;color:var(--y);display:block}
       <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#e"/></svg></span><h3>EV Chargers</h3><p>Level 2 charger installation in your garage or driveway. Your panel gets checked first.</p><button class="go" type="button" data-open="EV charger" aria-label="Get a quote: EV Chargers"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
       <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#h"/></svg></span><h3>Rewiring &amp; Updates</h3><p>Old wiring replaced and updates for older homes, kitchens, basements and additions.</p><button class="go" type="button" data-open="New circuits / renovation" aria-label="Get a quote: Rewiring and Updates"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
       <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#l"/></svg></span><h3>Lighting &amp; Outlets</h3><p>Fixtures, recessed lighting, ceiling fans, outlets and switches. Small jobs are welcome.</p><button class="go" type="button" data-open="Lighting|Outlets &amp; switches" aria-label="Get a quote: Lighting and Outlets"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
-      <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#g"/></svg></span><h3>Generators &amp; Transfer Switches</h3><p>Portable generator hookups and transfer switches, so the essentials keep running in an outage.</p><button class="go" type="button" data-open="Generator" aria-label="Get a quote: Generators and Transfer Switches"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
-      <article class="sv"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#m"/></svg></span><h3>Service &amp; Troubleshooting</h3><p>Breakers that won't reset, dead outlets and flickering lights tracked down and repaired.</p><button class="go" type="button" data-open="Something stopped working" aria-label="Get a quote: Service and Troubleshooting"><svg aria-hidden="true"><use href="#a"/></svg></button></article>
     </div>
   </div>
 </section>
