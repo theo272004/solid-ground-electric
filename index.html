@@ -694,6 +694,17 @@ h1 em{font-style:normal;color:var(--y);display:block}
   section.svc,section.work,section.qs,section.af{padding-block:56px}
 }
 
+
+/* quote: wider text column so the intro takes two lines, tighter overall */
+@media (min-width:981px){
+  .qbox{grid-template-columns:minmax(0,720px) auto}
+  .qbox h2{max-width:none}
+  .qintro{max-width:none}
+  .qsteps{margin-top:clamp(16px,2.6svh,28px);gap:8px}
+  .qstep-b{padding-block:clamp(8px,1.3svh,13px)}
+  .qcta{margin-top:clamp(18px,3svh,30px)}
+}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
