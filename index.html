@@ -488,6 +488,38 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .area h2{font-size:clamp(30px,3vw,46px)}
 .towns .btn{margin-top:18px}
 
+
+/* quote section: steps + phone preview */
+.qbox{background:var(--g2);color:#fff;border-radius:22px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,72px);align-items:center;padding:clamp(34px,6svh,70px) clamp(26px,4.4vw,84px);overflow:hidden}
+.qbox h2{font-size:clamp(34px,3.4vw,54px);line-height:1.05}
+.qintro{color:var(--on);font-size:clamp(15.5px,1.2vw,18px);line-height:1.55;margin-top:14px;max-width:36ch}
+.qsteps{list-style:none;margin:clamp(22px,4svh,40px) 0 0;padding:0;display:grid;gap:clamp(18px,3svh,30px)}
+.qsteps li{position:relative;display:flex;gap:18px;align-items:flex-start}
+.qsteps li:not(:last-child)::after{content:"";position:absolute;left:22px;top:50px;bottom:calc(-1 * clamp(18px,3svh,30px) + 4px);border-left:2px dashed rgba(255,216,47,.4)}
+.qsteps i{flex:none;width:46px;height:46px;border-radius:50%;background:var(--y);color:var(--ink);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:19px}
+.qsteps b{display:block;font-size:clamp(17px,1.4vw,21px);font-weight:700;line-height:1.25;margin-top:2px}
+.qsteps span{display:block;font-size:clamp(14px,1.05vw,16px);color:var(--on);line-height:1.45;margin-top:3px}
+.qcta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:clamp(24px,4.2svh,42px)}
+.qcta .btn{min-height:56px;padding:0 30px;font-size:16.5px}
+.qcta small{font-size:13.5px;color:var(--on)}
+.qright{display:flex;justify-content:center}
+.phone{width:min(clamp(310px,24vw,370px),100%);background:#fff;color:var(--ink);border-radius:36px;border:9px solid #04130F;outline:1px solid rgba(255,255,255,.14);padding:clamp(20px,3svh,28px) clamp(18px,1.6vw,24px);box-shadow:0 30px 60px -28px rgba(0,0,0,.7)}
+.ph-top{display:flex;justify-content:space-between;align-items:baseline}
+.ph-top b{font-size:15px;font-weight:800}.ph-top small{font-size:12px;color:var(--mut)}
+.ph-bar{height:4px;border-radius:9px;background:#E7E6DC;margin:10px 0 16px}.ph-bar i{display:block;height:100%;width:40%;border-radius:9px;background:var(--y)}
+.ph-lbl{font-size:12.5px;font-weight:700;margin:0 0 8px}
+.ph-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.ph-chips span{font-size:13px;padding:7px 12px;border-radius:99px;border:1px solid var(--line);background:#fff}
+.ph-chips span.on{background:var(--y);border-color:var(--y);font-weight:700}
+.ph-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.ph-thumbs img,.ph-thumbs span{height:clamp(68px,10svh,92px);width:100%;border-radius:10px;object-fit:cover}
+.ph-thumbs span{display:grid;place-items:center;border:1.5px dashed #C9CAC2;color:var(--mut);font-size:22px}
+.ph-reply{background:#EAF3DE;border-radius:14px;padding:14px 16px;color:#173404}
+.ph-reply small{display:block;font-size:11.5px;color:#3B6D11}
+.ph-reply b{display:block;font-size:13px;margin-top:6px}
+.ph-reply strong{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+@media (max-width:980px){.qbox{grid-template-columns:minmax(0,1fr);padding:30px 22px}.qright{margin-top:8px}}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
@@ -594,12 +626,29 @@ h1 em{font-style:normal;color:var(--y);display:block}
 </section>
 
 <section class="qs" id="how" aria-label="How to request a quote">
-  <div class="w"><div class="box dk">
-    <div class="intro"><span class="lab">Get a quote</span><h2>It's Fast &amp; Easy</h2><p>Tell us about the job, add a few photos and send it. No need to wait for a visit to get started.</p></div>
-    <div class="qstep"><i>1</i><b>Tell us about the job</b><span>What you need done, where and how soon.</span></div>
-    <div class="qstep"><i>2</i><b>Add a few photos</b><span>The panel, the problem or where the work goes.</span></div>
-    <div class="qstep"><i>3</i><b>Send it and hear back</b><span>A quote, a question or a time for a visit.</span></div>
-    <div class="act"><button class="btn y" type="button" data-open>Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button><small>Takes about 2 minutes</small></div>
+  <div class="w"><div class="qbox dk">
+    <div class="qleft">
+      <span class="lab">Get a quote</span>
+      <h2>It's Fast &amp; Easy</h2>
+      <p class="qintro">Tell us about the job, add a few photos and send it. No need to wait for a visit to get started.</p>
+      <ol class="qsteps">
+        <li><i>1</i><div><b>Tell us about the job</b><span>What you need done, where and how soon.</span></div></li>
+        <li><i>2</i><div><b>Add a few photos</b><span>The panel, the problem or where the work goes.</span></div></li>
+        <li><i>3</i><div><b>Send it and hear back</b><span>A quote, a question or a time for a visit.</span></div></li>
+      </ol>
+      <div class="qcta"><button class="btn y" type="button" data-open>Request a Quote <svg class="ar" aria-hidden="true"><use href="#a"/></svg></button><small>Takes about 2 minutes</small></div>
+    </div>
+    <div class="qright" aria-hidden="true">
+      <div class="phone">
+        <div class="ph-top"><b>Job request</b><small>Step 2 of 5</small></div>
+        <div class="ph-bar"><i></i></div>
+        <div class="ph-lbl">What do you need done?</div>
+        <div class="ph-chips"><span class="on">Panel upgrade</span><span>EV charger</span><span>Lighting</span></div>
+        <div class="ph-lbl">Add photos</div>
+        <div class="ph-thumbs"><img src="assets/hero.webp" alt="" style="object-position:72% 40%"><img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=300&q=70&auto=format" alt="" style="object-position:40% 50%"><span>+</span></div>
+        <div class="ph-reply"><small>Reply from Solid Ground</small><b>Quote ready</b><strong>$<span>[amount]</span></strong><small>Visit: <span>[day]</span></small></div>
+      </div>
+    </div>
   </div></div>
 </section>
 
