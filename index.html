@@ -665,6 +665,13 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .fl{display:block;gap:0;border-top:1px solid var(--line);margin-top:22px}
 .fl details,.fl details[open]{background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0;box-shadow:none}
 
+
+/* reviews + map: more rest above (light part) and below (green part); the pair may grow past one screen */
+@media (min-width:981px){
+  .duo>section.tm{padding-block:clamp(76px,12svh,120px) clamp(40px,6svh,64px)}
+  .duo>section.area{padding-block:clamp(48px,7svh,76px) clamp(88px,13svh,136px)}
+}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
