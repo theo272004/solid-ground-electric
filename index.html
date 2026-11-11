@@ -9,7 +9,7 @@
 <meta property="og:title" content="Solid Ground Electric | Electrician in Lisbon Falls, Maine">
 <meta property="og:description" content="Electrical work. Done right. Request a quote online with photos of your job.">
 <meta name="theme-color" content="#071F19">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23FFD82F'/%3E%3Cpath d='M9 16.5l5 5 9-10.5' fill='none' stroke='%23ffffff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='%23FFD82F'/%3E%3Cpath d='M11.2 16.4l3.6 3.6 6.2-7.4' fill='none' stroke='%23ffffff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
@@ -731,6 +731,29 @@ h1 em{font-style:normal;color:var(--y);display:block}
 .qsteps .qstep-b[aria-current="step"] i{background:var(--y);color:var(--g)}
 .qsteps .qstep-b:focus-visible{outline-offset:6px;border-radius:12px}
 
+
+/* ---------- phone fixes ---------- */
+.gal .ba{display:none}
+@media (max-width:980px){
+  .gal .ba-b,.gal .ba-a{display:none}
+  .gal .ba{display:block;order:-1;grid-column:1/-1;height:min(78vw,360px)}
+  .gal .ba .lbl.r{left:auto;right:12px;background:var(--y);color:var(--ink)}
+  .gal .ba input{touch-action:pan-y}
+  .gal figure:nth-child(5){grid-column:1/-1}
+}
+@media (max-width:860px){
+  .hero{display:block;min-height:calc(100svh - 64px)}
+  .hphoto{position:absolute;inset:0;width:auto;height:auto}
+  .hphoto img{object-position:84% 60%}
+  .hphoto::after{background:linear-gradient(180deg,rgba(7,31,25,.94) 0%,rgba(7,31,25,.82) 45%,rgba(7,31,25,.42) 100%),linear-gradient(90deg,rgba(7,31,25,.5),rgba(7,31,25,0) 75%)}
+  .hero .tag{display:none}
+  .hero>.hin{position:relative;z-index:1;padding-block:34px 40px}
+}
+@media (max-width:640px){
+  .qs .w{padding-inline:max(var(--gut),env(safe-area-inset-left,0px)) max(var(--gut),env(safe-area-inset-right,0px))}
+  .qbox{border-radius:22px}
+}
+
 /* one section per screen (desktop) */
 @media (min-width:981px){
   html{scroll-padding-top:73px}
@@ -898,6 +921,7 @@ h1 em{font-style:normal;color:var(--y);display:block}
       <figure><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&q=75&auto=format" style="object-position:60% 30%" alt="Electrician working on a wall-mounted meter (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Meter &amp; service upgrade · <span class="fill">[Town]</span>, ME</figcaption></figure>
       <figure><img src="https://images.unsplash.com/photo-1682345262055-8f95f3c513ea?w=900&q=75&auto=format" alt="Gloved hand holding a stripped electrical cable (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Rewiring &amp; updates · <span class="fill">[Town]</span>, ME</figcaption></figure>
       <figure><img src="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?w=900&q=75&auto=format" style="object-position:50% 30%" alt="Electrician in a hard hat and face shield testing an electrical panel (sample photo)" loading="lazy"><span class="tag">Sample photo</span><figcaption>Testing &amp; troubleshooting · <span class="fill">[Town]</span>, ME</figcaption></figure>
+          <figure class="ba" id="ba"><img class="before" src="https://images.unsplash.com/photo-1751783901059-3d1870e69581?w=1200&q=75&auto=format" style="object-position:50% 45%" alt="Before: old, damaged electrical panel (sample photo)" loading="lazy"><img class="after" src="https://images.unsplash.com/photo-1660330589693-99889d60181e?w=1200&q=75&auto=format" style="object-position:55% 30%" alt="After: finished panel installation (sample photo)" loading="lazy"><span class="bar" aria-hidden="true"></span><span class="knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span><span class="lbl l">Before</span><span class="lbl r">After</span><label class="sr" for="baRange" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Compare before and after</label><input id="baRange" type="range" min="0" max="100" value="50"><span class="tag">Sample photo</span><figcaption>Panel installation · <span class="fill">[Town]</span>, ME</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1400,6 +1424,9 @@ h1 em{font-style:normal;color:var(--y);display:block}
   var sec=$("how");
   if("IntersectionObserver" in window){new IntersectionObserver(function(e){visible=e[0].isIntersecting;if(visible){go(0);play()}else pause()},{threshold:.35}).observe(sec)}
 }catch(e){}})();
+</script>
+<script>
+(function(){try{if(matchMedia("(max-width:980px)").matches)[].forEach.call(document.querySelectorAll(".fl details"),function(d){d.removeAttribute("open")})}catch(e){}})();
 </script>
 </body>
 </html>
